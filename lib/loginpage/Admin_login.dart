@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:nav2/checkbox.dart';
+
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/edit_profile.dart';
-import 'package:nav2/home.dart';
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
-import 'package:nav2/manage_messages.dart';
+import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/postjobs/post_job.dart';
 
-class postjob extends StatefulWidget {
-  const postjob({Key? key}) : super(key: key);
+class adminlogin extends StatefulWidget {
+  const adminlogin({Key? key}) : super(key: key);
 
   @override
-  State<postjob> createState() => _postjobState();
+  State<adminlogin> createState() => _adminloginState();
 }
 
-class _postjobState extends State<postjob> {
+class _adminloginState extends State<adminlogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +49,7 @@ class _postjobState extends State<postjob> {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => home(),
+                              builder: (context) => managefollowers(),
                             ),
                           ),
                           child: Align(
@@ -85,7 +85,7 @@ class _postjobState extends State<postjob> {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => home(),
+                              builder: (context) => managefollowers(),
                             ),
                           ),
                           child: Align(
@@ -139,7 +139,7 @@ class _postjobState extends State<postjob> {
                           onTap: () => Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => home(),
+                              builder: (context) => managefollowers(),
                             ),
                           ),
                           child: Align(
@@ -197,112 +197,7 @@ class _postjobState extends State<postjob> {
           ),
         ),
       ),
-       endDrawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            SizedBox(
-              height: 100,
-              child: const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 151, 239, 249),
-                ),
-                child: Text('MENU'),
-              ),
-            ),
-            // ListTile(
-            //   title: const Text('Dashboard'),
-            //   leading: Icon(
-            //     Icons.home,
-            //   ),
-            //   iconColor: Colors.black,
-            //   onTap: () => Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //       builder: (context) => dashboardpage(),
-            //     ),
-            //   ),
-            // ),
-            ListTile(
-              title: const Text('Edit Profile'),
-              leading: Icon(Icons.edit),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => editprofile(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Company Profile'),
-              leading: Icon(Icons.contacts),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => companyprofile(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Post job'),
-              leading: Icon(Icons.computer),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => postjob(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Manage Jobs'),
-              leading: Icon(Icons.groups_outlined),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => managejob(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Manage Message'),
-              leading: Icon(Icons.mail),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => managemessages(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Manage Followers'),
-              iconColor: Colors.black,
-              leading: Icon(Icons.dashboard_customize_rounded),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => managefollowers(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Logout'),
-              iconColor: Colors.black,
-              leading: Icon(Icons.logout_outlined),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => postjob(),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+       
     );
   
     

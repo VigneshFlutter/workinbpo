@@ -1,16 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/edit_profile.dart';
-import 'package:nav2/job_plan.dart';
-import 'package:nav2/login_page.dart';
+import 'package:nav2/jobplan/job_diamondplan.dart';
+import 'package:nav2/jobplan/job_goldplan.dart';
+import 'package:nav2/loginpage/login_page.dart';
 
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
-import 'package:nav2/manage_messages.dart';
-import 'package:nav2/manage_messages_receiv.dart';
+import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/managemessages/manage_messages_receiv.dart';
 import 'package:nav2/openjob.dart';
-import 'package:nav2/post_job.dart';
+import 'package:nav2/postjobs/post_job.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
+
+const buttoncolor = const Color.fromARGB(255, 26, 181, 195);
+const whitecolor = Color.fromARGB(255, 255, 255, 255);
+const blackcolor = Color.fromARGB(255, 0, 0, 0);
+const greycolor = Colors.grey;
+const bluecolor =  Color.fromARGB(255, 15, 28, 216);
+const lightbluecolor =  Color.fromARGB(255, 176, 195, 249);
+
+
 
 class dashboardpage extends StatefulWidget {
   const dashboardpage({Key? key}) : super(key: key);
@@ -50,7 +61,7 @@ class _dashboardpageState extends State<dashboardpage> {
         title: Center(
             child: Container(
                 width: 80, child: Image.asset('assets/work in bpo.png'))),
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: whitecolor,
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
       body: SafeArea(
@@ -579,7 +590,7 @@ class _dashboardpageState extends State<dashboardpage> {
                        onTap: () => Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => openjob(),
+                                  builder: (context) => managejob(),
                                 ),
                               ),
                       child: Card(
@@ -794,13 +805,13 @@ class _dashboardpageState extends State<dashboardpage> {
                                     child: Center(
                                         child: Text("View More ",
                                             style: TextStyle(
-                                                color: Colors.white,
+                                                color: whitecolor,
                                                 fontSize: 13,
                                                 fontWeight: FontWeight.w700))),
                                     decoration: BoxDecoration(
                                       borderRadius: BorderRadius.circular(
                                           10), // radius of 10
-                                      color: Color.fromARGB(255, 26, 181, 195),
+                                      color: buttoncolor,
                                       // green as background color
                                     )),
                               ),
@@ -811,7 +822,7 @@ class _dashboardpageState extends State<dashboardpage> {
                ),
                 Container(
                   child: Container(
-                    color: Color.fromARGB(255, 255, 255, 255),
+                    color: whitecolor,
                     height: 150,
                     child: Column(
                       children: [
@@ -883,7 +894,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         Padding(
                           padding: const EdgeInsets.only(left: 70),
                           child: Divider(
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: blackcolor,
                           ),
                         ),
                         Padding(
@@ -954,7 +965,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         Padding(
                           padding: const EdgeInsets.only(left: 70),
                           child: Divider(
-                            color: Color.fromARGB(255, 0, 0, 0),
+                            color: blackcolor,
                           ),
                         ),
                       ],
@@ -994,13 +1005,13 @@ class _dashboardpageState extends State<dashboardpage> {
                                       child: Center(
                                           child: Text("View More ",
                                               style: TextStyle(
-                                                  color: Colors.white,
+                                                  color: whitecolor,
                                                   fontSize: 13,
                                                   fontWeight: FontWeight.w700))),
                                       decoration: BoxDecoration(
                                         borderRadius: BorderRadius.circular(
                                             10), // radius of 10
-                                        color: Color.fromARGB(255, 26, 181, 195),
+                                        color: buttoncolor,
                                         // green as background color
                                       )),
                                 ),
@@ -1029,7 +1040,7 @@ class _dashboardpageState extends State<dashboardpage> {
                           width: 320,
                           height: 360,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              color: whitecolor,
                               borderRadius: BorderRadius.circular(20)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1083,7 +1094,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                        side: BorderSide(color: Colors.grey),
+                                        side: BorderSide(color: greycolor),
 
                                         borderRadius: BorderRadius.circular(15),),
                                       child: Container(
@@ -1100,7 +1111,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Text(
                                             'FLUTTER',
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                color:blackcolor,
                                                 fontSize: 13),
                                           ),
                                         ),
@@ -1109,11 +1120,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                     
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color: greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color:whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1124,7 +1135,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'JAVA',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color:blackcolor,),
                                           ),
                                         ),
                                       ),
@@ -1132,11 +1143,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color: greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1147,7 +1158,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'REACT JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1162,11 +1173,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                         left: 5, right: 5),
                                     child: Card(
                                      
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1177,7 +1188,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'Node JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1185,11 +1196,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                   ),
                                   Card(
                                     
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Color.fromARGB(255, 255, 255, 255),
+                                          color: whitecolor,
                                           borderRadius:
                                               BorderRadius.circular(15)),
                                       child: Padding(
@@ -1200,7 +1211,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             right: 20),
                                         child: Text(
                                           'REACT JS',
-                                          style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                          style: TextStyle(color:blackcolor),
                                         ),
                                       ),
                                     ),
@@ -1254,13 +1265,13 @@ class _dashboardpageState extends State<dashboardpage> {
                                   alignment: Alignment.topRight,
                                   child: Card(
                                    
-                                       shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                       shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                         borderRadius: BorderRadius.circular(8)),
                                     child: Container(
                                       width: 140,
                                       height: 35,
                                       decoration: BoxDecoration(
-                                         color: Color.fromARGB(255, 26, 181, 195),
+                                         color: buttoncolor,
                                           borderRadius: BorderRadius.circular(8)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(
@@ -1269,7 +1280,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         
                                           children: [
                                             Icon(Icons.visibility,size: 18,),
-                                            Text('  View Profile',style: TextStyle(color: Colors.white),)
+                                            Text('  View Profile',style: TextStyle(color: whitecolor),)
                                           ],
                                         ),
                                       ),
@@ -1292,7 +1303,7 @@ class _dashboardpageState extends State<dashboardpage> {
                           width: 320,
                           height: 360,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              color: whitecolor,
                               borderRadius: BorderRadius.circular(20)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1346,12 +1357,12 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                        side: BorderSide(color: Colors.grey),
+                                        side: BorderSide(color: greycolor),
 
                                         borderRadius: BorderRadius.circular(15),),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1363,7 +1374,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Text(
                                             'FLUTTER',
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                color: blackcolor,
                                                 fontSize: 13),
                                           ),
                                         ),
@@ -1372,11 +1383,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                     
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color: greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1387,7 +1398,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'JAVA',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1395,11 +1406,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color: greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color:whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1410,7 +1421,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'REACT JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color:blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1425,11 +1436,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                         left: 5, right: 5),
                                     child: Card(
                                      
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1440,7 +1451,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'Node JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1448,11 +1459,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                   ),
                                   Card(
                                     
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color: greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Color.fromARGB(255, 255, 255, 255),
+                                          color: whitecolor,
                                           borderRadius:
                                               BorderRadius.circular(15)),
                                       child: Padding(
@@ -1463,7 +1474,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             right: 20),
                                         child: Text(
                                           'REACT JS',
-                                          style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                          style: TextStyle(color:blackcolor),
                                         ),
                                       ),
                                     ),
@@ -1517,13 +1528,13 @@ class _dashboardpageState extends State<dashboardpage> {
                                   alignment: Alignment.topRight,
                                   child: Card(
                                    
-                                       shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                       shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                         borderRadius: BorderRadius.circular(8)),
                                     child: Container(
                                       width: 140,
                                       height: 35,
                                       decoration: BoxDecoration(
-                                         color: Color.fromARGB(255, 26, 181, 195),
+                                         color: buttoncolor,
                                           borderRadius: BorderRadius.circular(8)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(
@@ -1532,7 +1543,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         
                                           children: [
                                             Icon(Icons.visibility,size: 18,),
-                                            Text('  View Profile',style: TextStyle(color: Colors.white),)
+                                            Text('  View Profile',style: TextStyle(color:whitecolor),)
                                           ],
                                         ),
                                       ),
@@ -1555,7 +1566,7 @@ class _dashboardpageState extends State<dashboardpage> {
                           width: 320,
                           height: 360,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              color: whitecolor,
                               borderRadius: BorderRadius.circular(20)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1609,12 +1620,12 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                        side: BorderSide(color: Colors.grey),
+                                        side: BorderSide(color: greycolor),
 
                                         borderRadius: BorderRadius.circular(15),),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1626,7 +1637,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Text(
                                             'FLUTTER',
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                color: blackcolor,
                                                 fontSize: 13),
                                           ),
                                         ),
@@ -1635,11 +1646,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                     
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color:greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1650,7 +1661,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'JAVA',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color:blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1658,11 +1669,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color:greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1673,7 +1684,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'REACT JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1688,11 +1699,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                         left: 5, right: 5),
                                     child: Card(
                                      
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color: greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1703,7 +1714,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'Node JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1711,11 +1722,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                   ),
                                   Card(
                                     
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Color.fromARGB(255, 255, 255, 255),
+                                          color: whitecolor,
                                           borderRadius:
                                               BorderRadius.circular(15)),
                                       child: Padding(
@@ -1726,7 +1737,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             right: 20),
                                         child: Text(
                                           'REACT JS',
-                                          style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                          style: TextStyle(color:blackcolor),
                                         ),
                                       ),
                                     ),
@@ -1780,13 +1791,13 @@ class _dashboardpageState extends State<dashboardpage> {
                                   alignment: Alignment.topRight,
                                   child: Card(
                                    
-                                       shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                       shape: RoundedRectangleBorder( side: BorderSide(color: greycolor),
                                         borderRadius: BorderRadius.circular(8)),
                                     child: Container(
                                       width: 140,
                                       height: 35,
                                       decoration: BoxDecoration(
-                                         color: Color.fromARGB(255, 26, 181, 195),
+                                         color: buttoncolor,
                                           borderRadius: BorderRadius.circular(8)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(
@@ -1795,7 +1806,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         
                                           children: [
                                             Icon(Icons.visibility,size: 18,),
-                                            Text('  View Profile',style: TextStyle(color: Colors.white),)
+                                            Text('  View Profile',style: TextStyle(color: whitecolor),)
                                           ],
                                         ),
                                       ),
@@ -1807,7 +1818,7 @@ class _dashboardpageState extends State<dashboardpage> {
                           ),
                         ),
                       ),
-                         SizedBox(
+                           SizedBox(
                         width: 10,
                       ),
                       Card(
@@ -1818,7 +1829,7 @@ class _dashboardpageState extends State<dashboardpage> {
                           width: 320,
                           height: 360,
                           decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 255, 255, 255),
+                              color: whitecolor,
                               borderRadius: BorderRadius.circular(20)),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -1872,12 +1883,12 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                        side: BorderSide(color: Colors.grey),
+                                        side: BorderSide(color: greycolor),
 
                                         borderRadius: BorderRadius.circular(15),),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1889,7 +1900,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Text(
                                             'FLUTTER',
                                             style: TextStyle(
-                                                color: Color.fromARGB(255, 0, 0, 0),
+                                                color: blackcolor,
                                                 fontSize: 13),
                                           ),
                                         ),
@@ -1898,11 +1909,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                     
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color:greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1913,7 +1924,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'JAVA',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color:blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1921,11 +1932,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                     Card(
                                       
                                       shape: RoundedRectangleBorder(
-                                         side: BorderSide(color: Colors.grey),
+                                         side: BorderSide(color:greycolor),
                                          borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1936,7 +1947,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'REACT JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1951,11 +1962,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                         left: 5, right: 5),
                                     child: Card(
                                      
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color: greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                       child: Container(
                                         decoration: BoxDecoration(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: whitecolor,
                                             borderRadius:
                                                 BorderRadius.circular(15)),
                                         child: Padding(
@@ -1966,7 +1977,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                               right: 20),
                                           child: Text(
                                             'Node JS',
-                                            style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                            style: TextStyle(color: blackcolor),
                                           ),
                                         ),
                                       ),
@@ -1974,11 +1985,11 @@ class _dashboardpageState extends State<dashboardpage> {
                                   ),
                                   Card(
                                     
-                                      shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                      shape: RoundedRectangleBorder( side: BorderSide(color:greycolor),
                                       borderRadius: BorderRadius.circular(15)),
                                     child: Container(
                                       decoration: BoxDecoration(
-                                          color: Color.fromARGB(255, 255, 255, 255),
+                                          color: whitecolor,
                                           borderRadius:
                                               BorderRadius.circular(15)),
                                       child: Padding(
@@ -1989,7 +2000,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             right: 20),
                                         child: Text(
                                           'REACT JS',
-                                          style: TextStyle(color: Color.fromARGB(255, 0, 0, 0)),
+                                          style: TextStyle(color:blackcolor),
                                         ),
                                       ),
                                     ),
@@ -2043,13 +2054,13 @@ class _dashboardpageState extends State<dashboardpage> {
                                   alignment: Alignment.topRight,
                                   child: Card(
                                    
-                                       shape: RoundedRectangleBorder( side: BorderSide(color: Colors.grey),
+                                       shape: RoundedRectangleBorder( side: BorderSide(color: greycolor),
                                         borderRadius: BorderRadius.circular(8)),
                                     child: Container(
                                       width: 140,
                                       height: 35,
                                       decoration: BoxDecoration(
-                                         color: Color.fromARGB(255, 26, 181, 195),
+                                         color: buttoncolor,
                                           borderRadius: BorderRadius.circular(8)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(
@@ -2058,7 +2069,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         
                                           children: [
                                             Icon(Icons.visibility,size: 18,),
-                                            Text('  View Profile',style: TextStyle(color: Colors.white),)
+                                            Text('  View Profile',style: TextStyle(color: whitecolor),)
                                           ],
                                         ),
                                       ),
@@ -2086,7 +2097,7 @@ class _dashboardpageState extends State<dashboardpage> {
                         style: TextStyle(
                             fontSize: 25,
                             fontWeight: FontWeight.w900,
-                            color: Color.fromARGB(255, 0, 0, 0)),
+                            color: blackcolor),
                       ),
                      
                     ],
@@ -2109,8 +2120,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                   children: [
                                     Text("My Order & Purchases ",
                                         style: TextStyle(
-                                            color: Color.fromARGB(
-                                                255, 255, 255, 255),
+                                            color:whitecolor,
                                             fontSize: 15,
                                             fontWeight: FontWeight.w700)),
                                     Padding(
@@ -2122,8 +2132,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Text(
                                             '2',
                                             style: TextStyle(
-                                                color: Color.fromARGB(
-                                                    255, 251, 250, 250),
+                                                color: whitecolor,
                                                 fontSize: 10),
                                           )),
                                     )
@@ -2132,7 +2141,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(10),
                                   // radius of 10
-                                  color: Color.fromARGB(255, 93, 205, 215),
+                                  color: buttoncolor,
                                   // green as background color
                                 )),
                           ),
@@ -2146,7 +2155,7 @@ class _dashboardpageState extends State<dashboardpage> {
                     style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w600,
-                        color: Color.fromARGB(255, 0, 0, 0)),
+                        color: blackcolor),
                   ),
                 ),
 
@@ -2169,8 +2178,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                     child: Text(
                                       'Plan Name',
                                       style: TextStyle(
-                                          color: Color.fromARGB(
-                                              255, 77, 218, 201)),
+                                          color:buttoncolor),
                                     ))),
                             GridTextColumn(
                                 columnName: 'User ID',
@@ -2180,8 +2188,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                     child: Text(
                                       'User ID',
                                       style: TextStyle(
-                                          color: Color.fromARGB(
-                                              255, 77, 218, 201)),
+                                          color: buttoncolor),
                                     ))),
                             GridTextColumn(
                                 columnName: 'Purchase Date',
@@ -2195,8 +2202,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                       child: Text(
                                         'Purchase Date',
                                         style: TextStyle(
-                                            color: Color.fromARGB(
-                                                255, 77, 218, 201)),
+                                            color: buttoncolor),
                                       )),
                                 )),
                             GridTextColumn(
@@ -2207,8 +2213,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                     child: Text(
                                       'Expire Date',
                                       style: TextStyle(
-                                          color: Color.fromARGB(
-                                              255, 77, 218, 201)),
+                                          color: buttoncolor),
                                     ))),
                             GridTextColumn(
                                 columnName: 'Availd Quata',
@@ -2218,8 +2223,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                     child: Text(
                                       'Availd Quata',
                                       style: TextStyle(
-                                          color: Color.fromARGB(
-                                              255, 77, 218, 201)),
+                                          color:buttoncolor),
                                     ))),
                           ],
                         ),
@@ -2248,7 +2252,7 @@ class _dashboardpageState extends State<dashboardpage> {
                       width: 300,
                       height: 390,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: whitecolor,
                           borderRadius: BorderRadius.circular(20)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2260,7 +2264,7 @@ class _dashboardpageState extends State<dashboardpage> {
                               'Gold Plan',
                               style: TextStyle(
                                   fontSize: 22,
-                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  color: blackcolor,
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
@@ -2271,7 +2275,7 @@ class _dashboardpageState extends State<dashboardpage> {
                               'INR \₹3000',
                               style: TextStyle(
                                   fontSize: 30,
-                                  color: Color.fromARGB(255, 15, 28, 216),
+                                  color:bluecolor,
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
@@ -2282,7 +2286,7 @@ class _dashboardpageState extends State<dashboardpage> {
                               'what you get :',
                               style: TextStyle(
                                   fontSize: 22,
-                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  color: blackcolor,
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
@@ -2300,8 +2304,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             left: 0, top: 10, bottom: 10),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                              color: Color.fromARGB(
-                                                  255, 176, 195, 249),
+                                              color: lightbluecolor,
                                               borderRadius:
                                                   BorderRadius.circular(25)),
                                           width: 30,
@@ -2309,7 +2312,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Icon(
                                             Icons.check_outlined,
                                             color:
-                                                Color.fromARGB(255, 0, 16, 234),
+                                               bluecolor,
                                             size: 20,
                                           ),
                                         ),
@@ -2337,8 +2340,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             left: 0, top: 0, bottom: 10),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                              color: Color.fromARGB(
-                                                  255, 176, 195, 249),
+                                              color: lightbluecolor,
                                               borderRadius:
                                                   BorderRadius.circular(25)),
                                           width: 30,
@@ -2346,7 +2348,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Icon(
                                             Icons.check_outlined,
                                             color:
-                                                Color.fromARGB(255, 0, 16, 234),
+                                                bluecolor,
                                             size: 20,
                                           ),
                                         ),
@@ -2380,15 +2382,14 @@ class _dashboardpageState extends State<dashboardpage> {
                                             child: Text(
                                                 "See detailed information ",
                                                 style: TextStyle(
-                                                  color: Color.fromARGB(
-                                                      255, 255, 255, 255),
+                                                  color: whitecolor,
                                                   fontSize: 16,
                                                 ))),
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(25),
                                             color:
-                                                Color.fromARGB(255, 0, 16, 234)
+                                               bluecolor
 
                                             // green as background color
                                             )),
@@ -2414,7 +2415,7 @@ class _dashboardpageState extends State<dashboardpage> {
                       width: 300,
                       height: 390,
                       decoration: BoxDecoration(
-                          color: Colors.white,
+                          color: whitecolor,
                           borderRadius: BorderRadius.circular(20)),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -2426,7 +2427,7 @@ class _dashboardpageState extends State<dashboardpage> {
                               'Diamond Plan',
                               style: TextStyle(
                                   fontSize: 22,
-                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  color: blackcolor,
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
@@ -2437,7 +2438,7 @@ class _dashboardpageState extends State<dashboardpage> {
                               'INR \₹5000',
                               style: TextStyle(
                                   fontSize: 30,
-                                  color: Color.fromARGB(255, 15, 28, 216),
+                                  color: bluecolor,
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
@@ -2448,7 +2449,7 @@ class _dashboardpageState extends State<dashboardpage> {
                               'what you get :',
                               style: TextStyle(
                                   fontSize: 22,
-                                  color: Color.fromARGB(255, 0, 0, 0),
+                                  color: blackcolor,
                                   fontWeight: FontWeight.w700),
                             ),
                           ),
@@ -2466,8 +2467,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             left: 0, top: 10, bottom: 10),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                              color: Color.fromARGB(
-                                                  255, 176, 195, 249),
+                                              color:lightbluecolor,
                                               borderRadius:
                                                   BorderRadius.circular(25)),
                                           width: 30,
@@ -2475,7 +2475,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Icon(
                                             Icons.check_outlined,
                                             color:
-                                                Color.fromARGB(255, 0, 16, 234),
+                                                bluecolor,
                                             size: 20,
                                           ),
                                         ),
@@ -2503,8 +2503,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                             left: 0, top: 0, bottom: 10),
                                         child: Container(
                                           decoration: BoxDecoration(
-                                              color: Color.fromARGB(
-                                                  255, 176, 195, 249),
+                                              color: lightbluecolor,
                                               borderRadius:
                                                   BorderRadius.circular(25)),
                                           width: 30,
@@ -2512,7 +2511,7 @@ class _dashboardpageState extends State<dashboardpage> {
                                           child: Icon(
                                             Icons.check_outlined,
                                             color:
-                                                Color.fromARGB(255, 0, 16, 234),
+                                               bluecolor,
                                             size: 20,
                                           ),
                                         ),
@@ -2546,15 +2545,14 @@ class _dashboardpageState extends State<dashboardpage> {
                                             child: Text(
                                                 "See detailed information ",
                                                 style: TextStyle(
-                                                  color: Color.fromARGB(
-                                                      255, 255, 255, 255),
+                                                  color: whitecolor,
                                                   fontSize: 16,
                                                 ))),
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(25),
                                             color:
-                                                Color.fromARGB(255, 0, 16, 234)
+                                                bluecolor,
 
                                             // green as background color
                                             )),
@@ -2584,6 +2582,7 @@ class _dashboardpageState extends State<dashboardpage> {
                 SizedBox(
                   height: 20,
                 ),
+               
               ],
             ),
           ),
@@ -2597,7 +2596,7 @@ class _dashboardpageState extends State<dashboardpage> {
               height: 100,
               child: const DrawerHeader(
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 151, 239, 249),
+                  color: buttoncolor,
                 ),
                 child: Text('MENU'),
               ),
@@ -2688,7 +2687,7 @@ class _dashboardpageState extends State<dashboardpage> {
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(
-                  builder: (context) => postjob(),
+                  builder: (context) => adminlogin(),
                 ),
               ),
             ),

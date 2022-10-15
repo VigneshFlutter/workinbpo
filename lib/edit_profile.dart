@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:nav2/company_profile.dart';
-import 'package:nav2/login_page.dart';
+import 'package:nav2/dashboard_page.dart';
+import 'package:nav2/loginpage/login_page.dart';
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
-import 'package:nav2/manage_messages.dart';
-import 'package:nav2/post_job.dart';
+import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/postjobs/post_job.dart';
 
 
 
@@ -153,13 +154,13 @@ class _editprofileState extends State<editprofile> {
                                         child: Text(" Select Company Logo ",
                                             style: TextStyle(
                                               color:
-                                                  Color.fromARGB(255, 255, 255, 255),
+                                               whitecolor,
                                               fontSize: 18,
                                             ))),
                                     decoration: BoxDecoration(
                                       borderRadius:
                                           BorderRadius.circular(10), // radius of 10
-                                      color: Color.fromARGB(255, 26, 181, 195),
+                                      color: buttoncolor,
                                       // green as background color
                                     )),
                               ),
@@ -516,7 +517,7 @@ class _editprofileState extends State<editprofile> {
                               ),
                             ),
                             child: Align(
-                              alignment: Alignment.topLeft,
+                              alignment: Alignment.topRight,
                               child: Padding(
                                 padding: const EdgeInsets.only(left: 20,right: 20),
                                 child: Container(
@@ -526,13 +527,13 @@ class _editprofileState extends State<editprofile> {
                                         child: Text("Update Profile And Save",
                                             style: TextStyle(
                                               color:
-                                                  Color.fromARGB(255, 255, 255, 255),
+                                                  whitecolor,
                                               fontSize: 16,fontWeight: FontWeight.w600
                                             ))),
                                     decoration: BoxDecoration(
                                       borderRadius:
                                           BorderRadius.circular(10), // radius of 10
-                                      color: Color.fromARGB(255, 26, 181, 195),
+                                      color: buttoncolor,
                                       // green as background color
                                     )),
                               ),
@@ -553,112 +554,7 @@ class _editprofileState extends State<editprofile> {
           ),
         ),
       ),
-       endDrawer: Drawer(
-        child: ListView(
-          padding: EdgeInsets.zero,
-          children: [
-            SizedBox(
-              height: 100,
-              child: const DrawerHeader(
-                decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 151, 239, 249),
-                ),
-                child: Text('MENU'),
-              ),
-            ),
-            // ListTile(
-            //   title: const Text('Dashboard'),
-            //   leading: Icon(
-            //     Icons.home,
-            //   ),
-            //   iconColor: Colors.black,
-            //   onTap: () => Navigator.push(
-            //     context,
-            //     MaterialPageRoute(
-            //       builder: (context) => dashboardpage(),
-            //     ),
-            //   ),
-            // ),
-            ListTile(
-              title: const Text('Edit Profile'),
-              leading: Icon(Icons.edit),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => editprofile(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Company Profile'),
-              leading: Icon(Icons.contacts),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => companyprofile(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Post job'),
-              leading: Icon(Icons.computer),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => postjob(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Manage Jobs'),
-              leading: Icon(Icons.groups_outlined),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => managejob(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Manage Message'),
-              leading: Icon(Icons.mail),
-              iconColor: Colors.black,
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => managemessages(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Manage Followers'),
-              iconColor: Colors.black,
-              leading: Icon(Icons.dashboard_customize_rounded),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => managefollowers(),
-                ),
-              ),
-            ),
-            ListTile(
-              title: const Text('Logout'),
-              iconColor: Colors.black,
-              leading: Icon(Icons.logout_outlined),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => postjob(),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+      
 
     );
     

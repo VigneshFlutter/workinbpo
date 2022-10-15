@@ -3,8 +3,11 @@ import 'package:nav2/dashboard_page.dart';
 import 'package:nav2/edit_profile.dart';
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
-import 'package:nav2/manage_messages.dart';
-import 'package:nav2/post_job.dart';
+import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/postjobs/post_job.dart';
+
+
+ const jobcardcolor =   Color.fromARGB(255, 241, 15, 15);
 
 class companyprofile extends StatefulWidget {
   const companyprofile({Key? key}) : super(key: key);
@@ -17,7 +20,7 @@ class _companyprofileState extends State<companyprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(
+      appBar: AppBar(
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 20),
@@ -34,7 +37,7 @@ class _companyprofileState extends State<companyprofile> {
         title: Center(
             child: Container(
                 width: 80, child: Image.asset('assets/work in bpo.png'))),
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
+        backgroundColor: whitecolor,
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
       body: SafeArea(
@@ -135,13 +138,11 @@ class _companyprofileState extends State<companyprofile> {
                                             children: [
                                               Icon(
                                                 Icons.favorite,
-                                                color: Color.fromARGB(
-                                                    255, 26, 181, 195),
+                                                color: buttoncolor
                                               ),
                                               Text("  Add to Favourite ",
                                                   style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     fontSize: 18,
                                                   )),
                                             ],
@@ -149,11 +150,9 @@ class _companyprofileState extends State<companyprofile> {
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(
                                                   30), // radius of 10
-                                              color: Color.fromARGB(
-                                                  255, 254, 254, 254),
+                                              color: whitecolor,
                                               border: Border.all(
-                                                  color: Color.fromARGB(
-                                                      255, 26, 181, 195),
+                                                  color: buttoncolor,
                                                   width: 2)
                                               // green as background color
                                               )),
@@ -182,13 +181,11 @@ class _companyprofileState extends State<companyprofile> {
                                             children: [
                                               Icon(
                                                 Icons.mail,
-                                                color: Color.fromARGB(
-                                                    255, 26, 181, 195),
+                                                color: buttoncolor,
                                               ),
                                               Text("  Send Messsage ",
                                                   style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     fontSize: 18,
                                                   )),
                                             ],
@@ -196,11 +193,9 @@ class _companyprofileState extends State<companyprofile> {
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(
                                                   30), // radius of 10
-                                              color: Color.fromARGB(
-                                                  255, 255, 255, 255),
+                                              color: whitecolor,
                                               border: Border.all(
-                                                  color: Color.fromARGB(
-                                                      255, 26, 181, 195),
+                                                  color: buttoncolor,
                                                   width: 2)
                                               // green as background color
                                               )),
@@ -435,7 +430,7 @@ class _companyprofileState extends State<companyprofile> {
                               elevation: 3,
                         shape: RoundedRectangleBorder(
                          side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
+      color:greycolor ),
                             borderRadius: BorderRadius.circular(20)),
                               child: Container(
                         width: 320,
@@ -468,19 +463,19 @@ class _companyprofileState extends State<companyprofile> {
                                    Padding(
                                      padding: const EdgeInsets.only(left: 15,right: 10),
                                      child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
                                       ),
                                       
                                   ),
                                    ),
                                    Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
                                     ),
                                     
                                   ),
@@ -528,7 +523,7 @@ class _companyprofileState extends State<companyprofile> {
                                                 
                                                 Text("View Detail",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
+                                                      color: whitecolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -536,8 +531,7 @@ class _companyprofileState extends State<companyprofile> {
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                color:buttoncolor,
                                                
                                                 // green as background color
                                                 )),
@@ -567,8 +561,7 @@ class _companyprofileState extends State<companyprofile> {
                                                 
                                                 Text("Save Job",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                      color:buttoncolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -576,11 +569,9 @@ class _companyprofileState extends State<companyprofile> {
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
+                                                color: whitecolor,
                                                 border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     width: 2)
                                                 // green as background color
                                                 )),
@@ -600,11 +591,11 @@ class _companyprofileState extends State<companyprofile> {
             
 
 
-                          Card(
+                             Card(
                               elevation: 3,
                         shape: RoundedRectangleBorder(
                          side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
+      color:greycolor ),
                             borderRadius: BorderRadius.circular(20)),
                               child: Container(
                         width: 320,
@@ -637,19 +628,19 @@ class _companyprofileState extends State<companyprofile> {
                                    Padding(
                                      padding: const EdgeInsets.only(left: 15,right: 10),
                                      child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
                                       ),
                                       
                                   ),
                                    ),
                                    Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
                                     ),
                                     
                                   ),
@@ -697,7 +688,7 @@ class _companyprofileState extends State<companyprofile> {
                                                 
                                                 Text("View Detail",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
+                                                      color: whitecolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -705,8 +696,7 @@ class _companyprofileState extends State<companyprofile> {
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                color:buttoncolor,
                                                
                                                 // green as background color
                                                 )),
@@ -736,8 +726,7 @@ class _companyprofileState extends State<companyprofile> {
                                                 
                                                 Text("Save Job",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                      color:buttoncolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -745,11 +734,9 @@ class _companyprofileState extends State<companyprofile> {
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
+                                                color: whitecolor,
                                                 border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     width: 2)
                                                 // green as background color
                                                 )),
@@ -762,16 +749,180 @@ class _companyprofileState extends State<companyprofile> {
                         ),
                       ),
                             ),
+                     
+                       SizedBox(
+                        width: 10,
+                      ),
+                     
+    Card(
+                              elevation: 3,
+                        shape: RoundedRectangleBorder(
+                         side: BorderSide(
+      color:greycolor ),
+                            borderRadius: BorderRadius.circular(20)),
+                              child: Container(
+                        width: 320,
+                        height: 360,
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                        child: Column(
+                          
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                              Padding(
+                               padding: const EdgeInsets.only(top: 5),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 40,bottom: 10),
+                                      child: Container(
+                                       
+                                        height: 80,
+                                        width: 80,
+                                        child: Image.asset('assets/job7.jpeg')),
+                                    ),
+                                     
+                                  ],
+                                ),
+                              ),
+                              
+                           
+                              Row(
+                                children: [
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 15,right: 10),
+                                     child: Container(
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
+                                      ),
+                                      
+                                  ),
+                                   ),
+                                   Container(
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
+                                    ),
+                                    
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                               padding: const EdgeInsets.only(left: 20,right: 90,top: 20,bottom: 0),
+                                child: Text('Conway c',style: TextStyle(fontSize: 22,fontWeight: FontWeight.w800),),
+                              ),
+                           
+                              Padding(
+                               padding: const EdgeInsets.only(left: 18,top: 5,bottom: 5),
+                                child: Text('Java Script',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w300),),
+                              ),
+                              Padding(
+                               padding: const EdgeInsets.only(left: 15,top: 5,bottom: 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.location_on_outlined),
+                                    Text('Address',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
+                                     Text(' Anar Darreh',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),),
+                                  ],
+                                ),
+                              ),
+                              InkWell(
+                                    onTap: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => dashboardpage(),
+                                      ),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 20, right: 20, bottom: 5, top: 10),
+                                        child: Container(
+                                            width: 300,
+                                            height: 40,
+                                            child: Center(
+                                                child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                
+                                                Text("View Detail",
+                                                    style: TextStyle(
+                                                      color: whitecolor,
+                                                      fontSize: 18,
+                                                    )),
+                                              ],
+                                            )),
+                                            decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(
+                                                    10), // radius of 10
+                                                color:buttoncolor,
+                                               
+                                                // green as background color
+                                                )),
+                                      ),
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => dashboardpage(),
+                                      ),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 20, right: 20, bottom: 5, top: 10),
+                                        child: Container(
+                                            width: 300,
+                                            height: 40,
+                                            child: Center(
+                                                child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                
+                                                Text("Save Job",
+                                                    style: TextStyle(
+                                                      color:buttoncolor,
+                                                      fontSize: 18,
+                                                    )),
+                                              ],
+                                            )),
+                                            decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(
+                                                    10), // radius of 10
+                                                color: whitecolor,
+                                                border: Border.all(
+                                                    color: buttoncolor,
+                                                    width: 2)
+                                                // green as background color
+                                                )),
+                                      ),
+                                    ),
+                                  ),
+                                  
+
+                          ],
+                        ),
+                      ),
+                            ),
+                     
                        SizedBox(
                         width: 10,
                       ),
                      
 
-Card(
+    Card(
                               elevation: 3,
                         shape: RoundedRectangleBorder(
                          side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
+      color:greycolor ),
                             borderRadius: BorderRadius.circular(20)),
                               child: Container(
                         width: 320,
@@ -804,19 +955,19 @@ Card(
                                    Padding(
                                      padding: const EdgeInsets.only(left: 15,right: 10),
                                      child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
                                       ),
                                       
                                   ),
                                    ),
                                    Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
                                     ),
                                     
                                   ),
@@ -864,7 +1015,7 @@ Card(
                                                 
                                                 Text("View Detail",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
+                                                      color: whitecolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -872,8 +1023,7 @@ Card(
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                color:buttoncolor,
                                                
                                                 // green as background color
                                                 )),
@@ -903,8 +1053,7 @@ Card(
                                                 
                                                 Text("Save Job",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                      color:buttoncolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -912,11 +1061,9 @@ Card(
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
+                                                color: whitecolor,
                                                 border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     width: 2)
                                                 // green as background color
                                                 )),
@@ -929,184 +1076,18 @@ Card(
                         ),
                       ),
                             ),
-                       SizedBox(
-                        width: 10,
-                      ),
                      
-
-Card(
-                              elevation: 3,
-                        shape: RoundedRectangleBorder(
-                         side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
-                            borderRadius: BorderRadius.circular(20)),
-                              child: Container(
-                        width: 320,
-                        height: 360,
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                        child: Column(
-                          
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                              Padding(
-                               padding: const EdgeInsets.only(top: 5),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 40,bottom: 10),
-                                      child: Container(
-                                       
-                                        height: 80,
-                                        width: 80,
-                                        child: Image.asset('assets/job7.jpeg')),
-                                    ),
-                                     
-                                  ],
-                                ),
-                              ),
-                              
-                           
-                              Row(
-                                children: [
-                                   Padding(
-                                     padding: const EdgeInsets.only(left: 15,right: 10),
-                                     child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
-                                      ),
-                                      
-                                  ),
-                                   ),
-                                   Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
-                                    ),
-                                    
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                               padding: const EdgeInsets.only(left: 20,right: 90,top: 20,bottom: 0),
-                                child: Text('Conway c',style: TextStyle(fontSize: 22,fontWeight: FontWeight.w800),),
-                              ),
-                           
-                              Padding(
-                               padding: const EdgeInsets.only(left: 18,top: 5,bottom: 5),
-                                child: Text('Java Script',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w300),),
-                              ),
-                              Padding(
-                               padding: const EdgeInsets.only(left: 15,top: 5,bottom: 4),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.location_on_outlined),
-                                    Text('Address',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
-                                     Text(' Anar Darreh',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),),
-                                  ],
-                                ),
-                              ),
-                              InkWell(
-                                    onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => dashboardpage(),
-                                      ),
-                                    ),
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 20, right: 20, bottom: 5, top: 10),
-                                        child: Container(
-                                            width: 300,
-                                            height: 40,
-                                            child: Center(
-                                                child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                
-                                                Text("View Detail",
-                                                    style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
-                                                      fontSize: 18,
-                                                    )),
-                                              ],
-                                            )),
-                                            decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(
-                                                    10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
-                                               
-                                                // green as background color
-                                                )),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => dashboardpage(),
-                                      ),
-                                    ),
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 20, right: 20, bottom: 5, top: 10),
-                                        child: Container(
-                                            width: 300,
-                                            height: 40,
-                                            child: Center(
-                                                child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                
-                                                Text("Save Job",
-                                                    style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
-                                                      fontSize: 18,
-                                                    )),
-                                              ],
-                                            )),
-                                            decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(
-                                                    10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
-                                                border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
-                                                    width: 2)
-                                                // green as background color
-                                                )),
-                                      ),
-                                    ),
-                                  ),
-                                  
-
-                          ],
-                        ),
-                      ),
-                            ),
                        SizedBox(
                         width: 10,
                       ),
                      
 
 
-                        Card(
+                           Card(
                               elevation: 3,
                         shape: RoundedRectangleBorder(
                          side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
+      color:greycolor ),
                             borderRadius: BorderRadius.circular(20)),
                               child: Container(
                         width: 320,
@@ -1139,19 +1120,19 @@ Card(
                                    Padding(
                                      padding: const EdgeInsets.only(left: 15,right: 10),
                                      child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
                                       ),
                                       
                                   ),
                                    ),
                                    Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
                                     ),
                                     
                                   ),
@@ -1199,7 +1180,7 @@ Card(
                                                 
                                                 Text("View Detail",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
+                                                      color: whitecolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -1207,8 +1188,7 @@ Card(
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                color:buttoncolor,
                                                
                                                 // green as background color
                                                 )),
@@ -1238,8 +1218,7 @@ Card(
                                                 
                                                 Text("Save Job",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                      color:buttoncolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -1247,11 +1226,9 @@ Card(
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
+                                                color: whitecolor,
                                                 border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     width: 2)
                                                 // green as background color
                                                 )),
@@ -1264,16 +1241,180 @@ Card(
                         ),
                       ),
                             ),
+                     
+                       SizedBox(
+                        width: 10,
+                      ),
+                     
+    Card(
+                              elevation: 3,
+                        shape: RoundedRectangleBorder(
+                         side: BorderSide(
+      color:greycolor ),
+                            borderRadius: BorderRadius.circular(20)),
+                              child: Container(
+                        width: 320,
+                        height: 360,
+                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                        child: Column(
+                          
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                              Padding(
+                               padding: const EdgeInsets.only(top: 5),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 40,bottom: 10),
+                                      child: Container(
+                                       
+                                        height: 80,
+                                        width: 80,
+                                        child: Image.asset('assets/job7.jpeg')),
+                                    ),
+                                     
+                                  ],
+                                ),
+                              ),
+                              
+                           
+                              Row(
+                                children: [
+                                   Padding(
+                                     padding: const EdgeInsets.only(left: 15,right: 10),
+                                     child: Container(
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
+                                      ),
+                                      
+                                  ),
+                                   ),
+                                   Container(
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
+                                    child: Padding(
+                                      padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
+                                    ),
+                                    
+                                  ),
+                                ],
+                              ),
+                              Padding(
+                               padding: const EdgeInsets.only(left: 20,right: 90,top: 20,bottom: 0),
+                                child: Text('Conway c',style: TextStyle(fontSize: 22,fontWeight: FontWeight.w800),),
+                              ),
+                           
+                              Padding(
+                               padding: const EdgeInsets.only(left: 18,top: 5,bottom: 5),
+                                child: Text('Java Script',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w300),),
+                              ),
+                              Padding(
+                               padding: const EdgeInsets.only(left: 15,top: 5,bottom: 4),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.location_on_outlined),
+                                    Text('Address',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
+                                     Text(' Anar Darreh',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),),
+                                  ],
+                                ),
+                              ),
+                              InkWell(
+                                    onTap: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => dashboardpage(),
+                                      ),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 20, right: 20, bottom: 5, top: 10),
+                                        child: Container(
+                                            width: 300,
+                                            height: 40,
+                                            child: Center(
+                                                child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                
+                                                Text("View Detail",
+                                                    style: TextStyle(
+                                                      color: whitecolor,
+                                                      fontSize: 18,
+                                                    )),
+                                              ],
+                                            )),
+                                            decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(
+                                                    10), // radius of 10
+                                                color:buttoncolor,
+                                               
+                                                // green as background color
+                                                )),
+                                      ),
+                                    ),
+                                  ),
+                                  InkWell(
+                                    onTap: () => Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => dashboardpage(),
+                                      ),
+                                    ),
+                                    child: Align(
+                                      alignment: Alignment.center,
+                                      child: Padding(
+                                        padding: const EdgeInsets.only(
+                                            left: 20, right: 20, bottom: 5, top: 10),
+                                        child: Container(
+                                            width: 300,
+                                            height: 40,
+                                            child: Center(
+                                                child: Row(
+                                              mainAxisAlignment:
+                                                  MainAxisAlignment.center,
+                                              children: [
+                                                
+                                                Text("Save Job",
+                                                    style: TextStyle(
+                                                      color:buttoncolor,
+                                                      fontSize: 18,
+                                                    )),
+                                              ],
+                                            )),
+                                            decoration: BoxDecoration(
+                                                borderRadius: BorderRadius.circular(
+                                                    10), // radius of 10
+                                                color: whitecolor,
+                                                border: Border.all(
+                                                    color: buttoncolor,
+                                                    width: 2)
+                                                // green as background color
+                                                )),
+                                      ),
+                                    ),
+                                  ),
+                                  
+
+                          ],
+                        ),
+                      ),
+                            ),
+                     
                        SizedBox(
                         width: 10,
                       ),
                      
 
-Card(
+    Card(
                               elevation: 3,
                         shape: RoundedRectangleBorder(
                          side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
+      color:greycolor ),
                             borderRadius: BorderRadius.circular(20)),
                               child: Container(
                         width: 320,
@@ -1306,19 +1447,19 @@ Card(
                                    Padding(
                                      padding: const EdgeInsets.only(left: 15,right: 10),
                                      child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                      decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                       child: Padding(
                                         padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
+                                        child: Text('Contract',style: TextStyle(color: whitecolor),),
                                       ),
                                       
                                   ),
                                    ),
                                    Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
+                                    decoration: BoxDecoration(color:jobcardcolor,borderRadius: BorderRadius.circular(15)),
                                     child: Padding(
                                       padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
+                                      child: Text('First Shift (Day)',style: TextStyle(color: whitecolor),),
                                     ),
                                     
                                   ),
@@ -1366,7 +1507,7 @@ Card(
                                                 
                                                 Text("View Detail",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
+                                                      color: whitecolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -1374,8 +1515,7 @@ Card(
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                color:buttoncolor,
                                                
                                                 // green as background color
                                                 )),
@@ -1405,8 +1545,7 @@ Card(
                                                 
                                                 Text("Save Job",
                                                     style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
+                                                      color:buttoncolor,
                                                       fontSize: 18,
                                                     )),
                                               ],
@@ -1414,11 +1553,9 @@ Card(
                                             decoration: BoxDecoration(
                                                 borderRadius: BorderRadius.circular(
                                                     10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
+                                                color: whitecolor,
                                                 border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     width: 2)
                                                 // green as background color
                                                 )),
@@ -1431,173 +1568,7 @@ Card(
                         ),
                       ),
                             ),
-                       SizedBox(
-                        width: 10,
-                      ),
                      
-
-Card(
-                              elevation: 3,
-                        shape: RoundedRectangleBorder(
-                         side: BorderSide(
-      color: Color.fromARGB(255, 174, 174, 176), ),
-                            borderRadius: BorderRadius.circular(20)),
-                              child: Container(
-                        width: 320,
-                        height: 360,
-                        decoration: BoxDecoration(borderRadius: BorderRadius.circular(20)),
-                        child: Column(
-                          
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                              Padding(
-                               padding: const EdgeInsets.only(top: 5),
-                                child: Row(
-                                  children: [
-                                    Padding(
-                                      padding: const EdgeInsets.only(left: 40,bottom: 10),
-                                      child: Container(
-                                       
-                                        height: 80,
-                                        width: 80,
-                                        child: Image.asset('assets/job7.jpeg')),
-                                    ),
-                                     
-                                  ],
-                                ),
-                              ),
-                              
-                           
-                              Row(
-                                children: [
-                                   Padding(
-                                     padding: const EdgeInsets.only(left: 15,right: 10),
-                                     child: Container(
-                                      decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                        child: Text('Contract',style: TextStyle(color: Colors.white),),
-                                      ),
-                                      
-                                  ),
-                                   ),
-                                   Container(
-                                    decoration: BoxDecoration(color: Color.fromARGB(255, 241, 15, 15),borderRadius: BorderRadius.circular(15)),
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(top: 5,bottom: 5,left: 20,right: 20),
-                                      child: Text('First Shift (Day)',style: TextStyle(color: Colors.white),),
-                                    ),
-                                    
-                                  ),
-                                ],
-                              ),
-                              Padding(
-                               padding: const EdgeInsets.only(left: 20,right: 90,top: 20,bottom: 0),
-                                child: Text('Conway c',style: TextStyle(fontSize: 22,fontWeight: FontWeight.w800),),
-                              ),
-                           
-                              Padding(
-                               padding: const EdgeInsets.only(left: 18,top: 5,bottom: 5),
-                                child: Text('Java Script',style: TextStyle(fontSize: 18,fontWeight: FontWeight.w300),),
-                              ),
-                              Padding(
-                               padding: const EdgeInsets.only(left: 15,top: 5,bottom: 4),
-                                child: Row(
-                                  children: [
-                                    Icon(Icons.location_on_outlined),
-                                    Text('Address',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600),),
-                                     Text(' Anar Darreh',style: TextStyle(fontSize: 20,fontWeight: FontWeight.w300),),
-                                  ],
-                                ),
-                              ),
-                              InkWell(
-                                    onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => dashboardpage(),
-                                      ),
-                                    ),
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 20, right: 20, bottom: 5, top: 10),
-                                        child: Container(
-                                            width: 300,
-                                            height: 40,
-                                            child: Center(
-                                                child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                
-                                                Text("View Detail",
-                                                    style: TextStyle(
-                                                      color: Color.fromARGB(255, 255, 255, 255),
-                                                      fontSize: 18,
-                                                    )),
-                                              ],
-                                            )),
-                                            decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(
-                                                    10), // radius of 10
-                                                color: Color.fromARGB(
-                                                          255, 26, 181, 195),
-                                               
-                                                // green as background color
-                                                )),
-                                      ),
-                                    ),
-                                  ),
-                                  InkWell(
-                                    onTap: () => Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) => dashboardpage(),
-                                      ),
-                                    ),
-                                    child: Align(
-                                      alignment: Alignment.center,
-                                      child: Padding(
-                                        padding: const EdgeInsets.only(
-                                            left: 20, right: 20, bottom: 5, top: 10),
-                                        child: Container(
-                                            width: 300,
-                                            height: 40,
-                                            child: Center(
-                                                child: Row(
-                                              mainAxisAlignment:
-                                                  MainAxisAlignment.center,
-                                              children: [
-                                                
-                                                Text("Save Job",
-                                                    style: TextStyle(
-                                                      color: Color.fromARGB(
-                                                          255, 26, 181, 195),
-                                                      fontSize: 18,
-                                                    )),
-                                              ],
-                                            )),
-                                            decoration: BoxDecoration(
-                                                borderRadius: BorderRadius.circular(
-                                                    10), // radius of 10
-                                                color: Color.fromARGB(
-                                                    255, 254, 254, 254),
-                                                border: Border.all(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
-                                                    width: 2)
-                                                // green as background color
-                                                )),
-                                      ),
-                                    ),
-                                  ),
-                                  
-
-                          ],
-                        ),
-                      ),
-                            ),
                             
                                  SizedBox(
                         width: 10,

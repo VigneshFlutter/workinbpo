@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/dashboard_page.dart';
 import 'package:nav2/edit_profile.dart';
-import 'package:nav2/login_page.dart';
+import 'package:nav2/loginpage/login_page.dart';
 import 'package:nav2/manage_job.dart';
-import 'package:nav2/manage_messages.dart';
-import 'package:nav2/post_job.dart';
+import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/postjobs/post_job.dart';
 
 class managefollowers extends StatefulWidget {
   const managefollowers({Key? key}) : super(key: key);
@@ -22,8 +22,8 @@ class _managefollowersState extends State<managefollowers> {
         title: Container(
           width: 80,
           child: Image.asset('assets/work in bpo.png')),
-          backgroundColor: Color.fromARGB(255, 255, 255, 255),
-            iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
+          backgroundColor: whitecolor,
+            iconTheme: IconThemeData(color: blackcolor),
       ),
       body: SafeArea(
         child: Center(
@@ -105,8 +105,7 @@ class _managefollowersState extends State<managefollowers> {
                                               
                                               Text("View Profile",
                                                   style: TextStyle(
-                                                    color: Color.fromARGB(
-                                                        255, 26, 181, 195),
+                                                    color: buttoncolor,
                                                     fontSize: 18,
                                                   )),
                                             ],
@@ -114,11 +113,9 @@ class _managefollowersState extends State<managefollowers> {
                                           decoration: BoxDecoration(
                                               borderRadius: BorderRadius.circular(
                                                   10), // radius of 10
-                                              color: Color.fromARGB(
-                                                  255, 254, 254, 254),
+                                              color: whitecolor,
                                               border: Border.all(
-                                                  color: Color.fromARGB(
-                                                      255, 26, 181, 195),
+                                                  color: buttoncolor,
                                                   width: 2)
                                               // green as background color
                                               )),
