@@ -95,7 +95,7 @@ class _shortlisted3State extends State<shortlisted3> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 80,
+                                  left: 50,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -238,7 +238,7 @@ class _shortlisted3State extends State<shortlisted3> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 110,
+                                  left: 79,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -382,7 +382,7 @@ class _shortlisted3State extends State<shortlisted3> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 65,
+                                  left: 31,
                                   right: 0,
                                 ),
                                 child: Container(

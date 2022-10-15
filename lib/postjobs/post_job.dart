@@ -37,12 +37,12 @@ class _postjobState extends State<postjob> {
               Row(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 10),
                     child: Text("Find your Posted jobs here",
                                                 style: TextStyle(
                                                   color:
                                                       Color.fromARGB(255, 0, 0, 0),
-                                                  fontSize: 19,fontWeight: FontWeight.bold
+                                                  fontSize: 18,fontWeight: FontWeight.bold
                                                 )),
                   ),
                                               InkWell(
@@ -55,7 +55,7 @@ class _postjobState extends State<postjob> {
                           child: Align(
                             alignment: Alignment.topLeft,
                             child: Padding(
-                              padding: const EdgeInsets.only(left: 20,right: 20,top: 10,bottom: 10),
+                              padding: const EdgeInsets.only(left: 10,right: 20,top: 10,bottom: 10),
                               child: Container(
                                 
                                   width: 100,
@@ -113,7 +113,7 @@ class _postjobState extends State<postjob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 154),
+                                      left: 10, right: 135),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -244,15 +244,17 @@ class _postjobState extends State<postjob> {
                                   padding: const EdgeInsets.only(
                                       left: 10, bottom: 10),
                                   child: Container(
-                                    height: 30,
+                                    height: 35,
                                     decoration: BoxDecoration(border: Border.all(color:greycolor),borderRadius: BorderRadius.circular(30)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                          'Full Time/ Permanent',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w600)),
+                                      child: Center(
+                                        child: Text(
+                                            'Full Time/ Permanent',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600)),
+                                      ),
                                     ),
                                   ),
                                 )
@@ -366,7 +368,7 @@ class _postjobState extends State<postjob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 178),
+                                      left: 10, right: 159),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -497,15 +499,17 @@ class _postjobState extends State<postjob> {
                                   padding: const EdgeInsets.only(
                                       left: 10, bottom: 10),
                                   child: Container(
-                                    height: 30,
+                                    height: 35,
                                     decoration: BoxDecoration(border: Border.all(color: greycolor),borderRadius: BorderRadius.circular(30)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
-                                      child: Text(
-                                          'Contract',
-                                          style: TextStyle(
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w600)),
+                                      child: Center(
+                                        child: Text(
+                                            'Contract',
+                                            style: TextStyle(
+                                                fontSize: 12,
+                                                fontWeight: FontWeight.w600)),
+                                      ),
                                     ),
                                   ),
                                 )
@@ -620,7 +624,7 @@ class _postjobState extends State<postjob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 151),
+                                      left: 10, right: 130),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -751,7 +755,7 @@ class _postjobState extends State<postjob> {
                                   padding: const EdgeInsets.only(
                                       left: 10, bottom: 10),
                                   child: Container(
-                                    height: 30,
+                                    height: 35,
                                     decoration: BoxDecoration(border: Border.all(color: greycolor),borderRadius: BorderRadius.circular(30)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),
@@ -876,7 +880,7 @@ class _postjobState extends State<postjob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 163),
+                                      left: 10, right: 146),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -1007,7 +1011,7 @@ class _postjobState extends State<postjob> {
                                   padding: const EdgeInsets.only(
                                       left: 10, bottom: 10),
                                   child: Container(
-                                    height: 30,
+                                    height: 35,
                                     decoration: BoxDecoration(border: Border.all(color: greycolor),borderRadius: BorderRadius.circular(30)),
                                     child: Padding(
                                       padding: const EdgeInsets.all(8.0),

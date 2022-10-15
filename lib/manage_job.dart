@@ -35,7 +35,7 @@ class _managejobState extends State<managejob> {
                   child: Text('Company Posted Jobs',style: TextStyle(fontSize: 25,fontWeight: FontWeight.w600),),
                 ),
                 Padding(
-                 padding: const EdgeInsets.only(left:5,right: 5),
+                 padding: const EdgeInsets.only(left:5,right: 5,bottom: 5),
                   child: Card(
                     elevation: 1,
                     child: Center(
@@ -60,7 +60,7 @@ class _managejobState extends State<managejob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 125),
+                                      left: 10, right: 105),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -295,7 +295,7 @@ class _managejobState extends State<managejob> {
                   ),
                 ),
                  Padding(
-                  padding: const EdgeInsets.only(left:5,right: 5),
+                  padding: const EdgeInsets.only(left:5,right: 5,bottom: 5),
                   child: Card(
                     elevation: 1,
                     child: Center(
@@ -320,7 +320,7 @@ class _managejobState extends State<managejob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 155),
+                                      left: 10, right: 137),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -536,7 +536,7 @@ class _managejobState extends State<managejob> {
                 ),
 
                  Padding(
-                 padding: const EdgeInsets.only(left:5,right: 5),
+                 padding: const EdgeInsets.only(left:5,right: 5,bottom: 5),
                   child: Card(
                     elevation: 1,
                     child: Center(
@@ -561,7 +561,7 @@ class _managejobState extends State<managejob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 155),
+                                      left: 10, right: 137),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -788,7 +788,7 @@ class _managejobState extends State<managejob> {
                 ),
 
                  Padding(
-                  padding: const EdgeInsets.only(left:5,right: 5),
+                  padding: const EdgeInsets.only(left:5,right: 5,bottom: 5),
                   child: Card(
                     elevation: 1,
                     child: Center(
@@ -813,7 +813,7 @@ class _managejobState extends State<managejob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 163),
+                                      left: 10, right: 146),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -1037,7 +1037,7 @@ class _managejobState extends State<managejob> {
                 ),
 
                  Padding(
-                  padding: const EdgeInsets.only(left:5,right: 5),
+                  padding: const EdgeInsets.only(left:5,right: 5,bottom: 5),
                   child: Card(
                     elevation: 1,
                     child: Center(
@@ -1062,7 +1062,7 @@ class _managejobState extends State<managejob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 150),
+                                      left: 10, right: 132),
                                   child: Column(
                                     children: [
                                       Padding(
@@ -1281,7 +1281,7 @@ class _managejobState extends State<managejob> {
                 ),
 
                  Padding(
-               padding: const EdgeInsets.only(left:5,right: 5),
+               padding: const EdgeInsets.only(left:5,right: 5,bottom: 5),
                   child: Card(
                     elevation: 1,
                     child: Center(
@@ -1306,7 +1306,7 @@ class _managejobState extends State<managejob> {
                                 ),
                                 Padding(
                                   padding: const EdgeInsets.only(
-                                      left: 10, right: 92),
+                                      left: 10, right: 74),
                                   child: Column(
                                     children: [
                                       Padding(

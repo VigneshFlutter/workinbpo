@@ -95,7 +95,7 @@ class _shortlisted1State extends State<shortlisted1> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 80,
+                                  left: 50,
                                   right: 0,
                                 ),
                                 child: Container(

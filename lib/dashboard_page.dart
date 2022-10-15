@@ -1025,7 +1025,7 @@ class _dashboardpageState extends State<dashboardpage> {
                   height: 20,
                 ),
                 SizedBox(
-                  height: 380,
+                  height: 400,
                   child: ListView(
                     scrollDirection: Axis.horizontal,
                     children: <Widget>[

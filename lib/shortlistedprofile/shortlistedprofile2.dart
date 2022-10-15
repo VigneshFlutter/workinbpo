@@ -37,7 +37,7 @@ class _shortlisted2State extends State<shortlisted2> {
         child: Column(
            crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             SizedBox(
+              SizedBox(
                   height: 20,
                 ),
                 Padding(
@@ -95,7 +95,7 @@ class _shortlisted2State extends State<shortlisted2> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 80,
+                                  left: 50,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -238,7 +238,7 @@ class _shortlisted2State extends State<shortlisted2> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 110,
+                                  left: 79,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -328,7 +328,6 @@ class _shortlisted2State extends State<shortlisted2> {
                     ),
                   ),
                 ),
-
           ],
         )),
     );

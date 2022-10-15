@@ -34,8 +34,8 @@ class _shortlisted4State extends State<shortlisted4> {
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
       body: SafeArea(
-        child: Column(
-           crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+           
           children: [
              SizedBox(
                   height: 20,
@@ -95,7 +95,7 @@ class _shortlisted4State extends State<shortlisted4> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 80,
+                                  left: 50,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -238,7 +238,7 @@ class _shortlisted4State extends State<shortlisted4> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 110,
+                                  left: 79,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -382,7 +382,7 @@ class _shortlisted4State extends State<shortlisted4> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 65,
+                                  left: 31,
                                   right: 0,
                                 ),
                                 child: Container(
@@ -511,7 +511,7 @@ class _shortlisted4State extends State<shortlisted4> {
                                         child: Row(
                                           children: [
                                             Text(
-                                              'Suba',
+                                              'Subhasrini TS',
                                               style: TextStyle(
                                                   fontSize: 18,
                                                   fontWeight: FontWeight.w600),
@@ -527,7 +527,7 @@ class _shortlisted4State extends State<shortlisted4> {
                               alignment: Alignment.topLeft,
                               child: Padding(
                                 padding: const EdgeInsets.only(
-                                  left: 150,
+                                  left: 50,
                                   right: 0,
                                 ),
                                 child: Container(
