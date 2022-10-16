@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nav2/dashboard_page.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 
+import '../utils/constants.dart';
+
 class shortlisted4 extends StatefulWidget {
   const shortlisted4({Key? key}) : super(key: key);
 
@@ -29,7 +31,7 @@ class _shortlisted4State extends State<shortlisted4> {
         ],
         title: Center(
             child: Container(
-                width: 80, child: Image.asset('assets/work in bpo.png'))),
+                width: 80, child: Image.asset(APP_LOGO))),
         backgroundColor: whitecolor,
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

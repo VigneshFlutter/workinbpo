@@ -1,15 +1,6 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 
-import 'package:nav2/company_profile.dart';
-import 'package:nav2/edit_profile.dart';
-
-import 'package:nav2/manage_followers.dart';
-import 'package:nav2/manage_job.dart';
-import 'package:nav2/managemessages/manage_messages.dart';
-import 'package:nav2/postjobs/post_job.dart';
-
+import '../utils/constants.dart';
 
 
 class post_a_newjob extends StatefulWidget {
@@ -87,7 +78,7 @@ class _post_a_newjobState extends State<post_a_newjob> {
     appBar: AppBar(
         title: Container(
           width: 80,
-          child: Image.asset('assets/work in bpo.png')),
+          child: Image.asset(APP_LOGO)),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
             iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
@@ -126,12 +117,12 @@ class _post_a_newjobState extends State<post_a_newjob> {
                   width: 345,
                   height: 58,
                  
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black),
-                      borderRadius: BorderRadius.circular(8)),
+                    // color: Colors.white,
+                    // shape: RoundedRectangleBorder(
+                    //   side: BorderSide(color: Colors.black),
+                    //   borderRadius: BorderRadius.circular(8)),
                     
                     child:  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -157,12 +148,12 @@ class _post_a_newjobState extends State<post_a_newjob> {
                   width: 345,
                   height: 58,
                  
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black),
-                      borderRadius: BorderRadius.circular(8)),
+                    // color: Colors.white,
+                    // shape: RoundedRectangleBorder(
+                    //   side: BorderSide(color: Colors.black),
+                    //   borderRadius: BorderRadius.circular(8)),
                     
                     child:  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -188,12 +179,12 @@ class _post_a_newjobState extends State<post_a_newjob> {
                   width: 345,
                   height: 58,
                  
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black),
-                      borderRadius: BorderRadius.circular(8)),
+                    // color: Colors.white,
+                    // shape: RoundedRectangleBorder(
+                    //   side: BorderSide(color: Colors.black),
+                    //   borderRadius: BorderRadius.circular(8)),
                     
                     child:  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -218,12 +209,12 @@ class _post_a_newjobState extends State<post_a_newjob> {
                   width: 345,
                   height: 58,
                  
-                  child: RaisedButton(
+                  child: ElevatedButton(
                     
-                    color: Colors.white,
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: Colors.black),
-                      borderRadius: BorderRadius.circular(8)),
+                    // color: Colors.white,
+                    // shape: RoundedRectangleBorder(
+                    //   side: BorderSide(color: Colors.black),
+                    //   borderRadius: BorderRadius.circular(8)),
                     
                     child:  Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,

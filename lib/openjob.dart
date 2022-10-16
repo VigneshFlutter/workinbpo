@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nav2/utils/constants.dart';
 
 import 'managemessages/manage_messages.dart';
 
@@ -29,7 +30,7 @@ class _openjobState extends State<openjob> {
         ],
         title: Center(
             child: Container(
-                width: 80, child: Image.asset('assets/work in bpo.png'))),
+                width: 80, child: Image.asset(APP_LOGO))),
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

@@ -9,6 +9,8 @@ import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/postjobs/post_a_newjob.dart';
 
+import '../utils/constants.dart';
+
 const activecolor = Colors.green;
 
 class postjob extends StatefulWidget {
@@ -25,7 +27,7 @@ class _postjobState extends State<postjob> {
        appBar: AppBar(
         title: Container(
           width: 80,
-          child: Image.asset('assets/work in bpo.png')),
+          child: Image.asset(APP_LOGO)),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
             iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
@@ -36,8 +38,8 @@ class _postjobState extends State<postjob> {
             children: [
               Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 10),
+                  const Padding(
+                    padding:  EdgeInsets.only(left: 10),
                     child: Text("Find your Posted jobs here",
                                                 style: TextStyle(
                                                   color:

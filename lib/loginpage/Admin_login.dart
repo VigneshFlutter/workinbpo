@@ -7,6 +7,8 @@ import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/postjobs/post_job.dart';
 
+import '../utils/constants.dart';
+
 class adminlogin extends StatefulWidget {
   const adminlogin({Key? key}) : super(key: key);
 
@@ -21,7 +23,7 @@ class _adminloginState extends State<adminlogin> {
        appBar: AppBar(
         title: Container(
           width: 80,
-          child: Image.asset('assets/work in bpo.png')),
+          child: Image.asset(APP_LOGO)),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
             iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

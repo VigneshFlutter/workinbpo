@@ -1,0 +1,1 @@
+String APP_LOGO = 'assets/icons/applogo.png';

@@ -4,6 +4,7 @@ import 'package:nav2/shortlistedprofile/shortlistedprofile1.dart';
 import 'package:nav2/shortlistedprofile/shortlistedprofile2.dart';
 import 'package:nav2/shortlistedprofile/shortlistedprofile3.dart';
 import 'package:nav2/shortlistedprofile/shortlistedprofile4.dart';
+import 'package:nav2/utils/constants.dart';
 
 class managejob extends StatefulWidget {
   const managejob({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _managejobState extends State<managejob> {
     return Scaffold(
       appBar: AppBar(
         title:
-            Container(width: 80, child: Image.asset('assets/work in bpo.png')),
+            Container(width: 80, child: Image.asset(APP_LOGO)),
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nav2/Registerpage.dart';
 
+import '../utils/constants.dart';
+
 
 
 class LoginPage extends StatefulWidget {
@@ -27,7 +29,7 @@ class _LoginPageState extends State<LoginPage> {
               SizedBox(
                   width: 70,
                   height: 70,
-                  child: Image.asset('assets/work in bpo.png')),
+                  child: Image.asset(APP_LOGO)),
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Text(

@@ -12,6 +12,7 @@ import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/managemessages/manage_messages_receiv.dart';
 import 'package:nav2/openjob.dart';
 import 'package:nav2/postjobs/post_job.dart';
+import 'package:nav2/utils/constants.dart';
 import 'package:syncfusion_flutter_datagrid/datagrid.dart';
 
 const buttoncolor = const Color.fromARGB(255, 26, 181, 195);
@@ -60,7 +61,7 @@ class _dashboardpageState extends State<dashboardpage> {
         ],
         title: Center(
             child: Container(
-                width: 80, child: Image.asset('assets/work in bpo.png'))),
+                width: 80, child: Image.asset(APP_LOGO))),
         backgroundColor: whitecolor,
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

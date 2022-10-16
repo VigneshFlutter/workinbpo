@@ -5,6 +5,7 @@ import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/postjobs/post_job.dart';
+import 'package:nav2/utils/constants.dart';
 
 
  const jobcardcolor =   Color.fromARGB(255, 241, 15, 15);
@@ -36,7 +37,7 @@ class _companyprofileState extends State<companyprofile> {
         ],
         title: Center(
             child: Container(
-                width: 80, child: Image.asset('assets/work in bpo.png'))),
+                width: 80, child: Image.asset(APP_LOGO))),
         backgroundColor: whitecolor,
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

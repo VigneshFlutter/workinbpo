@@ -6,6 +6,7 @@ import 'package:nav2/loginpage/login_page.dart';
 import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/postjobs/post_job.dart';
+import 'package:nav2/utils/constants.dart';
 
 class managefollowers extends StatefulWidget {
   const managefollowers({Key? key}) : super(key: key);
@@ -21,7 +22,7 @@ class _managefollowersState extends State<managefollowers> {
        appBar: AppBar(
         title: Container(
           width: 80,
-          child: Image.asset('assets/work in bpo.png')),
+          child: Image.asset(APP_LOGO)),
           backgroundColor: whitecolor,
             iconTheme: IconThemeData(color: blackcolor),
       ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:nav2/dashboard_page.dart';
 import 'package:nav2/loginpage/login_page.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/utils/constants.dart';
 
 const stripecolor = Color.fromARGB(255, 72, 2, 170);
 const plancolor =  Color.fromARGB(255, 235, 47, 169);
@@ -36,7 +37,7 @@ class _jobplangoldState extends State<jobplangold> {
         ],
         title: Center(
             child: Container(
-                width: 80, child: Image.asset('assets/work in bpo.png'))),
+                width: 80, child: Image.asset(APP_LOGO))),
         backgroundColor: whitecolor,
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),

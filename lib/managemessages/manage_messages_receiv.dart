@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../utils/constants.dart';
+
 
 class managemessagereceive extends StatefulWidget {
   const managemessagereceive({Key? key}) : super(key: key);
@@ -23,7 +25,7 @@ appBar: AppBar(
         ],
         title: Center(
             child: Container(
-                width: 80, child: Image.asset('assets/work in bpo.png'))),
+                width: 80, child: Image.asset(APP_LOGO))),
         backgroundColor: Color.fromARGB(255, 255, 255, 255),
         iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
@@ -226,7 +228,7 @@ class _managemessagereceive2State extends State<managemessagereceive2> {
        appBar: AppBar(
         title: Container(
           width: 80,
-          child: Image.asset('assets/work in bpo.png')),
+          child: Image.asset(APP_LOGO)),
           backgroundColor: Color.fromARGB(255, 255, 255, 255),
             iconTheme: IconThemeData(color: Color.fromARGB(255, 0, 1, 0)),
       ),
