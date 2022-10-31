@@ -4,7 +4,7 @@ import 'package:nav2/company_profile.dart';
 import 'package:nav2/edit_profile.dart';
 import 'package:nav2/jobplan/job_diamondplan.dart';
 import 'package:nav2/jobplan/job_goldplan.dart';
-import 'package:nav2/loginpage/login_page.dart';
+
 
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';

@@ -1,12 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nav2/company_profile.dart';
-import 'package:nav2/dashboard_page.dart';
-import 'package:nav2/edit_profile.dart';
-import 'package:nav2/loginpage/login_page.dart';
-import 'package:nav2/manage_followers.dart';
-import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages_receiv.dart';
-import 'package:nav2/postjobs/post_job.dart';
+
 
 import '../utils/constants.dart';
 

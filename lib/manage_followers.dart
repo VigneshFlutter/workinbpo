@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/dashboard_page.dart';
 import 'package:nav2/edit_profile.dart';
-import 'package:nav2/loginpage/login_page.dart';
+import 'package:nav2/loginpage/Admin_login.dart';
+
 import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/postjobs/post_job.dart';
@@ -87,7 +88,7 @@ class _managefollowersState extends State<managefollowers> {
                                   onTap: () => Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => LoginPage(),
+                                      builder: (context) => adminlogin(),
                                     ),
                                   ),
                                   child: Align(

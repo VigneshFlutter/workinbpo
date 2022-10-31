@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/dashboard_page.dart';
-import 'package:nav2/loginpage/login_page.dart';
+import 'package:nav2/loginpage/Admin_login.dart';
+
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
@@ -141,7 +142,7 @@ class _editprofileState extends State<editprofile> {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const LoginPage(),
+                                builder: (context) => const adminlogin(),
                               ),
                             ),
                             child: Align(
@@ -157,7 +158,7 @@ class _editprofileState extends State<editprofile> {
                                       color: buttoncolor,
                                       // green as background color
                                     ),
-                                    child: Center(
+                                    child: const Center(
                                         child: Text(" Select Company Logo ",
                                             style: TextStyle(
                                               color:
@@ -514,7 +515,7 @@ class _editprofileState extends State<editprofile> {
                             onTap: () => Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const LoginPage(),
+                                builder: (context) => const adminlogin(),
                               ),
                             ),
                             child: Align(
