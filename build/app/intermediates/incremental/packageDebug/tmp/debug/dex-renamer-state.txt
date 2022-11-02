@@ -1,4 +1,4 @@
-#Mon Oct 31 14:43:34 IST 2022
+#Tue Nov 01 12:00:20 IST 2022
 base.0=/Users/shripranav/Projects/knownjobz-recruiter/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 renamed.0=classes.dex
 path.0=classes.dex
