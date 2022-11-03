@@ -102,15 +102,15 @@ class _dashboardpageState extends State<dashboardpage> {
                                   padding: const EdgeInsets.only(top: 15),
                                  child: Image.asset('assets/openjob.png',width: 40,height: 40,),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15),
+                                const Padding(
+                                  padding:  EdgeInsets.only(top: 15),
                                   child: Text(
                                     'Open jobs',
                                     style: TextStyle(fontSize: 20),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15),
+                                const Padding(
+                                  padding:  EdgeInsets.only(top: 15),
                                   child: Text(
                                     '6',
                                     style: TextStyle(fontSize: 20,color: Color.fromARGB(255, 50, 153, 238)),
@@ -192,17 +192,17 @@ class _dashboardpageState extends State<dashboardpage> {
                             width: 170,
                             height: 150,
                             child: Column(
-                              children: [
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15),
+                              children: const [
+                                 Padding(
+                                  padding:  EdgeInsets.only(top: 15),
                                   child: Icon(
                                     Icons.mail,
                                     size: 40,
                                     color: Color.fromARGB(255, 255, 231, 11),
                                   ),
                                 ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 15),
+                                 Padding(
+                                  padding:  EdgeInsets.only(top: 15),
                                   child: Text(
                                     'Messages',
                                     style: TextStyle(fontSize: 20),

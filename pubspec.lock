@@ -128,13 +128,6 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
-  horizontal_data_table:
-    dependency: "direct main"
-    description:
-      name: horizontal_data_table
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "2.5.2"
   http:
     dependency: "direct main"
     description:
@@ -262,12 +255,12 @@ packages:
     source: hosted
     version: "4.2.4"
   provider:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: provider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.3.3"
+    version: "6.0.4"
   shared_preferences:
     dependency: "direct main"
     description:
