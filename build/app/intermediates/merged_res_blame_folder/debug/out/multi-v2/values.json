@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/shripranav/Projects/knownjobz-recruiter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/shripranav/Projects/workinbpo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
-                {
-                    "source": "/Users/shripranav/Projects/knownjobz-recruiter/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
-                    },
-                    "to": {
-                        "startLines": "93,98",
-                        "startColumns": "4,4",
-                        "startOffsets": "5462,5770",
-                        "endLines": "97,100",
-                        "endColumns": "12,12",
-                        "endOffsets": "5765,5934"
-                    }
-                },
                 {
                     "source": "/Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/res/values/values.xml",
                     "from": {
@@ -39,6 +20,25 @@
                         "endLines": "7,8,9,10,72,121,125,274,291,299",
                         "endColumns": "11,59,51,44,59,24,24,24,24,24",
                         "endOffsets": "289,349,401,446,4387,7249,7446,16407,17521,17914"
+                    }
+                },
+                {
+                    "source": "/Users/shripranav/Projects/workinbpo/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
+                    },
+                    "to": {
+                        "startLines": "93,98",
+                        "startColumns": "4,4",
+                        "startOffsets": "5462,5770",
+                        "endLines": "97,100",
+                        "endColumns": "12,12",
+                        "endOffsets": "5765,5934"
                     }
                 },
                 {

@@ -93,7 +93,7 @@
     },
     {
       "name": "flutter",
-      "rootUri": "file:///Users/shripranav/Projects/flutter/packages/flutter",
+      "rootUri": "file:///Users/shripranav/sdk/flutter/packages/flutter",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -105,13 +105,13 @@
     },
     {
       "name": "flutter_test",
-      "rootUri": "file:///Users/shripranav/Projects/flutter/packages/flutter_test",
+      "rootUri": "file:///Users/shripranav/sdk/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
     {
       "name": "flutter_web_plugins",
-      "rootUri": "file:///Users/shripranav/Projects/flutter/packages/flutter_web_plugins",
+      "rootUri": "file:///Users/shripranav/sdk/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -129,9 +129,9 @@
     },
     {
       "name": "intl",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/intl-0.15.8",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/intl-0.17.0",
       "packageUri": "lib/",
-      "languageVersion": "2.0"
+      "languageVersion": "2.12"
     },
     {
       "name": "ionicons",
@@ -153,9 +153,9 @@
     },
     {
       "name": "lottie",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/lottie-1.4.2",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/lottie-1.4.3",
       "packageUri": "lib/",
-      "languageVersion": "2.12"
+      "languageVersion": "2.18"
     },
     {
       "name": "matcher",
@@ -279,13 +279,13 @@
     },
     {
       "name": "sky_engine",
-      "rootUri": "file:///Users/shripranav/Projects/flutter/bin/cache/pkg/sky_engine",
+      "rootUri": "file:///Users/shripranav/sdk/flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "source_span",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/source_span-1.9.1",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/source_span-1.9.0",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -309,13 +309,13 @@
     },
     {
       "name": "syncfusion_flutter_core",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.3.52",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_core-20.3.56",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "syncfusion_flutter_datagrid",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_datagrid-20.3.52",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/syncfusion_flutter_datagrid-20.3.56",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -345,7 +345,7 @@
     },
     {
       "name": "win32",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/win32-3.0.1",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/win32-3.1.1",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -362,7 +362,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-11-02T05:23:56.269101Z",
+  "generated": "2022-11-11T10:31:30.436263Z",
   "generator": "pub",
-  "generatorVersion": "2.19.0-66.0.dev"
+  "generatorVersion": "2.18.4"
 }

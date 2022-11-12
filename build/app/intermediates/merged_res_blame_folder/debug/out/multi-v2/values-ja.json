@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/shripranav/Projects/knownjobz-recruiter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
+            "outputFile": "/Users/shripranav/Projects/workinbpo/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-ja/values-ja.xml",
             "map": [
                 {
                     "source": "/Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/res/values-ja/values-ja.xml",
