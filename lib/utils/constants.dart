@@ -11,6 +11,8 @@ const String MASTER_URL = '${APP_BASE_URL}masters';
 const String ADD_STATES_API = '${APP_BASE_URL}loadstates/' ;
 const String ADD_CITY_API = '${APP_BASE_URL}loadcities/' ;
 const String EDIT_PROFILE_API = '${APP_BASE_URL}update-company-profile' ;
+const String COMPANY_POSTED_JOBS_URL = "${APP_BASE_URL}c";
+
 
 
 String USER_TOKEN = 'user_auth';
@@ -22,3 +24,8 @@ const APPCOLOR =   Color(0xFF336FA3);
 //Lottie Files
 const String APP_LOADING = 'assets/lottie/apploading.json';
 const String COLOR_LOADING = 'assets/lottie/colorLoading.json';
+
+//Icons
+const String RUPEE_ICON = 'assets/rupee.png';
+const String PEOPLES_ICON = 'assets/peoples.png';
+const String SHORT_LIST_ICON = 'assets/shortlist-icon.png';

@@ -5,6 +5,7 @@ import 'package:nav2/dashboard_page.dart';
 import 'package:nav2/manage_followers.dart';
 import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
+import 'package:nav2/postjobs/company_posted_jobs.dart';
   
 
   
@@ -20,8 +21,8 @@ class _bottom_navigationState extends State<bottom_navigation> {
   
   final pages = [
     const dashboardpage(),
+    const CompanyPostedJobs() ,
     const managemessages(),
-    const managejob(),
     const companyprofile(),
   ];
   
@@ -30,185 +31,35 @@ class _bottom_navigationState extends State<bottom_navigation> {
     return Scaffold(
      
       body: Container(child: pages[pageIndex]),
-      bottomNavigationBar: buildMyNavBar(context),
-    );
-  }
-  
-  Container buildMyNavBar(BuildContext context) {
-    return Container(
-      height: 60,
-      decoration: BoxDecoration(
-        color: Color.fromARGB(255, 255, 255, 255),
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(0),
-          topRight: Radius.circular(0),
-        ),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                pageIndex = 0;
-              });
-            },
-            icon: pageIndex == 0
-                ? const Icon(
-                    Icons.home,
-                    color: Colors.black,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.home_outlined,
-                    color: Color.fromARGB(255, 0, 0, 0),
-                    size: 35,
-                  ),
-          ),
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                pageIndex = 1;
-              });
-            },
-            icon: pageIndex == 1
-                ? const Icon(
-                    Icons.mail,
-                   color: Colors.black,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.mail_outline_outlined,
-                    color: Colors.black,
-                    size: 35,
-                  ),
-          ),
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                pageIndex = 2;
-              });
-            },
-            icon: pageIndex == 2
-                ? const Icon(
-                    Icons.manage_search,
-                   color: Colors.black,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.manage_search,
-                    color: Colors.black,
-                    size: 35,
-                  ),
-          ),
-          IconButton(
-            enableFeedback: false,
-            onPressed: () {
-              setState(() {
-                pageIndex = 3;
-              });
-            },
-            icon: pageIndex == 3
-                ? const Icon(
-                    Icons.person,
-                    color: Colors.black,
-                    size: 35,
-                  )
-                : const Icon(
-                    Icons.person_outline,
-                    color: Colors.black,
-                    size: 35,
-                  ),
-          ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.grey,
+        currentIndex: pageIndex,
+        onTap: (val){
+          setState(() {
+            pageIndex = val ;
+          });
+        },
+        items: const [
+          BottomNavigationBarItem(
+            label: 'Home',
+              icon: Icon(Icons.home,)) ,
+
+          BottomNavigationBarItem(
+              label: 'Jobs',
+              icon: Icon(Icons.work,)) ,
+
+          BottomNavigationBarItem(
+              label: 'Followers',
+              icon: Icon(Icons.favorite,)) ,
+
+          BottomNavigationBarItem(
+              label: 'Profile',
+              icon: Icon(Icons.person,)) ,
         ],
       ),
     );
   }
+
 }
   
-// class Page1 extends StatelessWidget {
-//   const Page1({Key? key}) : super(key: key);
-  
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: const Color(0xffC4DFCB),
-//       child: Center(
-//         child: Text(
-//           "Page Number 1",
-//           style: TextStyle(
-//             color: Colors.green[900],
-//             fontSize: 45,
-//             fontWeight: FontWeight.w500,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-  
-// class Page2 extends StatelessWidget {
-//   const Page2({Key? key}) : super(key: key);
-  
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: const Color(0xffC4DFCB),
-//       child: Center(
-//         child: Text(
-//           "Page Number 2",
-//           style: TextStyle(
-//             color: Colors.green[900],
-//             fontSize: 45,
-//             fontWeight: FontWeight.w500,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-  
-// class Page3 extends StatelessWidget {
-//   const Page3({Key? key}) : super(key: key);
-  
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: const Color(0xffC4DFCB),
-//       child: Center(
-//         child: Text(
-//           "Page Number 3",
-//           style: TextStyle(
-//             color: Colors.green[900],
-//             fontSize: 45,
-//             fontWeight: FontWeight.w500,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
-  
-// class Page4 extends StatelessWidget {
-//   const Page4({Key? key}) : super(key: key);
-  
-//   @override
-//   Widget build(BuildContext context) {
-//     return Container(
-//       color: const Color(0xffC4DFCB),
-//       child: Center(
-//         child: Text(
-//           "Page Number 4",
-//           style: TextStyle(
-//             color: Colors.green[900],
-//             fontSize: 45,
-//             fontWeight: FontWeight.w500,
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
