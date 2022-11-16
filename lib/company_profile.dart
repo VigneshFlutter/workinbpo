@@ -76,9 +76,9 @@ class _companyprofileState extends State<companyprofile> {
       body: SafeArea(
         child: isLoading ? const LoadingWidget():  ListView(
           children: [
-            const SizedBox(
-              height: 20,
-            ),
+            // const SizedBox(
+            //   height: 20,
+            // ),
             const Padding(
               padding: EdgeInsets.only(left: 8.0),
               child: Text(

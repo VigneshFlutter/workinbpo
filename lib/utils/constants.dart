@@ -11,8 +11,9 @@ const String MASTER_URL = '${APP_BASE_URL}masters';
 const String ADD_STATES_API = '${APP_BASE_URL}loadstates/' ;
 const String ADD_CITY_API = '${APP_BASE_URL}loadcities/' ;
 const String EDIT_PROFILE_API = '${APP_BASE_URL}update-company-profile' ;
-const String COMPANY_POSTED_JOBS_URL = "${APP_BASE_URL}c";
-
+const String COMPANY_POSTED_JOBS_URL = "${APP_BASE_URL}company-jobs";
+const String MANAGE_FOLLOWERS_URL = '${APP_BASE_URL}company-followers';
+const String PACKAGES_LIST_API = '${APP_BASE_URL}packages';
 
 
 String USER_TOKEN = 'user_auth';
@@ -29,3 +30,10 @@ const String COLOR_LOADING = 'assets/lottie/colorLoading.json';
 const String RUPEE_ICON = 'assets/rupee.png';
 const String PEOPLES_ICON = 'assets/peoples.png';
 const String SHORT_LIST_ICON = 'assets/shortlist-icon.png';
+const String EDIT_ICON = 'assets/edit.svg';
+const String DELETE_ICON = 'assets/trash-2.svg' ;
+const String CANDIDATE_ICON = 'assets/user.svg';
+const String SHORTLIST_ICON = 'assets/check-square.svg';
+const String PRICE_TAG = 'assets/priceTags.png';
+const String FROM_DATE_ICON = 'assets/startCalendar.png';
+const String TO_DATE_ICON = 'assets/toCalendar.png' ;

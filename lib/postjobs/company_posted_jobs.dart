@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:nav2/model/company_posted_jobs_model.dart';
 import 'package:nav2/utils/constants.dart';
@@ -78,18 +79,19 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                   itemBuilder: (context , index){
                     return Column(
                       children: [
-
+                        const SizedBox(height: 10,) ,
                         data?.jobs?.data?[index].company?.logo == null ? ClipRRect(
                           borderRadius: BorderRadius.circular(13),
                           child: Image.asset(APP_LOGO , height: 55, width: 95,),
                         ):
                         Row(
-                          crossAxisAlignment: CrossAxisAlignment.center ,
+                          crossAxisAlignment: CrossAxisAlignment.start ,
                           children: [
                             ClipRRect(
                               borderRadius: BorderRadius.circular(12),
                               child: Image.network(IMAGEBASEURL+data!.jobs!.data![index].company!.logo! ,
                                 height: 95,
+                                fit: BoxFit.fill,
                                 width: 95,),
                             ) ,
                             Expanded(
@@ -153,113 +155,134 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
 
                         const SizedBox(height: 20,) ,
 
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start ,
-                          children: [
-                            InkWell(
-                              onTap: ()=> print('Pressed'),
-                              child: Container(
-                                height: 55,
-                                width: 125,
-                                decoration: BoxDecoration(
-                                  color: Colors.black ,
-                                  borderRadius: BorderRadius.circular(12)
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center ,
-                                  children: const [
-                                    Icon(Icons.edit , size: 24, color: Colors.white,) ,
-                                    SizedBox(width: 15,) ,
-                                    Text('Edit' , style: TextStyle(
-                                      fontSize: 14 ,
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.w600
-                                    ),)
-                                  ],
-                                ),
-                              ),
+                        InkWell(
+                          onTap: ()=> moreBottomSheet(),
+                          child: Container(
+                            height: 55,
+                            width: width!- 50,
+                            decoration: BoxDecoration(
+                              color: APPCOLOR ,
+                              borderRadius: BorderRadius.circular(6)
                             ),
-                            const SizedBox(width: 30,) ,
-                            InkWell(
-                              onTap: ()=> print('Pressed'),
-                              child: Container(
-                                height: 55,
-                                width: 125,
-                                decoration: BoxDecoration(
-                                    color: Colors.redAccent ,
-                                    borderRadius: BorderRadius.circular(12)
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center ,
-                                  children: const [
-                                    Icon(Icons.delete , size: 24, color: Colors.white,) ,
-                                    SizedBox(width: 15,) ,
-                                    Text('delete' , style: TextStyle(
-                                        fontSize: 14 ,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600
-                                    ),)
-                                  ],
-                                ),
-                              ),
+                            child: const Center(
+                              child: Text('More' ,
+                              style: TextStyle(
+                                fontSize: 15 ,
+                                color: Colors.white
+                              ),),
                             ),
-                          ],
-                        ),
-                        const SizedBox(height: 20,) ,
-
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.start ,
-                          children: [
-                            InkWell(
-                              onTap: ()=> print('Pressed'),
-                              child: Container(
-                                height: 55,
-                                width: 125,
-                                decoration: BoxDecoration(
-                                    color: APPCOLOR,
-                                    borderRadius: BorderRadius.circular(12)
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center ,
-                                  children:  [
-                                    Image.asset(SHORT_LIST_ICON , height: 35, width: 35, color: Colors.white,) ,
-                                    const SizedBox(width: 15,) ,
-                                    const Text('Shortlist candidate' , style: TextStyle(
-                                        fontSize: 14 ,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600
-                                    ),)
-                                  ],
-                                ),
-                              ),
-                            ),
-                            const SizedBox(width: 30,) ,
-                            InkWell(
-                              onTap: ()=> print('Pressed'),
-                              child: Container(
-                                height: 55,
-                                width: 175,
-                                decoration: BoxDecoration(
-                                    color: APPCOLOR ,
-                                    borderRadius: BorderRadius.circular(12)
-                                ),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.center ,
-                                  children:  [
-                                    Image.asset(PEOPLES_ICON , height: 35, width: 35, color: Colors.white,) ,
-                                    // Icon(Icons.delete , size: 24, color: Colors.white,) ,
-                                    const SizedBox(width: 15,) ,
-                                    const Text('List of candidate' , style: TextStyle(
-                                        fontSize: 14 ,
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.w600
-                                    ),)
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ) ,
+                        //
+                        // const SizedBox(height: 20,) ,
+                        //
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.start ,
+                        //   children: [
+                        //     InkWell(
+                        //       onTap: ()=> print('Pressed'),
+                        //       child: Container(
+                        //         height: 55,
+                        //         width: 125,
+                        //         decoration: BoxDecoration(
+                        //           color: Colors.black ,
+                        //           borderRadius: BorderRadius.circular(12)
+                        //         ),
+                        //         child: Row(
+                        //           mainAxisAlignment: MainAxisAlignment.center ,
+                        //           children: const [
+                        //             Icon(Icons.edit , size: 18, color: Colors.white,) ,
+                        //             SizedBox(width: 5,) ,
+                        //             Text('Edit' , style: TextStyle(
+                        //               fontSize: 12 ,
+                        //               color: Colors.white,
+                        //               fontWeight: FontWeight.w600
+                        //             ),)
+                        //           ],
+                        //         ),
+                        //       ),
+                        //     ),
+                        //     const SizedBox(width: 30,) ,
+                        //     InkWell(
+                        //       onTap: ()=> print('Pressed'),
+                        //       child: Container(
+                        //         height: 55,
+                        //         width: 125,
+                        //         decoration: BoxDecoration(
+                        //             color: Colors.redAccent ,
+                        //             borderRadius: BorderRadius.circular(12)
+                        //         ),
+                        //         child: Row(
+                        //           mainAxisAlignment: MainAxisAlignment.center ,
+                        //           children: const [
+                        //             Icon(Icons.delete , size: 18, color: Colors.white,) ,
+                        //             SizedBox(width: 5,) ,
+                        //             Text('delete' , style: TextStyle(
+                        //                 fontSize: 12 ,
+                        //                 color: Colors.white,
+                        //                 fontWeight: FontWeight.w600
+                        //             ),)
+                        //           ],
+                        //         ),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
+                        // const SizedBox(height: 20,) ,
+                        //
+                        // Row(
+                        //   mainAxisAlignment: MainAxisAlignment.start ,
+                        //   children: [
+                        //     InkWell(
+                        //       onTap: ()=> print('Pressed'),
+                        //       child: Container(
+                        //         height: 55,
+                        //         width: width!/2 -40,
+                        //         decoration: BoxDecoration(
+                        //             color: APPCOLOR,
+                        //             borderRadius: BorderRadius.circular(12)
+                        //         ),
+                        //         child: Row(
+                        //           mainAxisAlignment: MainAxisAlignment.center ,
+                        //           children:  [
+                        //             Image.asset(SHORT_LIST_ICON , height: 20, width: 20, color: Colors.white,) ,
+                        //             const SizedBox(width: 5,) ,
+                        //             const Text('Shortlist candidate' , style: TextStyle(
+                        //                 fontSize: 12 ,
+                        //                 color: Colors.white,
+                        //                 fontWeight: FontWeight.w600
+                        //             ),)
+                        //           ],
+                        //         ),
+                        //       ),
+                        //     ),
+                        //     const SizedBox(width: 30,) ,
+                        //     InkWell(
+                        //       onTap: ()=> print('Pressed'),
+                        //       child: Container(
+                        //         height: 55,
+                        //         width: width! / 2- 20,
+                        //         decoration: BoxDecoration(
+                        //             color: APPCOLOR ,
+                        //             borderRadius: BorderRadius.circular(12)
+                        //         ),
+                        //         child: Row(
+                        //           mainAxisAlignment: MainAxisAlignment.center ,
+                        //           children:  [
+                        //             Image.asset(PEOPLES_ICON , height: 20, width: 20, color: Colors.white,) ,
+                        //             // Icon(Icons.delete , size: 24, color: Colors.white,) ,
+                        //             const SizedBox(width: 5,) ,
+                        //             const Text('List of candidate' , style: TextStyle(
+                        //                 fontSize: 12 ,
+                        //                 color: Colors.white,
+                        //                 fontWeight: FontWeight.w600
+                        //             ),)
+                        //           ],
+                        //         ),
+                        //       ),
+                        //     ),
+                        //   ],
+                        // ),
                         const SizedBox(height: 20,) ,
 
                         Container(height: 1, width: width, color: Colors.grey,) ,
@@ -274,4 +297,79 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
       ),
     );
   }
+
+  void moreBottomSheet() {
+    showBottomSheet(
+        context: context,
+        builder: (context){
+          return Container(
+            height: height!/2,
+            width: width,
+            decoration: const BoxDecoration(
+              color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey ,
+                  blurRadius: 2.0
+                ) ,
+                BoxShadow(
+                    color: Colors.grey ,
+                    blurRadius: 2.0
+                ) ,
+                BoxShadow(
+                    color: Colors.grey ,
+                    blurRadius: 2.0
+                )
+              ],
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(12) ,
+                topRight: Radius.circular(12)
+              )
+            ),
+            child: Column(
+              children: [
+                const SizedBox(height: 20,) ,
+                Align(
+                  alignment: Alignment.topRight,
+                  child: IconButton(
+                    onPressed: ()=> Navigator.pop(context),
+                    icon: const Icon(Icons.cancel),
+                  ),
+                ),
+                const SizedBox(height: 10,) ,
+                Expanded(
+                  flex: 3,
+                    child: ListView(
+                      physics: const NeverScrollableScrollPhysics(),
+                      children: [
+                        ListTile(
+                          title: const Text("Edit"),
+                          leading:  SvgPicture.asset(EDIT_ICON),
+                          onTap: ()=> print('Pressed edit '),
+                        ) ,
+                        ListTile(
+                          title: Text('Delete'),
+                          leading: SvgPicture.asset(DELETE_ICON),
+                          onTap: () => print('Pressed delete'),
+                        ) ,
+
+                        ListTile(
+                          title: const Text('List of Candidate'),
+                          leading: SvgPicture.asset(CANDIDATE_ICON),
+                          onTap: ()=> print('Pressed candidate'),
+                        ) , 
+                        
+                        ListTile(
+                          title: Text('List of shortlist'),
+                          leading: Image.asset(SHORT_LIST_ICON , height: 20, width: 20,),
+                          onTap: ()=> print('Pressed shortlist'),
+                        )
+                      ],
+                    ))
+              ],
+            ),
+          );
+        });
+  }
+
 }

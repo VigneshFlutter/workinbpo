@@ -94,9 +94,9 @@ class Company {
   String? fax;
   String? phone;
   String? logo;
-  int? countryId;
+  dynamic countryId;
   int? stateId;
-  int? cityId;
+  dynamic cityId;
   String? slug;
   int? isActive;
   int? isFeatured;
