@@ -190,6 +190,165 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                   ],
                 ),
               ),
+            ) ,
+
+            const SizedBox(height: 20,) ,
+
+            data!.company!.package == null ? Container():
+            const Text('Update your Packages' ,
+            style: TextStyle(
+                fontSize: 22 ,
+                fontWeight: FontWeight.w600
+            ),) ,
+
+            SizedBox(height: 10,) ,
+
+            SizedBox(
+              height: 400 * data!.packages!.length.toDouble(),
+              width: width,
+
+              child: ListView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                itemCount: data!.packages!.length,
+                  itemBuilder: (context , index){
+                return Align(
+                  alignment: Alignment.topLeft,
+                  child: Container(
+                    height:  width! / 2 + 100,
+                    width:  width! / 2 + 100,
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 10.0 ,
+                      horizontal: 5.0
+                    ),
+                    decoration: BoxDecoration(
+                      color: Colors.white ,
+                      borderRadius: BorderRadius.circular(15) ,
+                      boxShadow: const [
+                        BoxShadow(
+                          color: Colors.grey ,
+                          blurRadius: 2.0
+                        ) ,
+
+                        BoxShadow(
+                            color: Colors.grey ,
+                            blurRadius: 2.0
+                        ) ,
+
+                        BoxShadow(
+                            color: Colors.grey ,
+                            blurRadius: 2.0
+                        )
+                      ]
+                    ),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 35,
+                          width: width,
+
+                          decoration: const BoxDecoration(
+                            color: Colors.deepOrangeAccent ,
+                            borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(15) ,
+                              topRight: Radius.circular(15)
+                            )
+                          ),
+                          child: Center(
+                            child: Text(data!.packages![index].packageTitle! ,
+                            style: const TextStyle(
+                              fontSize: 14 ,
+                              fontWeight: FontWeight.w600 ,
+                              color: Colors.white
+                            ),),
+                          ),
+                        ) ,
+                        SizedBox(height: 15,) ,
+
+                        ListTile(
+                          leading: Image.asset(RUPEE_ICON , height: 21, width: 21,),
+                          title: Text('Package pricing at : ${data!.packages![index].packagePrice!.toString()}' ,
+                          style: const TextStyle(
+                            fontSize: 13 ,
+                            fontWeight: FontWeight.w500
+                          ),),
+                        ) ,
+                        ListTile(
+                          leading: Image.asset(CHECKMARK_ICON , height: 21, width: 21,),
+                          title: RichText(
+                            text: TextSpan(
+                              text: 'Can post jobs : ',
+                              style: const TextStyle(
+                                fontWeight: FontWeight.w500 ,
+                                color: Colors.black,
+                                fontSize: 13
+                              ) ,
+                              children: [
+                                TextSpan(
+                                    text: data!.packages![index].packageNumListings!.toString(),
+                                style: const TextStyle(
+                                  fontSize: 16 ,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600
+                                ))
+                              ]
+                            ),
+                          ),
+                        ) ,
+
+                        ListTile(
+                          leading: Image.asset(CHECKMARK_ICON , height: 21, width: 21,),
+                          title: RichText(
+                            text:  TextSpan(
+                              text: "Package duration : " ,
+                              style: const TextStyle(
+                                fontSize: 13 ,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: data!.packages![index].packageNumDays!.toString() ,
+                                  style: const TextStyle(
+                                    fontSize: 16 ,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                ) ,
+                                const TextSpan(
+                                  text: ' days' ,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500 ,
+                                    fontSize: 13
+                                  )
+                                )
+                              ]
+                            ),
+                          ),
+                        ) ,
+
+                        InkWell(
+                          onTap: ()=> print('Pressed '),
+                          child: Container(
+                            height: 45,
+                            width: 150,
+                            decoration: BoxDecoration(
+                              color: APPCOLOR ,
+                              borderRadius: BorderRadius.circular(8)
+                            ),
+                            child: const Center(
+                              child: Text('Buy a package' ,
+                              style: TextStyle(
+                                fontSize: 15 ,
+                                color: Colors.white
+                              ),),
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                );
+              }),
             )
           ],
         ),

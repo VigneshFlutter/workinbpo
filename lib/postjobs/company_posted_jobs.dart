@@ -3,6 +3,8 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
+import 'package:nav2/job_detail_page/job_detail_page.dart';
+import 'package:nav2/manage_jobs/list_candiate_screen.dart';
 import 'package:nav2/model/company_posted_jobs_model.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
@@ -155,134 +157,31 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
 
                         const SizedBox(height: 20,) ,
 
-                        InkWell(
-                          onTap: ()=> moreBottomSheet(),
-                          child: Container(
-                            height: 55,
-                            width: width!- 50,
-                            decoration: BoxDecoration(
-                              color: APPCOLOR ,
-                              borderRadius: BorderRadius.circular(6)
+                        Align(
+                          alignment: Alignment.topRight ,
+                          child: InkWell(
+                            onTap: ()=> moreBottomSheet(
+                             data!.jobs!.data![index].slug! ,
+                              user_id: data!.jobs!.data![index].id.toString()
                             ),
-                            child: const Center(
-                              child: Text('More' ,
-                              style: TextStyle(
-                                fontSize: 15 ,
-                                color: Colors.white
-                              ),),
+                            child: Container(
+                              height: 35,
+                              width: 150,
+                              decoration: BoxDecoration(
+                                color: APPCOLOR ,
+                                borderRadius: BorderRadius.circular(6)
+                              ),
+                              child: const Center(
+                                child: Text('More' ,
+                                style: TextStyle(
+                                  fontSize: 15 ,
+                                  color: Colors.white
+                                ),),
+                              ),
                             ),
                           ),
                         ) ,
-                        //
-                        // const SizedBox(height: 20,) ,
-                        //
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.start ,
-                        //   children: [
-                        //     InkWell(
-                        //       onTap: ()=> print('Pressed'),
-                        //       child: Container(
-                        //         height: 55,
-                        //         width: 125,
-                        //         decoration: BoxDecoration(
-                        //           color: Colors.black ,
-                        //           borderRadius: BorderRadius.circular(12)
-                        //         ),
-                        //         child: Row(
-                        //           mainAxisAlignment: MainAxisAlignment.center ,
-                        //           children: const [
-                        //             Icon(Icons.edit , size: 18, color: Colors.white,) ,
-                        //             SizedBox(width: 5,) ,
-                        //             Text('Edit' , style: TextStyle(
-                        //               fontSize: 12 ,
-                        //               color: Colors.white,
-                        //               fontWeight: FontWeight.w600
-                        //             ),)
-                        //           ],
-                        //         ),
-                        //       ),
-                        //     ),
-                        //     const SizedBox(width: 30,) ,
-                        //     InkWell(
-                        //       onTap: ()=> print('Pressed'),
-                        //       child: Container(
-                        //         height: 55,
-                        //         width: 125,
-                        //         decoration: BoxDecoration(
-                        //             color: Colors.redAccent ,
-                        //             borderRadius: BorderRadius.circular(12)
-                        //         ),
-                        //         child: Row(
-                        //           mainAxisAlignment: MainAxisAlignment.center ,
-                        //           children: const [
-                        //             Icon(Icons.delete , size: 18, color: Colors.white,) ,
-                        //             SizedBox(width: 5,) ,
-                        //             Text('delete' , style: TextStyle(
-                        //                 fontSize: 12 ,
-                        //                 color: Colors.white,
-                        //                 fontWeight: FontWeight.w600
-                        //             ),)
-                        //           ],
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ],
-                        // ),
-                        // const SizedBox(height: 20,) ,
-                        //
-                        // Row(
-                        //   mainAxisAlignment: MainAxisAlignment.start ,
-                        //   children: [
-                        //     InkWell(
-                        //       onTap: ()=> print('Pressed'),
-                        //       child: Container(
-                        //         height: 55,
-                        //         width: width!/2 -40,
-                        //         decoration: BoxDecoration(
-                        //             color: APPCOLOR,
-                        //             borderRadius: BorderRadius.circular(12)
-                        //         ),
-                        //         child: Row(
-                        //           mainAxisAlignment: MainAxisAlignment.center ,
-                        //           children:  [
-                        //             Image.asset(SHORT_LIST_ICON , height: 20, width: 20, color: Colors.white,) ,
-                        //             const SizedBox(width: 5,) ,
-                        //             const Text('Shortlist candidate' , style: TextStyle(
-                        //                 fontSize: 12 ,
-                        //                 color: Colors.white,
-                        //                 fontWeight: FontWeight.w600
-                        //             ),)
-                        //           ],
-                        //         ),
-                        //       ),
-                        //     ),
-                        //     const SizedBox(width: 30,) ,
-                        //     InkWell(
-                        //       onTap: ()=> print('Pressed'),
-                        //       child: Container(
-                        //         height: 55,
-                        //         width: width! / 2- 20,
-                        //         decoration: BoxDecoration(
-                        //             color: APPCOLOR ,
-                        //             borderRadius: BorderRadius.circular(12)
-                        //         ),
-                        //         child: Row(
-                        //           mainAxisAlignment: MainAxisAlignment.center ,
-                        //           children:  [
-                        //             Image.asset(PEOPLES_ICON , height: 20, width: 20, color: Colors.white,) ,
-                        //             // Icon(Icons.delete , size: 24, color: Colors.white,) ,
-                        //             const SizedBox(width: 5,) ,
-                        //             const Text('List of candidate' , style: TextStyle(
-                        //                 fontSize: 12 ,
-                        //                 color: Colors.white,
-                        //                 fontWeight: FontWeight.w600
-                        //             ),)
-                        //           ],
-                        //         ),
-                        //       ),
-                        //     ),
-                        //   ],
-                        // ),
+                       
                         const SizedBox(height: 20,) ,
 
                         Container(height: 1, width: width, color: Colors.grey,) ,
@@ -298,9 +197,10 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
     );
   }
 
-  void moreBottomSheet() {
+  void moreBottomSheet(String slug , {String? user_id}) {
     showBottomSheet(
         context: context,
+        elevation: 3.0,
         builder: (context){
           return Container(
             height: height!/2,
@@ -343,6 +243,12 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                       physics: const NeverScrollableScrollPhysics(),
                       children: [
                         ListTile(
+                          title: const Text('View a Job'),
+                          leading: Icon(Icons.remove_red_eye),
+                          onTap: ()=> Navigator.push(context, MaterialPageRoute(
+                              builder: (context) => JobDetailPage(job_slug: slug))),
+                        ),
+                        ListTile(
                           title: const Text("Edit"),
                           leading:  SvgPicture.asset(EDIT_ICON),
                           onTap: ()=> print('Pressed edit '),
@@ -356,7 +262,9 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                         ListTile(
                           title: const Text('List of Candidate'),
                           leading: SvgPicture.asset(CANDIDATE_ICON),
-                          onTap: ()=> print('Pressed candidate'),
+                          onTap: ()=> Navigator.push(
+                              context, MaterialPageRoute(
+                              builder: (context) => ListCandidateScreen(user_id: user_id ?? ''))),
                         ) , 
                         
                         ListTile(

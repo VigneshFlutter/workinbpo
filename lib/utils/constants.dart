@@ -14,6 +14,8 @@ const String EDIT_PROFILE_API = '${APP_BASE_URL}update-company-profile' ;
 const String COMPANY_POSTED_JOBS_URL = "${APP_BASE_URL}company-jobs";
 const String MANAGE_FOLLOWERS_URL = '${APP_BASE_URL}company-followers';
 const String PACKAGES_LIST_API = '${APP_BASE_URL}packages';
+const String LIST_CANDIDATED_API = '${APP_BASE_URL}company-appliedusers/' ;
+const String APPLICANT_PROFILE_API = '${APP_BASE_URL}applicant-profile/';
 
 
 String USER_TOKEN = 'user_auth';
@@ -25,6 +27,7 @@ const APPCOLOR =   Color(0xFF336FA3);
 //Lottie Files
 const String APP_LOADING = 'assets/lottie/apploading.json';
 const String COLOR_LOADING = 'assets/lottie/colorLoading.json';
+const String NOTIFICATION_BELL = 'assets/lottie/notication-bell.json';
 
 //Icons
 const String RUPEE_ICON = 'assets/rupee.png';
@@ -37,3 +40,15 @@ const String SHORTLIST_ICON = 'assets/check-square.svg';
 const String PRICE_TAG = 'assets/priceTags.png';
 const String FROM_DATE_ICON = 'assets/startCalendar.png';
 const String TO_DATE_ICON = 'assets/toCalendar.png' ;
+const String GRADUATION_ICON = 'assets/graduation.png';
+const String PERSON_ICON = 'assets/person.png';
+const String JOB_LOCATION = 'assets/locationIcon.png';
+const String SUIT_CASE = 'assets/briefcase.png';
+const String SHIFT_TIME_ICON = 'assets/shift_time.png';
+const String GROUP_PEOPLE = 'assets/group-people.png';
+const String CAREERLEVEL = 'assets/education.png';
+const String PERMANENT_JOB = 'assets/permanent-job.png';
+const String CHECKMARK_ICON = 'assets/checkmark-icon.png';
+const String NO_IMAGE_ICON = 'assets/noImage.jpg' ;
+
+

@@ -109,7 +109,7 @@ class _companyprofileState extends State<companyprofile> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       const SizedBox(height: 20) ,
-                      data!.company!.logo! == null ? SizedBox(
+                      data?.company?.logo == null ? SizedBox(
                         width: width,
                         height: 200,
                         child: ClipRRect(

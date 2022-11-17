@@ -1,8 +1,12 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:nav2/bottom_navigation.dart';
 import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/utils/constants.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../provider/internet_provider.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -20,6 +24,18 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     choosingScreen();
     super.initState();
+  }
+
+  void checkConnectivity() async {
+    var subscription = Connectivity().onConnectivityChanged.listen((ConnectivityResult result) {
+      if(result == ConnectivityResult.mobile){
+        Provider.of<InternetProvider>(context , listen: false).updateValues(true);
+      }else if(result == ConnectivityResult.wifi){
+        Provider.of<InternetProvider>(context , listen: false).updateValues(true);
+      }else{
+        Provider.of<InternetProvider>(context , listen: false).updateValues(false);
+      }
+    });
   }
 
   void choosingScreen() async{
