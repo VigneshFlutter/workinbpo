@@ -5,6 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
 import 'package:nav2/job_detail_page/job_detail_page.dart';
 import 'package:nav2/manage_jobs/list_candiate_screen.dart';
+import 'package:nav2/manage_jobs/shortlist_job_screen.dart';
 import 'package:nav2/model/company_posted_jobs_model.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
@@ -244,7 +245,7 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                       children: [
                         ListTile(
                           title: const Text('View a Job'),
-                          leading: Icon(Icons.remove_red_eye),
+                          leading: const  Icon(Icons.remove_red_eye , color: Colors.black,),
                           onTap: ()=> Navigator.push(context, MaterialPageRoute(
                               builder: (context) => JobDetailPage(job_slug: slug))),
                         ),
@@ -270,7 +271,9 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                         ListTile(
                           title: Text('List of shortlist'),
                           leading: Image.asset(SHORT_LIST_ICON , height: 20, width: 20,),
-                          onTap: ()=> print('Pressed shortlist'),
+                          onTap: ()=> Navigator.push(
+                              context, MaterialPageRoute(
+                              builder: (context)=> ShortListJobScreen(id: user_id ?? ''))),
                         )
                       ],
                     ))

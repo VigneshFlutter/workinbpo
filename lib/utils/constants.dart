@@ -16,7 +16,7 @@ const String MANAGE_FOLLOWERS_URL = '${APP_BASE_URL}company-followers';
 const String PACKAGES_LIST_API = '${APP_BASE_URL}packages';
 const String LIST_CANDIDATED_API = '${APP_BASE_URL}company-appliedusers/' ;
 const String APPLICANT_PROFILE_API = '${APP_BASE_URL}applicant-profile/';
-
+const String SHORTLIST_API = '${APP_BASE_URL}company-listshortlist/';
 
 String USER_TOKEN = 'user_auth';
 //APP COLORS
@@ -50,5 +50,10 @@ const String CAREERLEVEL = 'assets/education.png';
 const String PERMANENT_JOB = 'assets/permanent-job.png';
 const String CHECKMARK_ICON = 'assets/checkmark-icon.png';
 const String NO_IMAGE_ICON = 'assets/noImage.jpg' ;
+const String MAIL_ICON = 'assets/mail.png' ;
+const String CAKE_ICON = 'assets/cake.png';
+const String GENDER_ICON = 'assets/equality.png';
+const String SALARY_ICON = 'assets/salary.png' ;
+const String MARTIAL_STATUS_ICON = 'assets/wedding-ring.png';
 
 
