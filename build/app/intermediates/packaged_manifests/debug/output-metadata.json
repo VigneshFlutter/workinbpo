@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.nav2",
+  "applicationId": "com.bhive.knownjobzrecruiter",
   "variantName": "debug",
   "elements": [
     {

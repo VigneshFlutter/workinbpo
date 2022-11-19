@@ -1,6 +1,6 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-3    package="com.example.nav2"
+3    package="com.bhive.knownjobzrecruiter"
 4    android:versionCode="1"
 5    android:versionName="1.0.0" >
 6
@@ -13,8 +13,8 @@
 13         to allow setting breakpoints, to provide hot reload, etc.
 14    -->
 15    <uses-permission android:name="android.permission.INTERNET" />
-15-->/Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml:7:5-66
-15-->/Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml:7:22-64
+15-->/Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:5-66
+15-->/Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:22-64
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 16-->[:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
 16-->[:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
@@ -27,7 +27,7 @@
 22        android:icon="@mipmap/ic_launcher"
 23        android:label="Knownjobz recruiter" >
 24        <activity
-25            android:name="com.example.nav2.MainActivity"
+25            android:name="com.bhive.knownjobzrecruiter.MainActivity"
 26            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
 27            android:exported="true"
 28            android:hardwareAccelerated="true"

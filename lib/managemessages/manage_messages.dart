@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:nav2/managemessages/manage_messages_receiv.dart';
 import 'package:nav2/model/manage_followers_model.dart';
+import 'package:nav2/utils/no_results_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/constants.dart';
 import 'package:http/http.dart' as http;
@@ -58,6 +59,9 @@ class _managemessagesState extends State<managemessages> {
         width: width,
         height: height,
         color: Colors.white,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 8.0
+        ),
         child: isLoading ? const LoadingWidget(): Column(
           children: [
             const SizedBox(height: 40,) ,
@@ -68,7 +72,10 @@ class _managemessagesState extends State<managemessages> {
                   fontWeight: FontWeight.w600
               ),),
             ) ,
-            Expanded(
+            data!.users!.isEmpty ? Expanded(
+              flex: 3,
+              child: NoResultsPage(),
+            ): Expanded(
               flex: 3,
               child: ListView.builder(
                   itemCount: data!.users!.length,

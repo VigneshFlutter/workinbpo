@@ -1104,7 +1104,9 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
                   ),),
                 ),
               ),
-            )
+            )  ,
+
+            const SizedBox(height: 30,)
           ],
         ),
       ),

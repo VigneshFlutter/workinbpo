@@ -1,4 +1,4 @@
-com.example.nav2
+com.bhive.knownjobzrecruiter
 attr activityAction
 attr activityName
 attr alpha

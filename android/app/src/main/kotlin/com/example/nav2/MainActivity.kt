@@ -1,4 +1,4 @@
-package com.example.nav2
+package com.bhive.knownjobzrecruiter
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -14,12 +14,14 @@
             <stringArg name="classpath">
               <args>
                 <arg>$MODULE_DIR$/../../../../build/app/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/110ff59c0513b71fe49027f765bffc13/transformed/jetified-libs.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/c7a91112e9b14fdfee781eed4b22e71e/transformed/jetified-flutter_embedding_debug-1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/c8c5b7dcb068b93f4fd7000710b3ac30/transformed/jetified-armeabi_v7a_debug-1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/fdf8415d2160953e73b4ae1150b8c619/transformed/jetified-arm64_v8a_debug-1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/61a2edf18ef1221cbf160941c8c3fc72/transformed/jetified-x86_64_debug-1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519.jar</arg>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/fa415441fa490eb57e6fdb148009880a/transformed/jetified-x86_debug-1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/64ee22e2267b1cbe028d7ca3878dda77/transformed/jetified-libs.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/shared_preferences_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/connectivity_plus/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/5587552ab7efc796b3a1f535ed25118f/transformed/jetified-armeabi_v7a_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/466679674b762d0064146347bd6e87dd/transformed/jetified-arm64_v8a_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/50f12d7ae2075b95bccfefc7d0dec180/transformed/jetified-x86_64_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/c6cddbda38f7fca978f9ffb16783206f/transformed/jetified-x86_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/f35a1a1dd51a76b162c84e4e09eaf1df/transformed/jetified-flutter_embedding_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common-java8/2.2.0/cd3478503da69b1a7e0319bd2d1389943db9b364/lifecycle-common-java8-2.2.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/793fa9c5d22a211b6642bb61d2246416/transformed/fragment-1.1.0-api.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/b6860168dad1be73948cd7fda58d7d3d/transformed/viewpager-1.0.0-api.jar</arg>
@@ -60,6 +62,7 @@
             <stringArg name="languageVersion" arg="1.6" />
           </stringArguments>
           <arrayArguments>
+            <arrayArg name="friendPaths" />
             <arrayArg name="pluginClasspaths" />
             <arrayArg name="pluginOptions" />
           </arrayArguments>
@@ -105,12 +108,14 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="Gradle: ./../build/app/intermediates/flutter/debug/libs.jar" level="project" />
-    <orderEntry type="library" name="Gradle: io.flutter:flutter_embedding_debug:1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519" level="project" />
-    <orderEntry type="library" name="Gradle: io.flutter:armeabi_v7a_debug:1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519" level="project" />
-    <orderEntry type="library" name="Gradle: io.flutter:arm64_v8a_debug:1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519" level="project" />
-    <orderEntry type="library" name="Gradle: io.flutter:x86_64_debug:1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519" level="project" />
-    <orderEntry type="library" name="Gradle: io.flutter:x86_debug:1.0.0-25bad51f09d6fcdcb59abf09f63f1db37339a519" level="project" />
+    <orderEntry type="module" module-name="android.shared_preferences_android.main" />
+    <orderEntry type="module" module-name="android.connectivity_plus.main" />
+    <orderEntry type="library" name="Gradle: /Users/shripranav/Projects/workinbpo/build/app/intermediates/flutter/debug/libs.jar" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:armeabi_v7a_debug:1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:arm64_v8a_debug:1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:x86_64_debug:1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:x86_debug:1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25" level="project" />
+    <orderEntry type="library" name="Gradle: io.flutter:flutter_embedding_debug:1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common-java8:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.lifecycle:lifecycle-common:2.2.0" level="project" />
     <orderEntry type="library" name="Gradle: androidx.arch.core:core-common:2.1.0" level="project" />

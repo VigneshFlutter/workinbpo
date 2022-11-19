@@ -3,13 +3,16 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart' as http;
+import 'package:lottie/lottie.dart';
 import 'package:nav2/job_detail_page/job_detail_page.dart';
+import 'package:nav2/manage_jobs/add_job_post_screen.dart';
 import 'package:nav2/manage_jobs/list_candiate_screen.dart';
 import 'package:nav2/manage_jobs/shortlist_job_screen.dart';
 import 'package:nav2/model/company_posted_jobs_model.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:nav2/utils/loading_widget.dart';
+import 'package:nav2/utils/no_results_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CompanyPostedJobs extends StatefulWidget {
@@ -75,7 +78,35 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                 fontWeight: FontWeight.w600
               ),),
             ) ,
-            Expanded(
+            const SizedBox(height: 5,) ,
+            Align(
+              alignment: Alignment.topRight,
+              child: InkWell(
+                onTap: ()=> Navigator.push(
+                    context, MaterialPageRoute(
+                    builder: (context) => const AddJobPostScreen())),
+                child: Container(
+                  height: 45,
+                  width: 130,
+                  decoration: BoxDecoration(
+                    color: APPCOLOR ,
+                    borderRadius: BorderRadius.circular(8)
+                  ),
+                  child: const Center(
+                    child: Text('Add Post' ,
+                    style: TextStyle(
+                      fontSize: 15 ,
+                      color: Colors.white
+                    ),),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 10,) ,
+            data!.jobs!.data!.isEmpty ? Expanded(
+              flex: 3,
+              child: NoResultsPage(),
+            ): Expanded(
               flex: 3,
               child: ListView.builder(
                 itemCount: data!.jobs!.data!.length,

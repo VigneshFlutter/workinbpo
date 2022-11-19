@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nav2/bottom_navigation.dart';
 import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/model/register_model.dart';
 import 'package:nav2/utils/constants.dart';
@@ -63,6 +64,9 @@ class _RegisterState extends State<Register> {
 
     if(data.status!){
       savingToken(data.token!);
+      Navigator.push(
+        context, MaterialPageRoute(
+          builder: (context) => bottom_navigation()));
     }else{
       errorSnackBar('Not registered yet', context);
     }

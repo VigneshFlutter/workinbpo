@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.nav2"
+    package="com.bhive.knownjobzrecruiter"
     android:versionCode="1"
     android:versionName="1.0.0" >
 
@@ -22,7 +22,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="Knownjobz recruiter" >
         <activity
-            android:name="com.example.nav2.MainActivity"
+            android:name="com.bhive.knownjobzrecruiter.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:exported="true"
             android:hardwareAccelerated="true"

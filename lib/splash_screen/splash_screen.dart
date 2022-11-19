@@ -23,6 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     choosingScreen();
+    checkConnectivity();
     super.initState();
   }
 
@@ -62,14 +63,17 @@ class _SplashScreenState extends State<SplashScreen> {
       width: width,
       color: Colors.white,
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(APP_LOGO , height: 125,) ,
-          const SizedBox(height: 30,) ,
-          const Text('Knownjobz' ,
-          style: TextStyle(
-            fontSize: 18 ,
-            fontWeight: FontWeight.w700
-          ),)
+          Image.asset(APP_LOGO , height: 125, width: width,) ,
+          // const SizedBox(height: 30,) ,
+          // const Text('Knownjobz' ,
+          // style: TextStyle(
+          //   fontSize: 18 ,
+          //   decoration: TextDecoration.none,
+          //   color: Colors.black,
+          //   fontWeight: FontWeight.w700
+          // ),)
         ],
       ),
     );

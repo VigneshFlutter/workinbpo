@@ -28,6 +28,7 @@ const APPCOLOR =   Color(0xFF336FA3);
 const String APP_LOADING = 'assets/lottie/apploading.json';
 const String COLOR_LOADING = 'assets/lottie/colorLoading.json';
 const String NOTIFICATION_BELL = 'assets/lottie/notication-bell.json';
+const String NO_RESULTS = 'assets/lottie/no-results.json'; 
 
 //Icons
 const String RUPEE_ICON = 'assets/rupee.png';
