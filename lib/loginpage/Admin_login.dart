@@ -23,7 +23,7 @@ class adminlogin extends StatefulWidget {
 
 class _adminloginState extends State<adminlogin> {
 
-  bool isVisible = false ;
+  bool isVisible = true ;
   bool isPressed = false ;
   //TextEditing
   TextEditingController emailTextEd = TextEditingController();

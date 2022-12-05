@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:nav2/bottom_navigation.dart';
 import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/provider/internet_provider.dart';
+import 'package:nav2/provider/profile_provider.dart';
 import 'package:nav2/splash_screen/splash_screen.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:provider/provider.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
 
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (_) => ProfileProvider()) ,
         ChangeNotifierProvider(create: (_)=> InternetProvider()) ,
     ],
     child: MaterialApp(

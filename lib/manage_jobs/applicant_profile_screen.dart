@@ -1,10 +1,14 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
+import 'package:nav2/manage_jobs/call_interview_screen.dart';
 import 'package:nav2/model/applicant_profile_model.dart';
+import 'package:nav2/model/call_for_interview_model.dart';
 import 'package:nav2/utils/constants.dart';
+import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 class ApplicantProfileScreen extends StatefulWidget {
   String id ;
@@ -20,17 +24,21 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
   double? width ;
   bool isLoading = true ;
   ApplicantProfileModel? data ;
+  bool isShortlist = false ;
 
   @override
   void initState() {
     applicantProfileApi();
     super.initState();
   }
+
+
   
   Future<void> applicantProfileApi() async {
     final prefs = await SharedPreferences.getInstance(); 
     var token = prefs.getString(USER_TOKEN) ;
-    
+
+    print('The Application Profile ID ${widget.id}');
     var url = Uri.parse(APPLICANT_PROFILE_API+widget.id);
     http.Response response = await http.get(url ,
     headers: {
@@ -41,9 +49,43 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
       setState(() {
         data = ApplicantProfileModel.fromJson(jsonDecode(response.body));
         isLoading = false ;
+        isShortlist = data!.user!.isSubscribed == 0 ? true : false ;
       });
     }
   }
+
+  Future<void> addShortListApi({
+    String? baseurl ,
+  int? applicationID ,
+    int? userID ,
+    int? jobID  ,
+    int? companyID
+}) async{
+    final prefs = await SharedPreferences.getInstance();
+    var token = prefs.getString(USER_TOKEN);
+
+    var url = Uri.parse('$baseurl$applicationID/$userID/$jobID/$companyID');
+    http.Response response = await http.get(url ,
+    headers: {
+      'Authorization': 'Bearer $token'
+    });
+
+    print('The Response of ShortList APi ${response.body}');
+    CallForInterviewModel data = CallForInterviewModel.fromJson(jsonDecode(response.body));
+
+    if(data.status!){
+      setState(() {
+        isShortlist = !isShortlist ;
+      });
+      //ignore: use_build_context_synchronously
+      successSnackBar('Successfully updated', context);
+    }else{
+      //ignore: use_build_context_synchronously
+      errorSnackBar('Failed to update', context);
+    }
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +102,9 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
           horizontal: 8.0
         ),
         color: Colors.white ,
-        child: ListView(
+        child: isLoading ? Center(
+          child: Lottie.asset(APP_LOADING , height: 45 , width: 75),
+        ): ListView(
           children:  [
             const SizedBox(height: 20,) ,
 
@@ -93,7 +137,12 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
                   child: Image.asset(NO_IMAGE_ICON , height: 65, width: 65, fit: BoxFit.fill,),
                 ) : ClipRRect(
                   borderRadius: BorderRadius.circular(8),
-                  child: Image.network(IMAGEBASEURL+data!.user!.image),
+                  child: FadeInImage(
+                    height: 65,
+                    width: 65,
+                    image: NetworkImage(IMAGEBASEURL+data!.user!.image),
+                    placeholder: AssetImage(NO_IMAGE_ICON),
+                  ),
                 ) ,
 
                 const SizedBox(width: 18,) ,
@@ -114,6 +163,120 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             
             const SizedBox(height: 20,) ,
 
+            InkWell(
+              onTap: () async{
+                final url = RESUME_URL+data!.profileCv!.cvFile! ;
+                if(await canLaunch(url)){
+                  await launch(url ,
+                      forceSafariVC: false);
+                }
+              },
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: Container(
+                  height: 45,
+                  width: 150,
+                  decoration: BoxDecoration(
+                    color: APPCOLOR ,
+                    borderRadius: BorderRadius.circular(8)
+
+                  ),
+                  child: const Center(
+                    child: Text('View Resume' ,
+                    style: TextStyle(
+                      fontSize: 15 ,
+                      fontWeight: FontWeight.w600 ,
+                      color: Colors.white
+                    ),),
+                  ),
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 20,) ,
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+
+                InkWell(
+                  onTap: (){
+                    if(isShortlist){
+                      addShortListApi(
+                          baseurl: REMOVE_SHORTLIST_API,
+                          applicationID: data!.jobApplication!.id ,
+                          userID: data!.jobApplication!.userId ,
+                          jobID: data!.jobApplication!.jobId  ,
+                          companyID: data!.company!.id
+                      );
+                    }else{
+                      addShortListApi(
+                        baseurl: ADD_SHORTLIST_API ,
+                        applicationID: data!.jobApplication!.id ,
+                        userID: data!.jobApplication!.userId ,
+                        jobID: data!.jobApplication!.jobId  ,
+                        companyID: data!.company!.id
+                      );
+                    }
+                  },
+                  child: Container(
+                    height: 45,
+                    width: width! / 2 - 30,
+                    decoration: BoxDecoration(
+                      color: ORANGE_COLOR ,
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child:  Center(
+                      child: isShortlist ? const Text('Add Shortlist' ,
+                        style: TextStyle(
+                            fontSize: 15 ,
+                            fontWeight: FontWeight.w600 ,
+                            color: Colors.white
+                        ),) : const Text('Remove Shortlist' ,
+                      style: TextStyle(
+                        fontSize: 15 ,
+                        fontWeight: FontWeight.w600 ,
+                        color: Colors.white
+                      ),),
+                    ),
+                  ),
+                ),
+
+                InkWell(
+                  onTap: ()=> {
+                    Navigator.push(
+                        context, MaterialPageRoute(
+                        builder: (context) =>  CallForInterview(
+                          applicationID: data!.jobApplication!.id!,
+                          userID: data!.jobApplication!.userId!,
+                          jobID: data!.jobApplication!.jobId! ,
+                          companyID: data!.company!.id!,
+                        )))
+                  },
+                  child: Container(
+                    height: 45,
+                    width: width! / 2 - 30,
+                    decoration: BoxDecoration(
+                        color: Colors.white ,
+                        border: Border.all(
+                          color: APPCOLOR
+                        ),
+                        borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: const Center(
+                      child: Text('Call for interview' ,
+                        style: TextStyle(
+                            fontSize: 15 ,
+                            fontWeight: FontWeight.w600 ,
+                            color: APPCOLOR
+                        ),),
+                    ),
+                  ),
+                )
+              ],
+            ),
+
+            const SizedBox(height: 20,) ,
             const Text('About Applicant' , style: TextStyle(
               fontSize: 22 ,
               fontWeight: FontWeight.w600
@@ -131,7 +294,21 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             const SizedBox(height: 15,) ,
             
             data?.user?.dateOfBirth == null ? Container():
-            label(CAKE_ICON, 'Age: ${data!.user!.dateOfBirth!}') ,
+            // label(CAKE_ICON, 'Age: ${DateFormat('yyyy-MM-dd').format(data!.user!.dateOfBirth!).toString()}') ,
+
+            Row(
+              children: [
+                Image.asset(CAKE_ICON , height: 21, width: 21,) ,
+                const SizedBox(width: 15,) ,
+                Text(data!.user!.dateOfBirth!,
+                  maxLines: 2,
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w600 ,
+                      fontSize: 15
+                  ),)
+              ],
+            ),
+            
 
             const SizedBox(height: 15,) ,
             

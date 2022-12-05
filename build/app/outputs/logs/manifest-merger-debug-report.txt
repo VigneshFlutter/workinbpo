@@ -1,14 +1,18 @@
 -- Merging decision tree log ---
 application
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:4:4-34:19
+MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-14:19
+MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-14:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.core:core:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 	android:name
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 manifest
@@ -18,22 +22,30 @@ INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidM
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
 MERGED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
 MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/shripranav/Projects/workinbpo/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /Users/shripranav/Projects/workinbpo/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
+MERGED from [:path_provider_android] /Users/shripranav/Projects/workinbpo/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/a93f1008f3da602a75ae46c7dfa53a41/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/be92215fab3da24cbe07fe18376b07d1/transformed/webkit-1.5.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/a0d61da4bfc5b21e303413fc60017037/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/e9adbecd9056266acffccefed7155c7c/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/6649f67ac6323d51965da4c86f4f75e7/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/54c09cef60ccffe07bc6f2a3383e2621/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/67d5adbebd1c309e560281ca11e76021/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shripranav/.gradle/caches/transforms-3/f22d655c6f4d7b628454e7cc686d4437/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/bb4276f5721e5efed4a2cd3cbc7424d4/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/eef4b3f7d428e87568176db3b53d7e84/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/shripranav/.gradle/caches/transforms-3/b8323f0ef94ca566f0c1ddcd7d4f5eef/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/71bdaf2e8795acec6537e777932c5d84/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/10eb63eb18fb477267d5e10a495a467d/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/ebdf9dde7f3f46d3825ffad1e3be4600/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/eef4b3f7d428e87568176db3b53d7e84/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/77b6bd4c3f9f74e6d0883db8820ac6c6/transformed/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/952f0afc993353413fc613e98ac40aad/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/ce70321dbabdb4133b4ed138bd6656c8/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/db3f3968d97ef50ab7d2a813d5c652fd/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
@@ -65,12 +77,26 @@ INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidM
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/shripranav/Projects/workinbpo/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/shripranav/Projects/workinbpo/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/shripranav/Projects/workinbpo/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/shripranav/Projects/workinbpo/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/shripranav/Projects/workinbpo/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/shripranav/Projects/workinbpo/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/a93f1008f3da602a75ae46c7dfa53a41/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/a93f1008f3da602a75ae46c7dfa53a41/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/be92215fab3da24cbe07fe18376b07d1/transformed/webkit-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/be92215fab3da24cbe07fe18376b07d1/transformed/webkit-1.5.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/a0d61da4bfc5b21e303413fc60017037/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/a0d61da4bfc5b21e303413fc60017037/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/e9adbecd9056266acffccefed7155c7c/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
@@ -81,22 +107,24 @@ MERGED from [androidx.activity:activity:1.0.0] /Users/shripranav/.gradle/caches/
 MERGED from [androidx.activity:activity:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/54c09cef60ccffe07bc6f2a3383e2621/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/67d5adbebd1c309e560281ca11e76021/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.customview:customview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/67d5adbebd1c309e560281ca11e76021/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/2e40a1256cfc7a1cf83a3ebc0ee6b81e/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shripranav/.gradle/caches/transforms-3/f22d655c6f4d7b628454e7cc686d4437/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/shripranav/.gradle/caches/transforms-3/f22d655c6f4d7b628454e7cc686d4437/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/bb4276f5721e5efed4a2cd3cbc7424d4/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/bb4276f5721e5efed4a2cd3cbc7424d4/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/eef4b3f7d428e87568176db3b53d7e84/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/eef4b3f7d428e87568176db3b53d7e84/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/shripranav/.gradle/caches/transforms-3/b8323f0ef94ca566f0c1ddcd7d4f5eef/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/shripranav/.gradle/caches/transforms-3/b8323f0ef94ca566f0c1ddcd7d4f5eef/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/71bdaf2e8795acec6537e777932c5d84/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/71bdaf2e8795acec6537e777932c5d84/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/10eb63eb18fb477267d5e10a495a467d/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/10eb63eb18fb477267d5e10a495a467d/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/ebdf9dde7f3f46d3825ffad1e3be4600/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/ebdf9dde7f3f46d3825ffad1e3be4600/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/eef4b3f7d428e87568176db3b53d7e84/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/eef4b3f7d428e87568176db3b53d7e84/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/77b6bd4c3f9f74e6d0883db8820ac6c6/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/77b6bd4c3f9f74e6d0883db8820ac6c6/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/fc5ecffa8020e6dede32c1d22e1403b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/952f0afc993353413fc613e98ac40aad/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/952f0afc993353413fc613e98ac40aad/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/ce70321dbabdb4133b4ed138bd6656c8/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/ce70321dbabdb4133b4ed138bd6656c8/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/db3f3968d97ef50ab7d2a813d5c652fd/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
@@ -109,6 +137,30 @@ INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/Android
 	android:minSdkVersion
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:14:13-47
+	android:authorities
+		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-74
+	android:exported
+		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-37
+	android:name
+		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-82
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:15:13-17:75
+	android:resource
+		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
+	android:name
+		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
+	android:exported
+		ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
+	android:name
+		ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
 	android:name

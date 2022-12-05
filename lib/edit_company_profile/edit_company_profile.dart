@@ -1,14 +1,19 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nav2/model/city_model.dart';
 import 'package:nav2/model/district_model.dart';
 import 'package:nav2/model/edit_profile_model.dart';
 import 'package:nav2/model/master_model.dart';
+import 'package:nav2/provider/internet_provider.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:http/http.dart' as http;
 import 'package:nav2/utils/custom_snackbar.dart';
+import 'package:nav2/utils/internet_viewer.dart';
 import 'package:nav2/utils/loading_widget.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class EditCompanyProfile extends StatefulWidget {
@@ -33,6 +38,9 @@ class EditCompanyProfile extends StatefulWidget {
   String? country;
   String? state ;
   String? city ;
+  int? countryId ;
+  int? stateID;
+  int? cityID ;
   String? industryId ;
   String? ownershipId ;
   EditCompanyProfile({super.key,
@@ -57,6 +65,9 @@ class EditCompanyProfile extends StatefulWidget {
     this.country ,
     this.state ,
     this.city ,
+    this.countryId ,
+    this.stateID ,
+    this.cityID,
     this.industryId ,
     this.ownershipId
   }) ;
@@ -82,11 +93,12 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
   int countryIndex = 0 ;
   int stateIndex = 0 ;
   int cityIndex = 0 ;
-  int industryIndex = 0 ;
-  int ownerShipIndex = 0 ;
+  dynamic industryIndex = 0 ;
+  dynamic ownerShipIndex = 0 ;
   bool isStateLoading = true ;
   bool isCityLoading = true ;
   bool isIndia = false ;
+  File? user_image ;
 
 
   TextEditingController nameTextEd = TextEditingController();
@@ -116,24 +128,62 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
   
   @override
   void initState() {
+
     getMasterValues();
     stateValuesApi();
     updateValues();
-    print("The Values ${widget.name} , ${widget.email}");
+    print("The Values ${widget.name} , ${widget.description}");
     super.initState();
   }
 
   void updateValues() {
 
-    if(widget.industryId!.isNotEmpty){
+    if(widget.country!.isNotEmpty){
       setState(() {
-        industryIndex = int.parse(widget.industryId!);
+        countryValue = widget.country! ;
+        countryIndex = widget.countryId! ;
+      });
+    }
+
+
+    if(widget.state!.isNotEmpty){
+      setState(() {
+        stateValue = widget.state! ;
+        stateIndex = widget.stateID! ;
+      });
+    }
+
+    if(widget.city!.isNotEmpty){
+      setState(() {
+        cityValue = widget.city! ;
+        cityIndex = widget.cityID! ;
+      });
+    }
+
+    if(widget.industryId!.isNotEmpty){
+      print('The Industry ID ${widget.industryId}');
+      setState(() {
+        industryIndex = widget.industryId;
+      });
+    }
+
+    if(widget.industry!.isNotEmpty){
+      print('The Industry Value of edit profile ${widget.industry}');
+      setState(() {
+        industryValue = widget.industry!;
+      });
+    }
+
+    if(widget.ownership!.isNotEmpty){
+      print('The Ownership edit profile ${widget.ownership}');
+      setState(() {
+        ownerShipValue = widget.ownership! ;
       });
     }
 
     if(widget.ownershipId!.isNotEmpty){
       setState(() {
-        ownerShipIndex = int.parse(widget.ownershipId!);
+        ownerShipIndex = widget.ownershipId!;
       });
     }
 
@@ -189,6 +239,32 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
       setState(() {
         faxTextEd = TextEditingController(
           text: widget.fax
+        );
+      });
+    }
+
+    if(widget.establishedIn!.isNotEmpty){
+      setState(() {
+        establishedInTextEd = TextEditingController(
+          text: widget.establishedIn
+        );
+      });
+    }
+
+    if(widget.noOfOffice!.isNotEmpty){
+      setState(() {
+        noOfOfiiceTextEd = TextEditingController(
+          text: widget.noOfOffice
+        );
+      });
+    }
+
+
+
+    if(widget.address!.isNotEmpty){
+      setState(() {
+        addressTextEd = TextEditingController(
+          text: widget.address
         );
       });
     }
@@ -301,6 +377,7 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
       'ownership_type_id': ownerShipIndex == 0 ? "": ownerShipIndex.toString(),
       'description': descriptionTextEd.text ,
       'location': addressTextEd.text ,
+      'password': changePasswordTextEd.text ,
       'no_of_offices' : noOfOfiiceTextEd.text ,
       'no_of_employees': noOfEmployeesTextEd.text ,
       'established_in': establishedInTextEd.text ,
@@ -323,6 +400,60 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
     EditProfileModel data = EditProfileModel.fromJson(jsonDecode(response.body));
 
     if(data.status!){
+      setState(() {
+        isPressed = false ;
+      });
+      Navigator.pop(context);
+      successSnackBar('Successfully updated Profile', context);
+    }else{
+      errorSnackBar('Something went wrong', context);
+    }
+  }
+
+  //Edit Profile Api with Image
+  Future<void> editProfileWithImage() async {
+    print('Inside iMage upload Edit Profile');
+    final prefs = await SharedPreferences.getInstance() ;
+    var token = prefs.getString(USER_TOKEN);
+
+    print('The User Image ${user_image!.path}');
+
+    var url = Uri.parse(EDIT_PROFILE_API);
+    var request = http.MultipartRequest('POST' , url);
+    request.files.add(http.MultipartFile('logo' ,
+        user_image!.readAsBytes().asStream() ,
+        user_image!.lengthSync(),
+        filename: user_image!.path.split('/').last));
+
+    request.headers["authorization"] = 'Bearer $token' ;
+    request.fields['name'] = nameTextEd.text ;
+    request.fields['email'] = emailTextEd.text ;
+    request.fields["ceo"] = ceoNameTextEd.text ;
+    request.fields['description'] = descriptionTextEd.text ;
+    request.fields['password'] = changePasswordTextEd.text ;
+    request.fields["industry_id"] = industryIndex == 0 ? "": industryIndex.toString() ;
+    request.fields["ownership_type_id"] = ownerShipIndex == 0 ? "": ownerShipIndex.toString() ;
+    request.fields["location"] = addressTextEd.text;
+    request.fields['no_of_offices'] = noOfOfiiceTextEd.text ;
+    request.fields["no_of_employees"] = noOfEmployeesTextEd.text ;
+    request.fields["established_in"] = establishedInTextEd.text ;
+    request.fields["website"] = websiteUrlTextEd.text ;
+    request.fields["fax"] = faxTextEd.text ;
+    request.fields["phone"] = phoneTextEd.text ;
+    request.fields["facebook"] = facebookTextEd.text ;
+    request.fields["twitter"] = twitterTextEd.text ;
+    request.fields["linkedin"] = linkedInTextEd.text ;
+    request.fields["google_plus"] = googleplusTextEd.text ;
+    request.fields["pinterest"] = pintrestTextEd.text ;
+    request.fields["country_id"] = countryIndex.toString() ;
+    request.fields["state_id"] = stateIndex.toString() ;
+    request.fields["city_id"] = cityIndex.toString() ;
+
+    var res = await request.send();
+    var response = await http.Response.fromStream(res);
+    print('The response of upload image ${response.body}');
+
+    if(res.statusCode == 200){
       setState(() {
         isPressed = false ;
       });
@@ -681,435 +812,487 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width ;
 
-    return Scaffold(
-      body: Container(
-        height: height,
-        width: width,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8.0
-        ),
-        color: Colors.white,
-        child: isLoading? const LoadingWidget():  ListView(
-          children:  [
-            const SizedBox(height : 30) ,
-             Align(
-              alignment: Alignment.topLeft,
-                child:  IconButton(
-                  onPressed: ()=> Navigator.pop(context),
-                    icon: const Icon(Icons.arrow_back ,size: 25, ))) ,
-            const Text('Edit Profile' ,
-            style: TextStyle(
-              fontSize: 22 ,
-              color: Colors.black,
-              fontWeight: FontWeight.w600
-            ),) ,
+    return Consumer<InternetProvider>(
+      builder: (context ,value,  child ) {
+        return !value.isInternet ? InternetViewer():
+        Scaffold(
+          body: Container(
+            height: height,
+            width: width,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 8.0
+            ),
+            color: Colors.white,
+            child: isLoading? const LoadingWidget():  ListView(
+              children:  [
+                const SizedBox(height : 30) ,
+                 Align(
+                  alignment: Alignment.topLeft,
+                    child:  IconButton(
+                      onPressed: ()=> Navigator.pop(context),
+                        icon: const Icon(Icons.arrow_back ,size: 25, ))) ,
+                const Text('Edit Profile' ,
+                style: TextStyle(
+                  fontSize: 22 ,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w600
+                ),) ,
 
-            const SizedBox(height: 30,) ,
-            label('Company logo') ,
+                const SizedBox(height: 30,) ,
+                label('Company logo') ,
 
-            label('Name') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: nameTextEd,
-              decoration: InputDecoration(
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(12)
+                const SizedBox(height: 15,) ,
+                
+                SizedBox(
+                  height: 150,
+                  width: width,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(13),
+                    child: user_image == null ? Image.asset(NO_IMAGE_ICON ,height: 150, width: width,): 
+                    Image.file(user_image! , height: 150, width: width,),
+                  ),
                 ),
-                hintText: 'Enter your name'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
 
-            label('Email') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: emailTextEd,
-              keyboardType: TextInputType.emailAddress,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
+                InkWell(
+                  onTap: () async {
+                    final image = await ImagePicker().pickImage(source: ImageSource.gallery);
+                    if(image == null) return ;
+
+                    setState(() {
+                      user_image = File(image.path); 
+                    });
+                    print('The User Picked Image $user_image');
+                  },
+                  child: Container(
+                    height: 45,
+                    width: 165,
+                    decoration: BoxDecoration(
+                      color: APPCOLOR ,
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child: const Center(
+                      child: Text('Pick an image' ,
+                      style: TextStyle(
+                        fontSize: 16 ,
+                        color: Colors.white ,
+                        fontWeight: FontWeight.w600
+                      ),),
+                    ),
                   ),
-                  hintText: 'Enter your email'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
+                ),
 
-            label('Change Password') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: changePasswordTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
+                const SizedBox(height: 15,) ,
+                label('Name') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: nameTextEd,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(12)
+                    ),
+                    hintText: 'Enter your name'
                   ),
-                  hintText: 'Enter your change password'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
+                ),
+                const SizedBox(height: 20,) ,
 
-            label('Ceo Name') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: ceoNameTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
+                label('Email') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: emailTextEd,
+                  keyboardType: TextInputType.emailAddress,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your email'
                   ),
-                  hintText: 'Enter your ceo name'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
+                ),
+                const SizedBox(height: 20,) ,
 
-            label('Industry') ,
-            const SizedBox(
-              height:  10 ,
-            ),
-              InkWell(
-              onTap: (){
-                industryBottomSheet() ;
-              },
-              child: Container(
-                height: 55,
-                width: width,
-                decoration: BoxDecoration(
-                    color: Colors.white ,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
+                label('Change Password') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: changePasswordTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your change password'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Ceo Name') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: ceoNameTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your ceo name'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Industry') ,
+                const SizedBox(
+                  height:  10 ,
+                ),
+                  InkWell(
+                  onTap: (){
+                    industryBottomSheet() ;
+                  },
+                  child: Container(
+                    height: 55,
+                    width: width,
+                    decoration: BoxDecoration(
+                        color: Colors.white ,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                            color: Colors.grey
+                        )
+                    ),
+                    child: Center(
+                      child: Text(industryValue ,
+                        style: const TextStyle(
+                            fontSize: 15 ,
+                            color: Colors.grey
+                        ),),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Ownership') ,
+                const SizedBox(
+                  height:  10 ,
+                ),
+                InkWell(
+                  onTap: () => ownerShipBottomSheet(),
+                  child: Container(
+                    height: 55,
+                    width: width,
+                    decoration: BoxDecoration(
+                        color: Colors.white ,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                            color: Colors.grey
+                        )
+                    ),
+                    child: Center(
+                      child: Text(ownerShipValue ,
+                        style: const TextStyle(
+                            fontSize: 15 ,
+                            color: Colors.grey
+                        ),),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Description') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: descriptionTextEd,
+                  maxLines: 4,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your description'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Address') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: addressTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your address Eg. land no , Street '
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('No of office') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: noOfOfiiceTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Type your no of office members Eg. 11-40'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('No of employees') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: noOfEmployeesTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your no of employees Eg. 11-50'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Established in') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: establishedInTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your established'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Website url') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: websiteUrlTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your website url Eg.www.google.com'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Fax') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: faxTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your fax number'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Phone') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  keyboardType: TextInputType.number,
+                  maxLength: 10,
+                  controller: phoneTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your phone number'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Facebook') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: facebookTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your facebook name or profile url'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Twitter') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: twitterTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your twitter name or url'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('LinkedIn') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: linkedInTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your linkedin name or url'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Google plus+') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: googleplusTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your google plus name or url '
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Pinterest') ,
+                const SizedBox(height: 10,) ,
+                TextFormField(
+                  controller: pintrestTextEd,
+                  decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(12)
+                      ),
+                      hintText: 'Enter your pintrest name or url'
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                label('Country') ,
+                const SizedBox(
+                  height: 10,
+                ),
+                InkWell(
+                  onTap: ()=> countryBottomSheet(),
+                  child: Container(
+                    height: 55,
+                    width: width,
+                    decoration: BoxDecoration(
+                      color: Colors.white ,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
                         color: Colors.grey
-                    )
-                ),
-                child: Center(
-                  child: Text(industryValue ,
-                    style: const TextStyle(
+                      )
+                    ),
+                    child: Center(
+                      child: Text(countryValue ,
+                      style: const TextStyle(
                         fontSize: 15 ,
                         color: Colors.grey
-                    ),),
+                      ),),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            const SizedBox(height: 20,) ,
+                const SizedBox(height: 20,) ,
 
-            label('Ownership') ,
-            const SizedBox(
-              height:  10 ,
-            ),
-            InkWell(
-              onTap: () => ownerShipBottomSheet(),
-              child: Container(
-                height: 55,
-                width: width,
-                decoration: BoxDecoration(
-                    color: Colors.white ,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                        color: Colors.grey
-                    )
+                isIndia ? label('State') : Container(),
+                 SizedBox(
+                  height: isIndia?  10 : 0,
                 ),
-                child: Center(
-                  child: Text(ownerShipValue ,
-                    style: const TextStyle(
+                !isIndia? Container():  InkWell(
+                  onTap: () {
+                    if(isIndia){
+                      stateBottomSheet();
+                    }else{
+                      errorSnackBar('Please choose country', context);
+                    }
+                  },
+                  child: Container(
+                    height: 55,
+                    width: width,
+                    decoration: BoxDecoration(
+                        color: Colors.white ,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                            color: Colors.grey
+                        )
+                    ),
+                    child: Center(
+                      child: Text(stateValue ,
+                        style: const TextStyle(
+                            fontSize: 15 ,
+                            color: Colors.grey
+                        ),),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                isIndia? label('City'): Container() ,
+                 SizedBox(
+                  height: isIndia ? 10 : 0,
+                ),
+               !isIndia ? Container():  InkWell(
+                  onTap: (){
+                    if(isCityLoading){
+                      errorSnackBar('Loading... Please wait ', context);
+                    }else{
+                      cityBottomsheet();
+                    }
+                  },
+                  child: Container(
+                    height: 55,
+                    width: width,
+                    decoration: BoxDecoration(
+                        color: Colors.white ,
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                            color: Colors.grey
+                        )
+                    ),
+                    child: Center(
+                      child: Text(cityValue ,
+                        style: const TextStyle(
+                            fontSize: 15 ,
+                            color: Colors.grey
+                        ),),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 20,) ,
+
+                InkWell(
+                  onTap: () {
+
+                    setState(() {
+                      isPressed = true ;
+                    });
+                    if(user_image == null){
+                      editProfileApi();
+                    }else{
+                      editProfileWithImage();
+                    }
+
+                  },
+                  child: Container(
+                    height: 55,
+                    width: 150,
+                    decoration: BoxDecoration(
+                      color: APPCOLOR ,
+                      borderRadius: BorderRadius.circular(8)
+                    ),
+                    child:  Center(
+                      child: isPressed ? Lottie.asset(APP_LOADING , height: 35 , width: 55): const Text('Update' ,
+                      style:  TextStyle(
                         fontSize: 15 ,
-                        color: Colors.grey
-                    ),),
-                ),
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Description') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: descriptionTextEd,
-              maxLines: 4,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
+                        fontWeight: FontWeight.w600 ,
+                        color: Colors.white
+                      ),),
+                    ),
                   ),
-                  hintText: 'Enter your description'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
+                )  ,
 
-            label('Address') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: addressTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your address Eg. land no , Street '
-              ),
+                const SizedBox(height: 30,)
+              ],
             ),
-            const SizedBox(height: 20,) ,
-
-            label('No of office') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: noOfOfiiceTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Type your no of office members Eg. 11-40'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('No of employees') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: noOfEmployeesTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your no of employees Eg. 11-50'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Established in') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: establishedInTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your established'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Website url') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: websiteUrlTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your website url Eg.www.google.com'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Fax') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: faxTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your fax number'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Phone') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              keyboardType: TextInputType.number,
-              maxLength: 10,
-              controller: phoneTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your phone number'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Facebook') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: facebookTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your facebook name or profile url'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Twitter') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: twitterTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your twitter name or url'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('LinkedIn') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: linkedInTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your linkedin name or url'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Google plus+') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: googleplusTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your google plus name or url '
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Pinterest') ,
-            const SizedBox(height: 10,) ,
-            TextFormField(
-              controller: pintrestTextEd,
-              decoration: InputDecoration(
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12)
-                  ),
-                  hintText: 'Enter your pintrest name or url'
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            label('Country') ,
-            const SizedBox(
-              height: 10,
-            ),
-            InkWell(
-              onTap: ()=> countryBottomSheet(),
-              child: Container(
-                height: 55,
-                width: width,
-                decoration: BoxDecoration(
-                  color: Colors.white ,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(
-                    color: Colors.grey
-                  )
-                ),
-                child: Center(
-                  child: Text(countryValue ,
-                  style: const TextStyle(
-                    fontSize: 15 ,
-                    color: Colors.grey
-                  ),),
-                ),
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            isIndia ? label('State') : Container(),
-             SizedBox(
-              height: isIndia?  10 : 0,
-            ),
-            !isIndia? Container():  InkWell(
-              onTap: () {
-                if(isIndia){
-                  stateBottomSheet();
-                }else{
-                  errorSnackBar('Please choose country', context);
-                }
-              },
-              child: Container(
-                height: 55,
-                width: width,
-                decoration: BoxDecoration(
-                    color: Colors.white ,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                        color: Colors.grey
-                    )
-                ),
-                child: Center(
-                  child: Text(stateValue ,
-                    style: const TextStyle(
-                        fontSize: 15 ,
-                        color: Colors.grey
-                    ),),
-                ),
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            isIndia? label('City'): Container() ,
-             SizedBox(
-              height: isIndia ? 10 : 0,
-            ),
-           !isIndia ? Container():  InkWell(
-              onTap: (){
-                if(isCityLoading){
-                  errorSnackBar('Loading... Please wait ', context);
-                }else{
-                  cityBottomsheet();
-                }
-              },
-              child: Container(
-                height: 55,
-                width: width,
-                decoration: BoxDecoration(
-                    color: Colors.white ,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(
-                        color: Colors.grey
-                    )
-                ),
-                child: Center(
-                  child: Text(cityValue ,
-                    style: const TextStyle(
-                        fontSize: 15 ,
-                        color: Colors.grey
-                    ),),
-                ),
-              ),
-            ),
-            const SizedBox(height: 20,) ,
-
-            InkWell(
-              onTap: () {
-                setState(() {
-                  isPressed = true ;
-                });
-                editProfileApi();
-              },
-              child: Container(
-                height: 55,
-                width: 150,
-                decoration: BoxDecoration(
-                  color: APPCOLOR ,
-                  borderRadius: BorderRadius.circular(8)
-                ),
-                child:  Center(
-                  child: isPressed ? Lottie.asset(APP_LOADING , height: 35 , width: 55): const Text('Update' ,
-                  style:  TextStyle(
-                    fontSize: 15 ,
-                    fontWeight: FontWeight.w600 ,
-                    color: Colors.white
-                  ),),
-                ),
-              ),
-            )  ,
-
-            const SizedBox(height: 30,)
-          ],
-        ),
-      ),
+          ),
+        );
+      }
     );
   }
 

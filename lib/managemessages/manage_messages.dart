@@ -3,7 +3,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:nav2/managemessages/manage_messages_receiv.dart';
 import 'package:nav2/model/manage_followers_model.dart';
+import 'package:nav2/provider/internet_provider.dart';
+import 'package:nav2/utils/internet_viewer.dart';
 import 'package:nav2/utils/no_results_page.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../utils/constants.dart';
 import 'package:http/http.dart' as http;
@@ -54,129 +57,140 @@ class _managemessagesState extends State<managemessages> {
     height = MediaQuery.of(context).size.height ;
     width = MediaQuery.of(context).size.width ;
 
-    return Scaffold(
-      body: Container(
-        width: width,
-        height: height,
-        color: Colors.white,
-        padding: const EdgeInsets.symmetric(
-          horizontal: 8.0
-        ),
-        child: isLoading ? const LoadingWidget(): Column(
-          children: [
-            const SizedBox(height: 40,) ,
-            const Align(
-              alignment: Alignment.topLeft,
-              child:  Text("Manage Followers" , style: TextStyle(
-                  fontSize: 23 ,
-                  fontWeight: FontWeight.w600
-              ),),
-            ) ,
-            data!.users!.isEmpty ? Expanded(
-              flex: 3,
-              child: NoResultsPage(),
-            ): Expanded(
-              flex: 3,
-              child: ListView.builder(
-                  itemCount: data!.users!.length,
-                  itemBuilder: (context , index){
-                    return Container(
-                      width: width,
-                      padding:  const EdgeInsets.all(16),
-                      margin: const EdgeInsets.symmetric(horizontal: 12),
-                      decoration:  BoxDecoration(
-                        color: Colors.white , 
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: const [
-                          BoxShadow(
-                            color: Colors.grey , 
-                            blurRadius: 2.0
-                          ) ,
-                          BoxShadow(
-                              color: Colors.grey ,
-                              blurRadius: 2.0
-                          )
-                        ]
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              const CircleAvatar(
-                                backgroundColor: Colors.white,
-                                radius: 25 ,
-                                backgroundImage: AssetImage(APP_LOGO),
+    return  Consumer<InternetProvider>(
+      builder: (context , value , child) {
+        return !value.isInternet ? InternetViewer() : Scaffold(
+          body: Container(
+            width: width,
+            height: height,
+            color: Colors.white,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 8.0
+            ),
+            child: isLoading ? const LoadingWidget(): Column(
+              children: [
+                const SizedBox(height: 40,) ,
+                const Align(
+                  alignment: Alignment.topLeft,
+                  child:  Text("Manage Followers" , style: TextStyle(
+                      fontSize: 23 ,
+                      fontWeight: FontWeight.w600
+                  ),),
+                ) ,
+                data!.users!.isEmpty ? Expanded(
+                  flex: 3,
+                  child: NoResultsPage(),
+                ): Expanded(
+                  flex: 3,
+                  child: ListView.builder(
+                      itemCount: data!.users!.length,
+                      itemBuilder: (context , index){
+                        return Container(
+                          width: width,
+                          padding:  const EdgeInsets.all(16),
+                          margin: const EdgeInsets.symmetric(horizontal: 12),
+                          decoration:  BoxDecoration(
+                            color: Colors.white ,
+                            borderRadius: BorderRadius.circular(20),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.grey ,
+                                blurRadius: 2.0
                               ) ,
-                              Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                                child: Expanded(
-                                  flex: 3,
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      data?.users?[index].name == null ? Container():
-                                          RichText(text: TextSpan(
-                                            text: data!.users![index].name! ,
-                                            style: const TextStyle(
-                                              fontSize: 17 ,
-                                              color: Colors.black,
-                                              fontWeight: FontWeight.w600
-                                            ) ,
-                                            children: const [
-                                              TextSpan(
-                                                text: ' has following you' ,
-                                                style: TextStyle(
-                                                  fontSize: 16 ,
-                                                  color: Colors.black,
-                                                  fontWeight: FontWeight.w500
-                                                )
-                                              )
-                                            ]
-                                          )),
-
-                                      const SizedBox(
-                                        height: 10,
-                                      ) ,
-
-                                      Row(
-                                        children: [
-                                          const Icon(Icons.mail , size: 24, color: Colors.black,) ,
-                                          const SizedBox(width: 10,) ,
-                                          Text(data!.users![index].email! ,
-                                            maxLines: 2,
-                                            style: const TextStyle(
-                                                fontSize: 13
-                                            ),)
-                                        ],
-                                      ) ,
-
-                                      const SizedBox(height: 10,) ,
-
-                                      Row(
-                                        children: [
-                                          const Icon(Icons.phone , size: 24, color: Colors.black,) ,
-                                          const SizedBox(width: 10,) ,
-                                          Text(data!.users![index].phone! ,
-                                            style: const TextStyle(
-                                                fontSize: 13
-                                            ),)
-                                        ],
-                                      )
-                                    ],
-                                  )
-                                ),
+                              BoxShadow(
+                                  color: Colors.grey ,
+                                  blurRadius: 2.0
                               )
-                            ],
-                          ) ,
+                            ]
+                          ),
+                          child: Column(
+                            children: [
+                              Row(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  const CircleAvatar(
+                                    backgroundColor: Colors.white,
+                                    radius: 25 ,
+                                    backgroundImage: AssetImage(APP_LOGO),
+                                  ) ,
+                                  Expanded(
+                                    flex: 3,
+                                    child: Padding(
+                                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                                      child: Column(
+                                        crossAxisAlignment: CrossAxisAlignment.start,
+                                        children: [
+                                          data?.users?[index].name == null ? Container():
+                                              SizedBox(
+                                                width: width ,
 
-                        ],
-                      ),
-                    );
-              }),
-            )
-          ],
-        ),
-      ),
+                                                child: RichText(
+                                                    text: TextSpan(
+                                                  text: data!.users![index].name! ,
+                                                  style: const TextStyle(
+                                                    fontSize: 17 ,
+                                                    color: Colors.black,
+                                                    fontWeight: FontWeight.w600
+                                                  ) ,
+                                                  children: const [
+                                                    TextSpan(
+                                                      text: ' has following you' ,
+                                                      style: TextStyle(
+                                                        fontSize: 16 ,
+                                                        color: Colors.black,
+                                                        fontWeight: FontWeight.w500
+                                                      )
+                                                    )
+                                                  ]
+                                                ) , maxLines: 3,
+                                                overflow: TextOverflow.ellipsis,),
+                                              ),
+
+                                          const SizedBox(
+                                            height: 10,
+                                          ) ,
+
+                                          Row(
+                                            children: [
+                                              const Icon(Icons.mail , size: 24, color: Colors.black,) ,
+                                              const SizedBox(width: 10,) ,
+                                              Text(data!.users![index].email! ,
+                                                maxLines: 2,
+                                                style: const TextStyle(
+                                                    fontSize: 13
+                                                ),)
+                                            ],
+                                          ) ,
+
+                                          const SizedBox(height: 10,) ,
+
+                                          Row(
+                                            children: [
+                                              const Icon(Icons.phone , size: 24, color: Colors.black,) ,
+                                              const SizedBox(width: 10,) ,
+                                              Text(data!.users![index].phone! ,
+                                                style: const TextStyle(
+                                                    fontSize: 13
+                                                ),)
+                                            ],
+                                          )
+                                        ],
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ) ,
+
+                            ],
+                          ),
+                        );
+                  }),
+                )
+              ],
+            ),
+          ),
+        );
+      }
     );
   }
 }

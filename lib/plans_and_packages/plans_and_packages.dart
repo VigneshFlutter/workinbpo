@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:nav2/model/plans_and_packages_model.dart';
+import 'package:nav2/plans_and_packages/buy_package_screen.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:nav2/utils/loading_widget.dart';
@@ -327,7 +328,15 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                         ) ,
 
                         InkWell(
-                          onTap: ()=> print('Pressed '),
+                          onTap: (){
+                            Navigator.push(
+                                context, MaterialPageRoute(
+                                builder: (context) => BuyPackageScreen(
+                                    packageName: data!.packages![index].packageTitle!,
+                                    price: data!.packages![index].packagePrice!.toString(),
+                                    noOfDays: data!.packages![index].packageNumDays!.toString(),
+                                    noOfPosts: data!.packages![index].packageNumListings!.toString())));
+                          },
                           child: Container(
                             height: 45,
                             width: 150,

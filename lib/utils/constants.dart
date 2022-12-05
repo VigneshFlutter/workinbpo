@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+
+String RESUME_URL = 'https://knownjobz.com/cvs/';
+
 const String APP_LOGO = 'assets/icons/applogo.png';
 const String APP_NAME = 'Known jobz';
 const String BASE_URL = 'https://knownjobz.com/api/company/';
@@ -17,12 +20,19 @@ const String PACKAGES_LIST_API = '${APP_BASE_URL}packages';
 const String LIST_CANDIDATED_API = '${APP_BASE_URL}company-appliedusers/' ;
 const String APPLICANT_PROFILE_API = '${APP_BASE_URL}applicant-profile/';
 const String SHORTLIST_API = '${APP_BASE_URL}company-listshortlist/';
+const String ADD_POST_JOB_API = '${APP_BASE_URL}company-addjob';
+const String UPDATE_POST_JOB_API = '${APP_BASE_URL}company-updatejob/' ;
+const String CALL_FOR_INTERVIEW = '${APP_BASE_URL}company-callforinterview/';
+const String ADD_SHORTLIST_API = '${APP_BASE_URL}company-addtoshortlist/';
+const String REMOVE_SHORTLIST_API = '${APP_BASE_URL}company-removefromshortlist/';
+
 
 String USER_TOKEN = 'user_auth';
 //APP COLORS
 const stripecolor = Color.fromARGB(255, 72, 2, 170);
 const plancolor = Color.fromARGB(255, 235, 47, 169);
 const APPCOLOR =   Color(0xFF336FA3);
+const ORANGE_COLOR = Color(0xFFE78E41);
 
 //Lottie Files
 const String APP_LOADING = 'assets/lottie/apploading.json';
@@ -56,5 +66,6 @@ const String CAKE_ICON = 'assets/cake.png';
 const String GENDER_ICON = 'assets/equality.png';
 const String SALARY_ICON = 'assets/salary.png' ;
 const String MARTIAL_STATUS_ICON = 'assets/wedding-ring.png';
+const String JOB_GREY_ICON = 'assets/suitcase-grey.png';
 
 
