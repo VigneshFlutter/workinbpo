@@ -333,11 +333,11 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             mainTitle('Education') ,
 
             SizedBox(
-              height: 60* data!.profileEdu!.length!.toDouble(),
+              height: 60* data!.profileEdu!.length.toDouble(),
               width: width,
               child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
-                itemCount: data!.profileEdu!.length!,
+                itemCount: data!.profileEdu!.length,
                   itemBuilder: (context , index){
 
                   return Column(
@@ -378,7 +378,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
               height: 80 * data!.profileExp!.length.toDouble(),
               width: width,
               child: ListView.builder(
-                  itemCount: data!.profileExp!.length!,
+                  itemCount: data!.profileExp!.length,
                   physics: NeverScrollableScrollPhysics(),
                   itemBuilder: (context , index){
                     return Column(

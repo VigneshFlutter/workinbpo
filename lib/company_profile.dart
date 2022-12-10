@@ -243,41 +243,41 @@ class _companyprofileState extends State<companyprofile> {
                                       description: value.data.company?.description == null ? '' :
                                       value.data.company!.description,
 
-                                      address: value.data?.company?.location == null ? "" :
-                                      value.data!.company!.location,
+                                      address: value.data.company?.location == null ? "" :
+                                      value.data.company!.location,
 
 
 
-                                      noOfOffice: value.data?.company?.noOfOffices?.toString() == null ? "":
-                                      value.data!.company!.noOfOffices!.toString() ,
+                                      noOfOffice: value.data.company?.noOfOffices?.toString() == null ? "":
+                                      value.data.company!.noOfOffices!.toString() ,
 
-                                      noOfEmployees: value.data?.company?.noOfEmployees?.toString() == null ? "":
-                                      value.data!.company!.noOfEmployees!.toString() ,
+                                      noOfEmployees: value.data.company?.noOfEmployees?.toString() == null ? "":
+                                      value.data.company!.noOfEmployees!.toString() ,
 
-                                      establishedIn: value.data?.company?.establishedIn == null ? "":
-                                      value.data!.company!.establishedIn!,
+                                      establishedIn: value.data.company?.establishedIn == null ? "":
+                                      value.data.company!.establishedIn!,
 
-                                      websiteUrl: value.data?.company?.website == null ? "":
-                                      value.data!.company!.website! ,
+                                      websiteUrl: value.data.company?.website == null ? "":
+                                      value.data.company!.website! ,
 
-                                      fax: value.data?.company?.fax == null ? "":
-                                      value.data!.company!.fax ,
+                                      fax: value.data.company?.fax == null ? "":
+                                      value.data.company!.fax ,
 
-                                      phone: value.data?.company?.phone == null ? "" :
-                                      value.data!.company!.phone! ,
+                                      phone: value.data.company?.phone == null ? "" :
+                                      value.data.company!.phone! ,
 
-                                      facebook: value.data?.company?.facebook ?? '',
-                                      twitter: value.data?.company?.twitter ?? '',
-                                      linkedIn: value.data?.company?.linkedin ?? '',
-                                      googlePlus: value.data?.company?.googlePlus ?? '',
-                                      pintrest : value.data?.company?.pinterest ?? '' ,
-                                      industryId: value.data?.company?.industry?.id.toString() == null ? "" :
-                                      value.data!.company!.industry!.id.toString(),
-                                      ownershipId: value.data?.company?.ownershipType?.id == null ? "":
-                                      value.data!.company!.ownershipType!.id.toString(),
-                                      country: value.data?.company?.countryId?.country ?? '',
-                                      state:  value.data?.company?.stateId?.state ?? '',
-                                      city:  value.data?.company?.cityId?.city ?? '',
+                                      facebook: value.data.company?.facebook ?? '',
+                                      twitter: value.data.company?.twitter ?? '',
+                                      linkedIn: value.data.company?.linkedin ?? '',
+                                      googlePlus: value.data.company?.googlePlus ?? '',
+                                      pintrest : value.data.company?.pinterest ?? '' ,
+                                      industryId: value.data.company?.industry?.id.toString() == null ? "" :
+                                      value.data.company!.industry!.id.toString(),
+                                      ownershipId: value.data.company?.ownershipType?.id == null ? "":
+                                      value.data.company!.ownershipType!.id.toString(),
+                                      country: value.data.company?.countryId?.country ?? '',
+                                      state:  value.data.company?.stateId?.state ?? '',
+                                      city:  value.data.company?.cityId?.city ?? '',
                                       countryId: value.data.company?.countryId?.countryId ?? 0,
                                       stateID: value.data.company?.stateId?.stateId ?? 0,
                                       cityID: value.data.company?.cityId?.cityId ?? 0,
