@@ -50,16 +50,20 @@ class _companyprofileState extends State<companyprofile> {
 
     if(response.statusCode == 200){
       data = ProfileModel.fromJson(jsonDecode(response.body));
+      
+      // ignore: use_build_context_synchronously
       Provider.of<ProfileProvider>(context , listen: false).updateValues(data!);
       if(data == null){
         print('The Response of error');
-        Navigator.push(context, MaterialPageRoute(builder: (context) => adminlogin()));
+        // ignore: use_build_context_synchronously
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const adminlogin()));
       }else{
         setState(() {
           isLoading = false ;
         });
       }
     }else{
+      // ignore: use_build_context_synchronously
       errorSnackBar('Something went wrong', context);
     }
 
