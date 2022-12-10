@@ -94,7 +94,7 @@ class _ShortListJobScreenState extends State<ShortListJobScreen> {
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        label('Name', 'KnownJobz') ,
+                        label('Name', data!.jobApplications![index].user!.name!) ,
 
                         label('Current Salary', data!.jobApplications![index].currentSalary!.toString()) ,
 

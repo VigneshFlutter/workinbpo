@@ -33,6 +33,7 @@ class _CallForInterviewState extends State<CallForInterview> {
 
   String todayDate = '';
   TextEditingController locationTextEd = TextEditingController();
+  TextEditingController dateTextEd = TextEditingController();
 
   @override
   void initState() {
@@ -44,7 +45,7 @@ class _CallForInterviewState extends State<CallForInterview> {
     final prefs = await SharedPreferences.getInstance(); 
     var token = prefs.getString(USER_TOKEN);
 
-    String path = '$CALL_FOR_INTERVIEW${widget.applicationID}/${widget.userID}/${widget.jobID}/${widget.companyID}?date=$todayDate&location=${locationTextEd.text}' ;
+    String path = '$CALL_FOR_INTERVIEW${widget.applicationID}/${widget.userID}/${widget.jobID}/${widget.companyID}?date=${dateTextEd.text}&location=${locationTextEd.text}' ;
     var url = Uri.parse(path);
     print('The Call for interview $path');
     http.Response response = await http.get(url ,
@@ -103,39 +104,49 @@ class _CallForInterviewState extends State<CallForInterview> {
             label('Choose a Date') ,
             const SizedBox(height: 10,) ,
 
-            InkWell(
-              onTap: () async{
-                final picker = await showDatePicker(
-                    context: context,
-                    initialDate: DateTime.now(),
-                    firstDate: DateTime.now(),
-                    lastDate: DateTime(2060));
-
-                if(picker != null){
-                  setState(() {
-                    todayDate = DateFormat('yyyy-MM-dd').format(picker!);
-                  });
-                }
-              },
-              child: Container(
-                height: 55,
-                width: width,
-                decoration: BoxDecoration(
-                  color: Colors.white ,
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: Colors.grey
-                  )
-                ),
-                child: Center(
-                  child: Text(todayDate ,
-                  style: const TextStyle(
-                    fontSize: 15 ,
-                    fontWeight: FontWeight.w600
-                  ),),
-                ),
+            TextFormField(
+              controller: dateTextEd,
+              decoration: InputDecoration(
+                hintText: 'Enter a date : 30/01/1900' ,
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(8)
+                )
               ),
             ),
+
+            // InkWell(
+            //   onTap: () async{
+            //     final picker = await showDatePicker(
+            //         context: context,
+            //         initialDate: DateTime.now(),
+            //         firstDate: DateTime.now(),
+            //         lastDate: DateTime(2060));
+            //
+            //     if(picker != null){
+            //       setState(() {
+            //         todayDate = DateFormat('yyyy-MM-dd').format(picker!);
+            //       });
+            //     }
+            //   },
+            //   child: Container(
+            //     height: 55,
+            //     width: width,
+            //     decoration: BoxDecoration(
+            //       color: Colors.white ,
+            //       borderRadius: BorderRadius.circular(8),
+            //       border: Border.all(
+            //         color: Colors.grey
+            //       )
+            //     ),
+            //     child: Center(
+            //       child: Text(todayDate ,
+            //       style: const TextStyle(
+            //         fontSize: 15 ,
+            //         fontWeight: FontWeight.w600
+            //       ),),
+            //     ),
+            //   ),
+            // ),
             const SizedBox(height: 20,) ,
 
             label('Location') ,

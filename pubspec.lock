@@ -195,11 +195,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.1"
-  flutter_localizations:
-    dependency: transitive
-    description: flutter
-    source: sdk
-    version: "0.0.0"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -287,6 +282,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.2.1"
+  jiffy:
+    dependency: "direct main"
+    description:
+      name: jiffy
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "5.0.0"
   js:
     dependency: transitive
     description:
@@ -329,13 +331,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0"
-  month_picker_dialog:
-    dependency: "direct main"
-    description:
-      name: month_picker_dialog
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.0"
   nested:
     dependency: transitive
     description:
@@ -482,7 +477,7 @@ packages:
       name: rxdart
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.26.0"
+    version: "0.27.7"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -592,14 +587,14 @@ packages:
       name: syncfusion_flutter_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "20.3.59"
+    version: "20.3.60"
   syncfusion_flutter_datagrid:
     dependency: "direct main"
     description:
       name: syncfusion_flutter_datagrid
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "20.3.59"
+    version: "20.3.60"
   synchronized:
     dependency: transitive
     description:

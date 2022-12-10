@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nav2/manage_jobs/call_interview_screen.dart';
 import 'package:nav2/model/applicant_profile_model.dart';
@@ -140,7 +141,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
                   child: FadeInImage(
                     height: 65,
                     width: 65,
-                    image: NetworkImage(IMAGEBASEURL+data!.user!.image),
+                    image: NetworkImage(IMAGEBASEURL+data!.user!.image!),
                     placeholder: AssetImage(NO_IMAGE_ICON),
                   ),
                 ) ,
@@ -300,7 +301,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
               children: [
                 Image.asset(CAKE_ICON , height: 21, width: 21,) ,
                 const SizedBox(width: 15,) ,
-                Text(data!.user!.dateOfBirth!,
+                Text(DateFormat('yyyy-MM-dd').format(data!.user!.dateOfBirth!),
                   maxLines: 2,
                   style: const TextStyle(
                       fontWeight: FontWeight.w600 ,
@@ -331,18 +332,127 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             
             mainTitle('Education') ,
 
+            SizedBox(
+              height: 60* data!.profileEdu!.length!.toDouble(),
+              width: width,
+              child: ListView.builder(
+                physics: NeverScrollableScrollPhysics(),
+                itemCount: data!.profileEdu!.length!,
+                  itemBuilder: (context , index){
+
+                  return Column(
+                    children: [
+                      Row(
+                        children: [
+                          Image.asset(CAREERLEVEL , height: 18, width: 18,) ,
+                          const SizedBox(width: 10,) ,
+                          Text(data!.profileEdu![index].degreeTitle! ,
+                          style: const TextStyle(
+                            fontSize: 15 ,
+                          ),)
+
+                        ],
+                      ) ,
+                      SizedBox(height: 10,) ,
+                      Row(
+                        children: [
+                          Image.asset(GRADUATION_ICON , height: 18, width: 18,) ,
+                          const SizedBox(width: 10,) ,
+                          Text(data!.profileEdu![index].institution! ,
+                            style: const TextStyle(
+                              fontSize: 15 ,
+                            ),)
+
+                        ],
+                      ) ,
+                    ],
+                  );
+              }),
+            ),
+
             const SizedBox(height: 15,) ,
             
             mainTitle('Experience') ,
+
+            SizedBox(
+              height: 80 * data!.profileExp!.length.toDouble(),
+              width: width,
+              child: ListView.builder(
+                  itemCount: data!.profileExp!.length!,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemBuilder: (context , index){
+                    return Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(data!.profileEdu![index].degreeTitle! ,
+                          style: const TextStyle(
+                            fontSize: 18 ,
+                            fontWeight: FontWeight.w600
+                          ),) ,
+                        SizedBox(height: 10,) ,
+                        Row(
+
+                          children: [
+                            Image.asset(PERMANENT_JOB , height: 18, width: 18,) ,
+                            const SizedBox(width: 10,) ,
+                            Text(data!.profileExp![index].company! ,
+                              style: const TextStyle(
+                                fontSize: 15 ,
+                              ),)
+
+                          ],
+                        ) ,
+                        SizedBox(height: 10,) ,
+                        Row(
+                          children: [
+                            Image.asset(SHORT_LIST_ICON , height: 18, width: 18,) ,
+                            const SizedBox(width: 10,) ,
+                            Text(data!.profileExp![index].description! ,
+                              style: const TextStyle(
+                                fontSize: 15 ,
+                              ),)
+
+                          ],
+                        ) ,
+                      ],
+                    );
+                  }),
+            ),
+
 
             const SizedBox(height: 15,) ,
             
             mainTitle('Skills') ,
 
+            Wrap(
+              children: data!.profileSkills!.map((e) {
+                return Chip(
+                    backgroundColor: Colors.white,
+                    side: const BorderSide(color: Colors.blueGrey),
+                    label: Text(e.jobSkill!.jobSkill! ,
+                style: const TextStyle(
+                  fontSize: 15 ,
+                  color: Colors.blueGrey
+                ),));
+              }).toList(),
+            ),
+
             const SizedBox(height: 15,) ,
             
-            mainTitle('Languages')
-            
+            mainTitle('Languages') ,
+            Wrap(
+              children: data!.profileLangs!.map((e) {
+                return Chip(
+                    backgroundColor: Colors.white,
+                    side: const BorderSide(color: Colors.blueGrey),
+                    label: Text(e.language!.lang! ,
+                      style: const TextStyle(
+                          fontSize: 15 ,
+                          color: Colors.blueGrey
+                      ),));
+              }).toList(),
+            ),
+            const SizedBox(height: 45,) ,
           ],
         ),
       ),

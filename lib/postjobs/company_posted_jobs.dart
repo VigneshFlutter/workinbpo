@@ -61,6 +61,20 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
     }
   }
 
+  Future<void> deleteJobsApi(String id) async {
+    final prefs = await SharedPreferences.getInstance();
+    var token = prefs.getString(USER_TOKEN);
+
+
+    var url = Uri.parse(DELETE_API+id);
+    http.Response response = await http.delete(url ,
+    headers: {
+      'Authorization': 'Bearer $token'
+    });
+
+    print('The Response of delete jobs ${response.body}');
+  }
+
   @override
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height ;
@@ -310,9 +324,15 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                 ))),
                         ) ,
                         ListTile(
-                          title: Text('Delete'),
+                          title: const Text('Delete'),
                           leading: SvgPicture.asset(DELETE_ICON),
-                          onTap: () => print('Pressed delete'),
+                          onTap: () {
+                            deleteJobsApi(data!.jobs!.data![index].id!.toString());
+                            setState(() {
+                              data!.jobs!.data!.removeAt(index);
+                            });
+                            Navigator.pop(context);
+                          },
                         ) ,
 
                         ListTile(

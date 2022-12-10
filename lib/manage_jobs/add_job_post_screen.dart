@@ -43,6 +43,8 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
   TextEditingController numberofPositionsTextEd = TextEditingController();
   TextEditingController salaryFromTextEd = TextEditingController();
   TextEditingController salaryToTextEd = TextEditingController();
+  TextEditingController jobSkillsTextEd = TextEditingController();
+  TextEditingController expiryDateTextEd = TextEditingController();
 
 
 
@@ -76,7 +78,8 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
   String jobShiftIdVal = '' ; 
   String genderIdVal = '' ; 
   String degreeLevelIdVal =  '' ; 
-  String jobExperienceIdVal = '' ; 
+  String jobExperienceIdVal = '' ;
+  List<String> jobSkills = [];
 
   //Models
   MasterModel data = MasterModel();
@@ -1328,7 +1331,36 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
 
                 const SizedBox(height: 20,) ,
 
+                label('Job skills') ,
+                const SizedBox(height: 10,) ,
 
+
+
+                const SizedBox(height: 10,) ,
+                jobSkills.isEmpty ? Container():
+                    Wrap(
+                      children: jobSkills.map((e){
+                        var indexof = jobSkills.indexOf(e);
+                        return ActionChip(
+                          onPressed: (){
+                            setState(() {
+                              jobSkills.removeAt(indexof);
+                            });
+                          },
+                            avatar: const Icon(
+                              Icons.delete,
+                              color: Colors.blueGrey,
+                            ),
+                          backgroundColor: Colors.blueGrey,
+                            label: Text(e ,
+                            style: const TextStyle(
+                              color: Colors.blueGrey ,
+                              fontSize: 15
+                            ),
+                        ));
+                      }).toList(),
+                    ),
+                const SizedBox(height: 20,) ,
                 label('Country') ,
                 const SizedBox(height: 10,) ,
 
@@ -1824,6 +1856,17 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                 ),
 
                 const SizedBox(height: 20,) ,
+
+                label('Job Expiry date') ,
+
+                const SizedBox(height: 10,) ,
+
+                TextFormField(
+                  decoration: InputDecoration(
+                    hintText: 'Expiration date: '
+                  ),
+                ),
+
 
                 InkWell(
                   onTap: ()=> checkingValues(),

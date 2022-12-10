@@ -16,6 +16,11 @@ class ApplicantProfileModel {
     this.job,
     this.company,
     this.profileCv,
+    this.profileSkills,
+    this.profileLangs,
+    this.profileExp,
+    this.profileEdu,
+    this.shortlisted,
     this.testing,
   });
 
@@ -25,6 +30,11 @@ class ApplicantProfileModel {
   Job? job;
   Company? company;
   ProfileCv? profileCv;
+  List<ProfileSkill>? profileSkills;
+  List<ProfileLang>? profileLangs;
+  List<ProfileExp>? profileExp;
+  List<ProfileEdu>? profileEdu;
+  int? shortlisted;
   String? testing;
 
   factory ApplicantProfileModel.fromJson(Map<String, dynamic> json) => ApplicantProfileModel(
@@ -34,6 +44,11 @@ class ApplicantProfileModel {
     job: json["job"] == null ? null : Job.fromJson(json["job"]),
     company: json["company"] == null ? null : Company.fromJson(json["company"]),
     profileCv: json["profileCv"] == null ? null : ProfileCv.fromJson(json["profileCv"]),
+    profileSkills: json["profileSkills"] == null ? null : List<ProfileSkill>.from(json["profileSkills"].map((x) => ProfileSkill.fromJson(x))),
+    profileLangs: json["profileLangs"] == null ? null : List<ProfileLang>.from(json["profileLangs"].map((x) => ProfileLang.fromJson(x))),
+    profileExp: json["profileExp"] == null ? null : List<ProfileExp>.from(json["profileExp"].map((x) => ProfileExp.fromJson(x))),
+    profileEdu: json["profileEdu"] == null ? null : List<ProfileEdu>.from(json["profileEdu"].map((x) => ProfileEdu.fromJson(x))),
+    shortlisted: json["shortlisted"] == null ? null : json["shortlisted"],
     testing: json["testing"] == null ? null : json["testing"],
   );
 
@@ -44,6 +59,11 @@ class ApplicantProfileModel {
     "job": job == null ? null : job!.toJson(),
     "company": company == null ? null : company!.toJson(),
     "profileCv": profileCv == null ? null : profileCv!.toJson(),
+    "profileSkills": profileSkills == null ? null : List<dynamic>.from(profileSkills!.map((x) => x.toJson())),
+    "profileLangs": profileLangs == null ? null : List<dynamic>.from(profileLangs!.map((x) => x.toJson())),
+    "profileExp": profileExp == null ? null : List<dynamic>.from(profileExp!.map((x) => x.toJson())),
+    "profileEdu": profileEdu == null ? null : List<dynamic>.from(profileEdu!.map((x) => x.toJson())),
+    "shortlisted": shortlisted == null ? null : shortlisted,
     "testing": testing == null ? null : testing,
   };
 }
@@ -84,7 +104,6 @@ class Company {
     this.packageId,
     this.packageStartDate,
     this.packageEndDate,
-    this.availFreepackage,
     this.jobsQuota,
     this.availedJobsQuota,
     this.isSubscribed,
@@ -93,6 +112,7 @@ class Company {
     this.personalContactNumber,
     this.companyEmail,
     this.emailVerifiedAt,
+    this.availFreepackage,
   });
 
   int? id;
@@ -103,13 +123,13 @@ class Company {
   dynamic ownershipTypeId;
   dynamic description;
   dynamic location;
-  int? noOfOffices;
+  dynamic noOfOffices;
   String? website;
   dynamic noOfEmployees;
   dynamic establishedIn;
   dynamic fax;
-  String? phone;
-  dynamic logo;
+  dynamic phone;
+  String? logo;
   int? countryId;
   int? stateId;
   int? cityId;
@@ -129,7 +149,6 @@ class Company {
   int? packageId;
   DateTime? packageStartDate;
   DateTime? packageEndDate;
-  int? availFreepackage;
   int? jobsQuota;
   int? availedJobsQuota;
   int? isSubscribed;
@@ -138,6 +157,7 @@ class Company {
   int? personalContactNumber;
   String? companyEmail;
   DateTime? emailVerifiedAt;
+  int? availFreepackage;
 
   factory Company.fromJson(Map<String, dynamic> json) => Company(
     id: json["id"] == null ? null : json["id"],
@@ -148,13 +168,13 @@ class Company {
     ownershipTypeId: json["ownership_type_id"],
     description: json["description"],
     location: json["location"],
-    noOfOffices: json["no_of_offices"] == null ? null : json["no_of_offices"],
+    noOfOffices: json["no_of_offices"],
     website: json["website"] == null ? null : json["website"],
     noOfEmployees: json["no_of_employees"],
     establishedIn: json["established_in"],
     fax: json["fax"],
-    phone: json["phone"] == null ? null : json["phone"],
-    logo: json["logo"],
+    phone: json["phone"],
+    logo: json["logo"] == null ? null : json["logo"],
     countryId: json["country_id"] == null ? null : json["country_id"],
     stateId: json["state_id"] == null ? null : json["state_id"],
     cityId: json["city_id"] == null ? null : json["city_id"],
@@ -174,7 +194,6 @@ class Company {
     packageId: json["package_id"] == null ? null : json["package_id"],
     packageStartDate: json["package_start_date"] == null ? null : DateTime.parse(json["package_start_date"]),
     packageEndDate: json["package_end_date"] == null ? null : DateTime.parse(json["package_end_date"]),
-    availFreepackage: json["avail_freepackage"] == null ? null : json["avail_freepackage"],
     jobsQuota: json["jobs_quota"] == null ? null : json["jobs_quota"],
     availedJobsQuota: json["availed_jobs_quota"] == null ? null : json["availed_jobs_quota"],
     isSubscribed: json["is_subscribed"] == null ? null : json["is_subscribed"],
@@ -183,6 +202,7 @@ class Company {
     personalContactNumber: json["personal_contact_number"] == null ? null : json["personal_contact_number"],
     companyEmail: json["company_email"] == null ? null : json["company_email"],
     emailVerifiedAt: json["email_verified_at"] == null ? null : DateTime.parse(json["email_verified_at"]),
+    availFreepackage: json["avail_freepackage"] == null ? null : json["avail_freepackage"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -194,13 +214,13 @@ class Company {
     "ownership_type_id": ownershipTypeId,
     "description": description,
     "location": location,
-    "no_of_offices": noOfOffices == null ? null : noOfOffices,
+    "no_of_offices": noOfOffices,
     "website": website == null ? null : website,
     "no_of_employees": noOfEmployees,
     "established_in": establishedIn,
     "fax": fax,
-    "phone": phone == null ? null : phone,
-    "logo": logo,
+    "phone": phone,
+    "logo": logo == null ? null : logo,
     "country_id": countryId == null ? null : countryId,
     "state_id": stateId == null ? null : stateId,
     "city_id": cityId == null ? null : cityId,
@@ -220,7 +240,6 @@ class Company {
     "package_id": packageId == null ? null : packageId,
     "package_start_date": packageStartDate == null ? null : packageStartDate!.toIso8601String(),
     "package_end_date": packageEndDate == null ? null : packageEndDate!.toIso8601String(),
-    "avail_freepackage": availFreepackage == null ? null : availFreepackage,
     "jobs_quota": jobsQuota == null ? null : jobsQuota,
     "availed_jobs_quota": availedJobsQuota == null ? null : availedJobsQuota,
     "is_subscribed": isSubscribed == null ? null : isSubscribed,
@@ -229,6 +248,7 @@ class Company {
     "personal_contact_number": personalContactNumber == null ? null : personalContactNumber,
     "company_email": companyEmail == null ? null : companyEmail,
     "email_verified_at": emailVerifiedAt == null ? null : emailVerifiedAt!.toIso8601String(),
+    "avail_freepackage": availFreepackage == null ? null : availFreepackage,
   };
 }
 
@@ -285,7 +305,7 @@ class Job {
   int? jobShiftId;
   int? numOfPositions;
   int? genderId;
-  DateTime? expiryDate;
+  dynamic expiryDate;
   int? degreeLevelId;
   int? jobExperienceId;
   int? isActive;
@@ -316,7 +336,7 @@ class Job {
     jobShiftId: json["job_shift_id"] == null ? null : json["job_shift_id"],
     numOfPositions: json["num_of_positions"] == null ? null : json["num_of_positions"],
     genderId: json["gender_id"] == null ? null : json["gender_id"],
-    expiryDate: json["expiry_date"] == null ? null : DateTime.parse(json["expiry_date"]),
+    expiryDate: json["expiry_date"],
     degreeLevelId: json["degree_level_id"] == null ? null : json["degree_level_id"],
     jobExperienceId: json["job_experience_id"] == null ? null : json["job_experience_id"],
     isActive: json["is_active"] == null ? null : json["is_active"],
@@ -348,7 +368,7 @@ class Job {
     "job_shift_id": jobShiftId == null ? null : jobShiftId,
     "num_of_positions": numOfPositions == null ? null : numOfPositions,
     "gender_id": genderId == null ? null : genderId,
-    "expiry_date": expiryDate == null ? null : expiryDate!.toIso8601String(),
+    "expiry_date": expiryDate,
     "degree_level_id": degreeLevelId == null ? null : degreeLevelId,
     "job_experience_id": jobExperienceId == null ? null : jobExperienceId,
     "is_active": isActive == null ? null : isActive,
@@ -448,6 +468,314 @@ class ProfileCv {
   };
 }
 
+class ProfileEdu {
+  ProfileEdu({
+    this.id,
+    this.userId,
+    this.degreeLevelId,
+    this.degreeTypeId,
+    this.degreeTitle,
+    this.countryId,
+    this.stateId,
+    this.cityId,
+    this.dateCompletion,
+    this.institution,
+    this.degreeResult,
+    this.resultTypeId,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  int? id;
+  int? userId;
+  int? degreeLevelId;
+  dynamic degreeTypeId;
+  String? degreeTitle;
+  int? countryId;
+  dynamic stateId;
+  dynamic cityId;
+  String? dateCompletion;
+  String? institution;
+  String? degreeResult;
+  int? resultTypeId;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+
+  factory ProfileEdu.fromJson(Map<String, dynamic> json) => ProfileEdu(
+    id: json["id"] == null ? null : json["id"],
+    userId: json["user_id"] == null ? null : json["user_id"],
+    degreeLevelId: json["degree_level_id"] == null ? null : json["degree_level_id"],
+    degreeTypeId: json["degree_type_id"],
+    degreeTitle: json["degree_title"] == null ? null : json["degree_title"],
+    countryId: json["country_id"] == null ? null : json["country_id"],
+    stateId: json["state_id"],
+    cityId: json["city_id"],
+    dateCompletion: json["date_completion"] == null ? null : json["date_completion"],
+    institution: json["institution"] == null ? null : json["institution"],
+    degreeResult: json["degree_result"] == null ? null : json["degree_result"],
+    resultTypeId: json["result_type_id"] == null ? null : json["result_type_id"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id == null ? null : id,
+    "user_id": userId == null ? null : userId,
+    "degree_level_id": degreeLevelId == null ? null : degreeLevelId,
+    "degree_type_id": degreeTypeId,
+    "degree_title": degreeTitle == null ? null : degreeTitle,
+    "country_id": countryId == null ? null : countryId,
+    "state_id": stateId,
+    "city_id": cityId,
+    "date_completion": dateCompletion == null ? null : dateCompletion,
+    "institution": institution == null ? null : institution,
+    "degree_result": degreeResult == null ? null : degreeResult,
+    "result_type_id": resultTypeId == null ? null : resultTypeId,
+    "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+    "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+  };
+}
+
+class ProfileExp {
+  ProfileExp({
+    this.id,
+    this.userId,
+    this.title,
+    this.company,
+    this.countryId,
+    this.stateId,
+    this.cityId,
+    this.dateStart,
+    this.dateEnd,
+    this.isCurrentlyWorking,
+    this.description,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  int? id;
+  int? userId;
+  String? title;
+  String? company;
+  int? countryId;
+  dynamic stateId;
+  dynamic cityId;
+  DateTime? dateStart;
+  DateTime? dateEnd;
+  int? isCurrentlyWorking;
+  String? description;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+
+  factory ProfileExp.fromJson(Map<String, dynamic> json) => ProfileExp(
+    id: json["id"] == null ? null : json["id"],
+    userId: json["user_id"] == null ? null : json["user_id"],
+    title: json["title"] == null ? null : json["title"],
+    company: json["company"] == null ? null : json["company"],
+    countryId: json["country_id"] == null ? null : json["country_id"],
+    stateId: json["state_id"],
+    cityId: json["city_id"],
+    dateStart: json["date_start"] == null ? null : DateTime.parse(json["date_start"]),
+    dateEnd: json["date_end"] == null ? null : DateTime.parse(json["date_end"]),
+    isCurrentlyWorking: json["is_currently_working"] == null ? null : json["is_currently_working"],
+    description: json["description"] == null ? null : json["description"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id == null ? null : id,
+    "user_id": userId == null ? null : userId,
+    "title": title == null ? null : title,
+    "company": company == null ? null : company,
+    "country_id": countryId == null ? null : countryId,
+    "state_id": stateId,
+    "city_id": cityId,
+    "date_start": dateStart == null ? null : dateStart!.toIso8601String(),
+    "date_end": dateEnd == null ? null : dateEnd!.toIso8601String(),
+    "is_currently_working": isCurrentlyWorking == null ? null : isCurrentlyWorking,
+    "description": description == null ? null : description,
+    "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+    "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+  };
+}
+
+class ProfileLang {
+  ProfileLang({
+    this.id,
+    this.userId,
+    this.languageId,
+    this.languageLevelId,
+    this.createdAt,
+    this.updatedAt,
+    this.language,
+  });
+
+  int? id;
+  int? userId;
+  int? languageId;
+  int? languageLevelId;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+  Language? language;
+
+  factory ProfileLang.fromJson(Map<String, dynamic> json) => ProfileLang(
+    id: json["id"] == null ? null : json["id"],
+    userId: json["user_id"] == null ? null : json["user_id"],
+    languageId: json["language_id"] == null ? null : json["language_id"],
+    languageLevelId: json["language_level_id"] == null ? null : json["language_level_id"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+    language: json["language"] == null ? null : Language.fromJson(json["language"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id == null ? null : id,
+    "user_id": userId == null ? null : userId,
+    "language_id": languageId == null ? null : languageId,
+    "language_level_id": languageLevelId == null ? null : languageLevelId,
+    "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+    "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+    "language": language == null ? null : language!.toJson(),
+  };
+}
+
+class Language {
+  Language({
+    this.id,
+    this.lang,
+    this.native,
+    this.isoCode,
+    this.isActive,
+    this.isRtl,
+    this.isDefault,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  int? id;
+  String? lang;
+  String? native;
+  String? isoCode;
+  int? isActive;
+  int? isRtl;
+  int? isDefault;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+
+  factory Language.fromJson(Map<String, dynamic> json) => Language(
+    id: json["id"] == null ? null : json["id"],
+    lang: json["lang"] == null ? null : json["lang"],
+    native: json["native"] == null ? null : json["native"],
+    isoCode: json["iso_code"] == null ? null : json["iso_code"],
+    isActive: json["is_active"] == null ? null : json["is_active"],
+    isRtl: json["is_rtl"] == null ? null : json["is_rtl"],
+    isDefault: json["is_default"] == null ? null : json["is_default"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id == null ? null : id,
+    "lang": lang == null ? null : lang,
+    "native": native == null ? null : native,
+    "iso_code": isoCode == null ? null : isoCode,
+    "is_active": isActive == null ? null : isActive,
+    "is_rtl": isRtl == null ? null : isRtl,
+    "is_default": isDefault == null ? null : isDefault,
+    "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+    "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+  };
+}
+
+class ProfileSkill {
+  ProfileSkill({
+    this.id,
+    this.userId,
+    this.jobSkillId,
+    this.jobExperienceId,
+    this.createdAt,
+    this.updatedAt,
+    this.jobSkill,
+  });
+
+  int? id;
+  int? userId;
+  int? jobSkillId;
+  int? jobExperienceId;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+  JobSkill? jobSkill;
+
+  factory ProfileSkill.fromJson(Map<String, dynamic> json) => ProfileSkill(
+    id: json["id"] == null ? null : json["id"],
+    userId: json["user_id"] == null ? null : json["user_id"],
+    jobSkillId: json["job_skill_id"] == null ? null : json["job_skill_id"],
+    jobExperienceId: json["job_experience_id"] == null ? null : json["job_experience_id"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+    jobSkill: json["job_skill"] == null ? null : JobSkill.fromJson(json["job_skill"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id == null ? null : id,
+    "user_id": userId == null ? null : userId,
+    "job_skill_id": jobSkillId == null ? null : jobSkillId,
+    "job_experience_id": jobExperienceId == null ? null : jobExperienceId,
+    "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+    "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+    "job_skill": jobSkill == null ? null : jobSkill!.toJson(),
+  };
+}
+
+class JobSkill {
+  JobSkill({
+    this.id,
+    this.jobSkillId,
+    this.jobSkill,
+    this.isDefault,
+    this.isActive,
+    this.sortOrder,
+    this.lang,
+    this.createdAt,
+    this.updatedAt,
+  });
+
+  int? id;
+  int? jobSkillId;
+  String? jobSkill;
+  int? isDefault;
+  int? isActive;
+  int? sortOrder;
+  String? lang;
+  DateTime? createdAt;
+  DateTime? updatedAt;
+
+  factory JobSkill.fromJson(Map<String, dynamic> json) => JobSkill(
+    id: json["id"] == null ? null : json["id"],
+    jobSkillId: json["job_skill_id"] == null ? null : json["job_skill_id"],
+    jobSkill: json["job_skill"] == null ? null : json["job_skill"],
+    isDefault: json["is_default"] == null ? null : json["is_default"],
+    isActive: json["is_active"] == null ? null : json["is_active"],
+    sortOrder: json["sort_order"] == null ? null : json["sort_order"],
+    lang: json["lang"] == null ? null : json["lang"],
+    createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+    updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+  );
+
+  Map<String, dynamic> toJson() => {
+    "id": id == null ? null : id,
+    "job_skill_id": jobSkillId == null ? null : jobSkillId,
+    "job_skill": jobSkill == null ? null : jobSkill,
+    "is_default": isDefault == null ? null : isDefault,
+    "is_active": isActive == null ? null : isActive,
+    "sort_order": sortOrder == null ? null : sortOrder,
+    "lang": lang == null ? null : lang,
+    "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+    "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+  };
+}
+
 class User {
   User({
     this.id,
@@ -489,13 +817,11 @@ class User {
     this.packageId,
     this.packageStartDate,
     this.packageEndDate,
-    this.availFreepackage,
     this.jobsQuota,
     this.availedJobsQuota,
     this.search,
-    this.isSubscribed,
-    this.fcmToken,
     this.emailVerifiedAt,
+    this.isSubscribed,
   });
 
   int? id;
@@ -504,31 +830,31 @@ class User {
   String? lastName;
   String? name;
   String? email;
-  dynamic fatherName;
-  dynamic dateOfBirth;
-  dynamic genderId;
-  dynamic maritalStatusId;
-  dynamic nationalityId;
-  dynamic nationalIdCardNumber;
-  dynamic countryId;
+  String? fatherName;
+  DateTime? dateOfBirth;
+  int? genderId;
+  int? maritalStatusId;
+  int? nationalityId;
+  String? nationalIdCardNumber;
+  String? countryId;
   dynamic stateId;
   dynamic cityId;
   String? phone;
   dynamic mobileNum;
-  dynamic jobExperienceId;
-  dynamic careerLevelId;
-  dynamic industryId;
-  dynamic functionalAreaId;
-  dynamic currentSalary;
-  dynamic expectedSalary;
-  dynamic salaryCurrency;
-  dynamic streetAddress;
+  int? jobExperienceId;
+  int? careerLevelId;
+  int? industryId;
+  int? functionalAreaId;
+  String? currentSalary;
+  String? expectedSalary;
+  String? salaryCurrency;
+  String? streetAddress;
   int? isActive;
   int? verified;
   dynamic verificationToken;
   dynamic provider;
   dynamic providerId;
-  dynamic image;
+  String? image;
   dynamic lang;
   DateTime? createdAt;
   DateTime? updatedAt;
@@ -537,13 +863,11 @@ class User {
   int? packageId;
   dynamic packageStartDate;
   dynamic packageEndDate;
-  int? availFreepackage;
   int? jobsQuota;
   int? availedJobsQuota;
-  dynamic search;
-  int? isSubscribed;
-  dynamic fcmToken;
+  String? search;
   DateTime? emailVerifiedAt;
+  int? isSubscribed;
 
   factory User.fromJson(Map<String, dynamic> json) => User(
     id: json["id"] == null ? null : json["id"],
@@ -552,31 +876,31 @@ class User {
     lastName: json["last_name"] == null ? null : json["last_name"],
     name: json["name"] == null ? null : json["name"],
     email: json["email"] == null ? null : json["email"],
-    fatherName: json["father_name"],
-    dateOfBirth: json["date_of_birth"],
-    genderId: json["gender_id"],
-    maritalStatusId: json["marital_status_id"],
-    nationalityId: json["nationality_id"],
-    nationalIdCardNumber: json["national_id_card_number"],
-    countryId: json["country_id"],
+    fatherName: json["father_name"] == null ? null : json["father_name"],
+    dateOfBirth: json["date_of_birth"] == null ? null : DateTime.parse(json["date_of_birth"]),
+    genderId: json["gender_id"] == null ? null : json["gender_id"],
+    maritalStatusId: json["marital_status_id"] == null ? null : json["marital_status_id"],
+    nationalityId: json["nationality_id"] == null ? null : json["nationality_id"],
+    nationalIdCardNumber: json["national_id_card_number"] == null ? null : json["national_id_card_number"],
+    countryId: json["country_id"] == null ? null : json["country_id"],
     stateId: json["state_id"],
     cityId: json["city_id"],
     phone: json["phone"] == null ? null : json["phone"],
     mobileNum: json["mobile_num"],
-    jobExperienceId: json["job_experience_id"],
-    careerLevelId: json["career_level_id"],
-    industryId: json["industry_id"],
-    functionalAreaId: json["functional_area_id"],
-    currentSalary: json["current_salary"],
-    expectedSalary: json["expected_salary"],
-    salaryCurrency: json["salary_currency"],
-    streetAddress: json["street_address"],
+    jobExperienceId: json["job_experience_id"] == null ? null : json["job_experience_id"],
+    careerLevelId: json["career_level_id"] == null ? null : json["career_level_id"],
+    industryId: json["industry_id"] == null ? null : json["industry_id"],
+    functionalAreaId: json["functional_area_id"] == null ? null : json["functional_area_id"],
+    currentSalary: json["current_salary"] == null ? null : json["current_salary"],
+    expectedSalary: json["expected_salary"] == null ? null : json["expected_salary"],
+    salaryCurrency: json["salary_currency"] == null ? null : json["salary_currency"],
+    streetAddress: json["street_address"] == null ? null : json["street_address"],
     isActive: json["is_active"] == null ? null : json["is_active"],
     verified: json["verified"] == null ? null : json["verified"],
     verificationToken: json["verification_token"],
     provider: json["provider"],
     providerId: json["provider_id"],
-    image: json["image"],
+    image: json["image"] == null ? null : json["image"],
     lang: json["lang"],
     createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
     updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
@@ -585,13 +909,11 @@ class User {
     packageId: json["package_id"] == null ? null : json["package_id"],
     packageStartDate: json["package_start_date"],
     packageEndDate: json["package_end_date"],
-    availFreepackage: json["avail_freepackage"] == null ? null : json["avail_freepackage"],
     jobsQuota: json["jobs_quota"] == null ? null : json["jobs_quota"],
     availedJobsQuota: json["availed_jobs_quota"] == null ? null : json["availed_jobs_quota"],
-    search: json["search"],
-    isSubscribed: json["is_subscribed"] == null ? null : json["is_subscribed"],
-    fcmToken: json["fcm_token"],
+    search: json["search"] == null ? null : json["search"],
     emailVerifiedAt: json["email_verified_at"] == null ? null : DateTime.parse(json["email_verified_at"]),
+    isSubscribed: json["is_subscribed"] == null ? null : json["is_subscribed"],
   );
 
   Map<String, dynamic> toJson() => {
@@ -601,31 +923,31 @@ class User {
     "last_name": lastName == null ? null : lastName,
     "name": name == null ? null : name,
     "email": email == null ? null : email,
-    "father_name": fatherName,
-    "date_of_birth": dateOfBirth,
-    "gender_id": genderId,
-    "marital_status_id": maritalStatusId,
-    "nationality_id": nationalityId,
-    "national_id_card_number": nationalIdCardNumber,
-    "country_id": countryId,
+    "father_name": fatherName == null ? null : fatherName,
+    "date_of_birth": dateOfBirth == null ? null : dateOfBirth!.toIso8601String(),
+    "gender_id": genderId == null ? null : genderId,
+    "marital_status_id": maritalStatusId == null ? null : maritalStatusId,
+    "nationality_id": nationalityId == null ? null : nationalityId,
+    "national_id_card_number": nationalIdCardNumber == null ? null : nationalIdCardNumber,
+    "country_id": countryId == null ? null : countryId,
     "state_id": stateId,
     "city_id": cityId,
     "phone": phone == null ? null : phone,
     "mobile_num": mobileNum,
-    "job_experience_id": jobExperienceId,
-    "career_level_id": careerLevelId,
-    "industry_id": industryId,
-    "functional_area_id": functionalAreaId,
-    "current_salary": currentSalary,
-    "expected_salary": expectedSalary,
-    "salary_currency": salaryCurrency,
-    "street_address": streetAddress,
+    "job_experience_id": jobExperienceId == null ? null : jobExperienceId,
+    "career_level_id": careerLevelId == null ? null : careerLevelId,
+    "industry_id": industryId == null ? null : industryId,
+    "functional_area_id": functionalAreaId == null ? null : functionalAreaId,
+    "current_salary": currentSalary == null ? null : currentSalary,
+    "expected_salary": expectedSalary == null ? null : expectedSalary,
+    "salary_currency": salaryCurrency == null ? null : salaryCurrency,
+    "street_address": streetAddress == null ? null : streetAddress,
     "is_active": isActive == null ? null : isActive,
     "verified": verified == null ? null : verified,
     "verification_token": verificationToken,
     "provider": provider,
     "provider_id": providerId,
-    "image": image,
+    "image": image == null ? null : image,
     "lang": lang,
     "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
     "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
@@ -634,12 +956,10 @@ class User {
     "package_id": packageId == null ? null : packageId,
     "package_start_date": packageStartDate,
     "package_end_date": packageEndDate,
-    "avail_freepackage": availFreepackage == null ? null : availFreepackage,
     "jobs_quota": jobsQuota == null ? null : jobsQuota,
     "availed_jobs_quota": availedJobsQuota == null ? null : availedJobsQuota,
-    "search": search,
-    "is_subscribed": isSubscribed == null ? null : isSubscribed,
-    "fcm_token": fcmToken,
+    "search": search == null ? null : search,
     "email_verified_at": emailVerifiedAt == null ? null : emailVerifiedAt!.toIso8601String(),
+    "is_subscribed": isSubscribed == null ? null : isSubscribed,
   };
 }

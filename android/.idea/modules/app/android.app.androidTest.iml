@@ -13,9 +13,15 @@
           <stringArguments>
             <stringArg name="classpath">
               <args>
-                <arg>$USER_HOME$/.gradle/caches/transforms-3/64ee22e2267b1cbe028d7ca3878dda77/transformed/jetified-libs.jar</arg>
+                <arg>$USER_HOME$/.gradle/caches/transforms-3/7f74443e4b5ddeba488238900a679648/transformed/jetified-libs.jar</arg>
                 <arg>$MODULE_DIR$/../../../../build/shared_preferences_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/flutter_plugin_android_lifecycle/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/sqflite/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/url_launcher_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/path_provider_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/image_picker_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
                 <arg>$MODULE_DIR$/../../../../build/connectivity_plus/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
+                <arg>$MODULE_DIR$/../../../../build/webview_flutter_android/intermediates/compile_library_classes_jar/debug/classes.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/5587552ab7efc796b3a1f535ed25118f/transformed/jetified-armeabi_v7a_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/466679674b762d0064146347bd6e87dd/transformed/jetified-arm64_v8a_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/50f12d7ae2075b95bccfefc7d0dec180/transformed/jetified-x86_64_debug-1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25.jar</arg>
@@ -50,7 +56,7 @@
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/20e9f0d462a02bdb5908bb867b76650a/transformed/jetified-annotations-13.0.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/d960c15c11e4f01c1b857bb90fbe4e99/transformed/jetified-kotlin-stdlib-common-1.6.10.jar</arg>
                 <arg>$USER_HOME$/.gradle/caches/transforms-3/8582362e76efd1d35d2d47047dd90364/transformed/jetified-annotation-experimental-1.1.0-api.jar</arg>
-                <arg>$USER_HOME$/Library/Android/sdk/platforms/android-31/android.jar</arg>
+                <arg>$USER_HOME$/Library/Android/sdk/platforms/android-33/android.jar</arg>
                 <arg>$USER_HOME$/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar</arg>
               </args>
             </stringArg>
@@ -101,10 +107,16 @@
     <content url="file://$MODULE_DIR$/../../../../build/app/generated/res/resValues/androidTest/debug" />
     <content url="file://$MODULE_DIR$/../../../../build/app/generated/res/rs/androidTest/debug" />
     <content url="file://$MODULE_DIR$/../../../../build/app/generated/source/buildConfig/androidTest/debug" />
-    <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
+    <orderEntry type="jdk" jdkName="Android API 33, extension level 3 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="android.shared_preferences_android.main" scope="TEST" />
+    <orderEntry type="module" module-name="android.flutter_plugin_android_lifecycle.main" scope="TEST" />
+    <orderEntry type="module" module-name="android.sqflite.main" scope="TEST" />
+    <orderEntry type="module" module-name="android.url_launcher_android.main" scope="TEST" />
+    <orderEntry type="module" module-name="android.path_provider_android.main" scope="TEST" />
+    <orderEntry type="module" module-name="android.image_picker_android.main" scope="TEST" />
     <orderEntry type="module" module-name="android.connectivity_plus.main" scope="TEST" />
+    <orderEntry type="module" module-name="android.webview_flutter_android.main" scope="TEST" />
     <orderEntry type="module" module-name="android.app.main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Gradle: /Users/shripranav/Projects/workinbpo/build/app/intermediates/flutter/debug/libs.jar" level="project" />
     <orderEntry type="library" scope="TEST" name="Gradle: io.flutter:armeabi_v7a_debug:1.0.0-857bd6b74c5eb56151bfafe91e7fa6a82b6fee25" level="project" />

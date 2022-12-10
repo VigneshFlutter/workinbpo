@@ -1,11 +1,11 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.bhive.knownjobzrecruiter"
-4    android:versionCode="1"
-5    android:versionName="1.0.0" >
+4    android:versionCode="2"
+5    android:versionName="1.0.1" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="19"
+8        android:minSdkVersion="21"
 9        android:targetSdkVersion="33" />
 10    <!--
 11         The INTERNET permission is required for development. Specifically,
@@ -22,7 +22,7 @@
 18    <application
 19        android:name="android.app.Application"
 20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-20-->[androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/90d054bf06c9bebddd540e6ac4486f56/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+20-->[androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
 21        android:debuggable="true"
 22        android:icon="@mipmap/ic_launcher"
 23        android:label="Knownjobz recruiter" >
@@ -87,17 +87,17 @@
 70-->[:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
 71
 72        <uses-library
-72-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+72-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 73            android:name="androidx.window.extensions"
-73-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+73-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 74            android:required="false" />
-74-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+74-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 75        <uses-library
-75-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+75-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 76            android:name="androidx.window.sidecar"
-76-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+76-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
 77            android:required="false" />
-77-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/ecafb2612f398d75150338d018e6b439/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+77-->[androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 78    </application>
 79
 80</manifest>

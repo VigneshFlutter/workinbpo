@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:intl/intl.dart';
+
 
 class BuyPackageScreen extends StatefulWidget {
    String packageName ;
@@ -24,6 +26,23 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
 
   String expiryMonth = 'Select a month';
   String expiryYear = 'Select a year';
+
+  List<String> months = [
+    'Jan' ,
+    'Feb' ,
+    'Mar' ,
+    'Apr' ,
+    'May' ,
+    'Jun' ,
+    'Jul' ,
+    'Aug' ,
+    'Sep' ,
+    'Oct' ,
+    'Nov' ,
+    'Dec'
+  ];
+
+  DateTime? selectedDate;
 
   //TextEditing Controller
   TextEditingController nameTextEd = TextEditingController();
@@ -139,27 +158,215 @@ class _BuyPackageScreenState extends State<BuyPackageScreen> {
             label('Credit card expiry date') ,
             const SizedBox(height: 15,) ,
 
-            Container(
-              height: 45,
-              width: width,
-              decoration: BoxDecoration(
-                color: Colors.white ,
-                border: Border.all(
-                  color: Colors.grey
-                ),
-                borderRadius: BorderRadius.circular(8)
-              ),
-              child: Center(
-                child: Text(expiryMonth ,
-                style: TextStyle(
+            InkWell(
+              onTap: (){
+                showModalBottomSheet(
+                    context: context, builder: (context){
+                      return Container(
+                        height: height!/2 +80,
+                        width: width,
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12.0
+                        ),
+                        decoration: const BoxDecoration(
+                          color: Colors.white ,
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(12) ,
+                            topLeft: Radius.circular(12)
+                          )
+                        ),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text('Choose a month' ,
+                                style: TextStyle(
+                                  fontSize: 17 ,
+                                  fontWeight: FontWeight.w600
+                                ),),
 
-                ),),
+                                IconButton(
+                                    onPressed: ()=> Navigator.pop(context),
+                                    icon: const Icon(Icons.cancel))
+                              ],
+                            ) ,
+
+                            const SizedBox(height: 20,) ,
+                            Expanded(
+                              flex: 3,
+                              child: ListView.builder(
+                                itemCount: months.length,
+                                  itemBuilder: (context , index){
+                                   return InkWell(
+                                     onTap: (){
+                                       setState(() {
+                                         expiryMonth = months[index];
+                                       });
+                                       Navigator.pop(context);
+                                     },
+                                     child: Column(
+                                       mainAxisAlignment: MainAxisAlignment.start,
+                                       crossAxisAlignment: CrossAxisAlignment.start,
+                                       children: [
+                                         Text(months[index] ,
+                                         style: const TextStyle(
+                                           fontSize: 16 ,
+                                           fontWeight: FontWeight.w600
+                                         ),) ,
+
+                                         const SizedBox(height: 10,) ,
+
+                                         Container(
+                                           height: 1,
+                                           width: width,
+                                           color: Colors.grey,
+                                         ) ,
+
+                                         const SizedBox(height: 10,)
+                                       ],
+                                     ),
+                                   );
+                                }),
+                            ),
+                          ],
+                        ),
+                      );
+                });
+              },
+              child: Container(
+                height: 45,
+                width: width,
+                decoration: BoxDecoration(
+                  color: Colors.white ,
+                  border: Border.all(
+                    color: Colors.grey
+                  ),
+                  borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(
+                  child: Text(expiryMonth ,
+                  style: const TextStyle(
+                    fontSize: 16 ,
+                    fontWeight: FontWeight.w600
+                  ),),
+                ),
               ),
             ) ,
 
             const SizedBox(height: 20,) ,
             
             label('Credit card expiry year') ,
+
+            InkWell(
+              onTap: () async {
+                final picker = await  showDatePicker(
+                  context: context,
+                  initialDatePickerMode: DatePickerMode.year,
+                  initialDate: DateTime.now(),
+                  firstDate: DateTime.now(),
+                  lastDate: DateTime.now(),
+                );
+                if(picker != null){
+                  expiryYear = DateFormat('yyyy').format(picker);
+                  print('The Expiry Year $expiryYear');
+                }
+
+                // ignore: use_build_context_synchronously
+                Navigator.pop(context);
+                // showModalBottomSheet(
+                //     context: context, builder: (context){
+                //   return Container(
+                //     height: height!/2 +80,
+                //     width: width,
+                //     padding: const EdgeInsets.symmetric(
+                //         horizontal: 12.0
+                //     ),
+                //     decoration: const BoxDecoration(
+                //         color: Colors.white ,
+                //         borderRadius: BorderRadius.only(
+                //             topRight: Radius.circular(12) ,
+                //             topLeft: Radius.circular(12)
+                //         )
+                //     ),
+                //     child: Column(
+                //       children: [
+                //         Row(
+                //           mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                //           children: [
+                //             const Text('Choose a month' ,
+                //               style: TextStyle(
+                //                   fontSize: 17 ,
+                //                   fontWeight: FontWeight.w600
+                //               ),),
+                //
+                //             IconButton(
+                //                 onPressed: ()=> Navigator.pop(context),
+                //                 icon: const Icon(Icons.cancel))
+                //           ],
+                //         ) ,
+                //
+                //         const SizedBox(height: 20,) ,
+                //         Expanded(
+                //           flex: 3,
+                //           child: ListView.builder(
+                //               itemCount: months.length,
+                //               itemBuilder: (context , index){
+                //                 return InkWell(
+                //                   onTap: (){
+                //                     setState(() {
+                //                       expiryMonth = months[index];
+                //                     });
+                //                     Navigator.pop(context);
+                //                   },
+                //                   child: Column(
+                //                     mainAxisAlignment: MainAxisAlignment.start,
+                //                     crossAxisAlignment: CrossAxisAlignment.start,
+                //                     children: [
+                //                       Text(months[index] ,
+                //                         style: const TextStyle(
+                //                             fontSize: 16 ,
+                //                             fontWeight: FontWeight.w600
+                //                         ),) ,
+                //
+                //                       const SizedBox(height: 10,) ,
+                //
+                //                       Container(
+                //                         height: 1,
+                //                         width: width,
+                //                         color: Colors.grey,
+                //                       ) ,
+                //
+                //                       const SizedBox(height: 10,)
+                //                     ],
+                //                   ),
+                //                 );
+                //               }),
+                //         ),
+                //       ],
+                //     ),
+                //   );
+                // });
+              },
+              child: Container(
+                height: 45,
+                width: width,
+                decoration: BoxDecoration(
+                    color: Colors.white ,
+                    border: Border.all(
+                        color: Colors.grey
+                    ),
+                    borderRadius: BorderRadius.circular(8)
+                ),
+                child: Center(
+                  child: Text(expiryMonth ,
+                    style: const TextStyle(
+                        fontSize: 16 ,
+                        fontWeight: FontWeight.w600
+                    ),),
+                ),
+              ),
+            ) ,
 
             label('Cvv number') ,
 

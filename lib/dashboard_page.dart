@@ -6,6 +6,8 @@ import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:http/http.dart' as http;
 import 'package:nav2/model/dashboard_model.dart';
+import 'package:nav2/notification_screen/no_notification_screen.dart';
+import 'package:nav2/notification_screen/show_notification_screen.dart';
 import 'package:nav2/plans_and_packages/plans_and_packages.dart';
 import 'package:nav2/provider/internet_provider.dart';
 import 'package:nav2/utils/constants.dart';
@@ -80,7 +82,7 @@ class _dashboardpageState extends State<dashboardpage> {
                 onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const managemessages(),
+                        builder: (context) => const ShowNotificationScreen(),
                       ),
                     ),
                 child: const Icon(Icons.notifications)),

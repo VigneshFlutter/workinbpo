@@ -25,6 +25,9 @@ const String UPDATE_POST_JOB_API = '${APP_BASE_URL}company-updatejob/' ;
 const String CALL_FOR_INTERVIEW = '${APP_BASE_URL}company-callforinterview/';
 const String ADD_SHORTLIST_API = '${APP_BASE_URL}company-addtoshortlist/';
 const String REMOVE_SHORTLIST_API = '${APP_BASE_URL}company-removefromshortlist/';
+const String NOTIFICATION_API = '${APP_BASE_URL}company-notifications';
+const String DELETE_API = '${APP_BASE_URL}company-deletejob/';
+
 
 
 String USER_TOKEN = 'user_auth';
