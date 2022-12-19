@@ -6,6 +6,7 @@ import 'package:nav2/model/list_candidate_model.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:nav2/utils/loading_widget.dart';
+import 'package:nav2/utils/no_results_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:http/http.dart' as http;
 
@@ -87,6 +88,11 @@ class _ListCandidateScreenState extends State<ListCandidateScreen> {
 
             SizedBox(height: 15,) ,
 
+            data!.jobApplications!.isEmpty ? Expanded(
+                flex: 3,
+                child: Align(
+                    alignment: Alignment.center,
+                    child: NoResultsPage())):
             Expanded(
               flex: 3,
               child: ListView.builder(

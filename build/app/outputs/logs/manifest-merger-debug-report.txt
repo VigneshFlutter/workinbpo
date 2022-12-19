@@ -1,18 +1,86 @@
 -- Merging decision tree log ---
 application
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:4:4-34:19
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-48:19
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-48:19
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
 MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
 MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-19:19
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-32:19
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-32:19
 MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-14:19
 MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-14:19
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
-MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/d43f3e5192c8f965074acf52d3f85256/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/d43f3e5192c8f965074acf52d3f85256/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:9:5-26:19
+MERGED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:9:5-26:19
+MERGED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:9:5-16:19
+MERGED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:9:5-16:19
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:22:5-53:19
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:22:5-53:19
+MERGED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:9:5-14:19
+MERGED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:9:5-14:19
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:16:5-90:19
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:16:5-90:19
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:9:5-14:19
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:9:5-14:19
+MERGED from [com.google.android.material:material:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/61e268f592f54243861760a15aa750f2/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
+MERGED from [com.google.android.material:material:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/61e268f592f54243861760a15aa750f2/transformed/material-1.6.0/AndroidManifest.xml:24:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/shripranav/.gradle/caches/transforms-3/a0a9f0cdb49842c77c272d78c774f109/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/shripranav/.gradle/caches/transforms-3/a0a9f0cdb49842c77c272d78c774f109/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:mavericks:2.7.0] /Users/shripranav/.gradle/caches/transforms-3/c29aa2b82946502961de722308b3604c/transformed/jetified-mavericks-2.7.0/AndroidManifest.xml:9:5-20
+MERGED from [com.airbnb.android:mavericks:2.7.0] /Users/shripranav/.gradle/caches/transforms-3/c29aa2b82946502961de722308b3604c/transformed/jetified-mavericks-2.7.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/9a0ddb7d157704edde943ad35266c48c/transformed/jetified-glide-4.12.0/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/9a0ddb7d157704edde943ad35266c48c/transformed/jetified-glide-4.12.0/AndroidManifest.xml:10:5-20
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:30:5-59:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:13:5-21:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:23:5-31:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:24:5-37:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/23f6522ec2bf9505a052a087ca677e3f/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/23f6522ec2bf9505a052a087ca677e3f/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/9c3960b94030be25e9b34ecf45e45377/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/9c3960b94030be25e9b34ecf45e45377/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:36:5-42:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/aa0a1ec6bc8e39aa292b7e5ea484327a/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/aa0a1ec6bc8e39aa292b7e5ea484327a/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/shripranav/.gradle/caches/transforms-3/a495e0a02449c223b57bf879c68931e1/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/shripranav/.gradle/caches/transforms-3/a495e0a02449c223b57bf879c68931e1/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/shripranav/.gradle/caches/transforms-3/8cb2eb951e4ba0a200f8629a14d14dcf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/shripranav/.gradle/caches/transforms-3/8cb2eb951e4ba0a200f8629a14d14dcf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:27:5-35:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:25:5-39:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:24:5-48:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:24:5-48:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:25:5-35:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:28:5-89
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/f8b0a65e94388cdd9bff99c6d4cef0be/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/f8b0a65e94388cdd9bff99c6d4cef0be/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:9:5-20
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/5e60e90a6c947e1e19ba8802d8e92900/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/5e60e90a6c947e1e19ba8802d8e92900/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:9:5-13:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
 	android:name
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 manifest
@@ -21,33 +89,145 @@ INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidM
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
 MERGED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
-MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-50:12
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
 MERGED from [:flutter_plugin_android_lifecycle] /Users/shripranav/Projects/workinbpo/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:sqflite] /Users/shripranav/Projects/workinbpo/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-34:12
 MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-16:12
 MERGED from [:path_provider_android] /Users/shripranav/Projects/workinbpo/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/190dae7ca6cc541541e30629f03f19ed/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
-MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/bbc8e63d61fc213b167e22c10f00ac34/transformed/webkit-1.5.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/43dce9ec1d0fff5e5df3d4140cdc94bb/transformed/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/365c1215f07354aca46d8218fbbac281/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/05a948180612559464e7b2aa7b686111/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.activity:activity:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/890e166fedeae474bab3e68484e853a3/transformed/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/a6a0e6a019710cc77784e547b1c20cdc/transformed/customview-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:17:1-26:12
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/8a9f8fb6aa7a50a35faf60a726d7061b/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/a386681f4dc66be913f439e7f7c360ad/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/shripranav/.gradle/caches/transforms-3/617a2a0c7e81e0644ee4f48aca655164/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/d43f3e5192c8f965074acf52d3f85256/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/54caadf135f208228cb0f072b0337615/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/3e2d0a98019bbf8e5d98ad6325508aa0/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/827ac686e1a37dd46dea23a058fa2d6f/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/4a291f64185873bc9507999b6717dcae/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/e089b2f8b18125d5c472c6e3d3348270/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/3a6acffc6d27eba9f037fa29ca3066bf/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:stripe_android] /Users/shripranav/Projects/workinbpo/build/stripe_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:stripe-android:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e35ef0c1cc95a3089393ce37fb837e02/transformed/jetified-stripe-android-20.15.4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:2:1-28:12
+MERGED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:2:1-18:12
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:2:1-55:12
+MERGED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:2:1-16:12
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:2:1-92:12
+MERGED from [com.stripe:payments-model:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e2d4b8ec4c53dfd270ef1f9a7da97114/transformed/jetified-payments-model-20.15.4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:stripe-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/091bc785dd8394b09d3f4c4a0d217168/transformed/jetified-stripe-ui-core-20.15.4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.stripe:stripe-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/c78ddea761d24b9aaef620272518a521/transformed/jetified-stripe-core-20.15.4/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.27.0] /Users/shripranav/.gradle/caches/transforms-3/27138e4ca1e4fb02a30a95574522f7fc/transformed/jetified-accompanist-navigation-animation-0.27.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-compose:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/297fd9797e22188c1c9a01c16e6861e1/transformed/jetified-navigation-compose-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-compose:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/0aab2cff0f1781c7fc43a62cc213816e/transformed/jetified-activity-compose-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-viewbinding:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/276666276f6aff3d2137fd3883afeb20/transformed/jetified-ui-viewbinding-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] /Users/shripranav/.gradle/caches/transforms-3/8ba61178ad47d34ddf627c26f2079e8a/transformed/jetified-constraintlayout-compose-1.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/0be4156fc7f9aacee2dc54df3c8dc916/transformed/jetified-material-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.accompanist:accompanist-flowlayout:0.27.0] /Users/shripranav/.gradle/caches/transforms-3/9b3904db9210019c2dcb5572c48b5ef0/transformed/jetified-accompanist-flowlayout-0.27.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.material:material-ripple:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/abda8ab3d19c943a4a935d2b405d9d86/transformed/jetified-material-ripple-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.foundation:foundation:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/d63daeef0fc5c9ffd61205fe8a2cb2d3/transformed/jetified-foundation-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.material:material-icons-core:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/046ef1dc8c622bd660a4483d6bc386b6/transformed/jetified-material-icons-core-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-livedata:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/42e846896eb8c34f0523af62c383fac3/transformed/jetified-runtime-livedata-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.animation:animation:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/63e2814921ae3a93f5af5b9c3bddc09d/transformed/jetified-animation-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.foundation:foundation-layout:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/22e330849496e71f67910037503369c2/transformed/jetified-foundation-layout-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/d3388f4f716aa8625a81c1b490ce3594/transformed/jetified-lifecycle-viewmodel-compose-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.animation:animation-core:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/64ebfab9ebe84c31b5aaec91fb338251/transformed/jetified-animation-core-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/ec342adaba44058e4da0ac910ec4ee3b/transformed/jetified-ui-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:2:1-16:12
+MERGED from [androidx.fragment:fragment-ktx:1.5.3] /Users/shripranav/.gradle/caches/transforms-3/0fb3a8b9df5d538f1d53f64354bb1f27/transformed/jetified-fragment-ktx-1.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.material:material:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/61e268f592f54243861760a15aa750f2/transformed/material-1.6.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/shripranav/.gradle/caches/transforms-3/a0a9f0cdb49842c77c272d78c774f109/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [com.airbnb.android:mavericks:2.7.0] /Users/shripranav/.gradle/caches/transforms-3/c29aa2b82946502961de722308b3604c/transformed/jetified-mavericks-2.7.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /Users/shripranav/.gradle/caches/transforms-3/bcc55ce51beb019bb15d20ebceefd0ad/transformed/jetified-appcompat-resources-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.5.1] /Users/shripranav/.gradle/caches/transforms-3/769482b341c31acf14c25fd4472424bd/transformed/appcompat-1.5.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/9a0ddb7d157704edde943ad35266c48c/transformed/jetified-glide-4.12.0/AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/f10839cdea33b9f9734d1f9f00a4c0fd/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:17:1-38:12
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:17:1-61:12
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:2:1-23:12
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:15:1-33:12
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/23f6522ec2bf9505a052a087ca677e3f/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/db35681a59ebc9b21037a68f8bfbd649/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml:15:1-22:12
+MERGED from [com.google.android.gms:play-services-wallet:19.1.0] /Users/shripranav/.gradle/caches/transforms-3/56658f702105f8b6fb67984f9d356db8/transformed/jetified-play-services-wallet-19.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/9c3960b94030be25e9b34ecf45e45377/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:17:1-44:12
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:16:1-24:12
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/d8dc463c0b188207e4cc3b35985175ff/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/c1ef40b948c2b28d0b3a4b2ca1919a67/transformed/jetified-lifecycle-livedata-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-text:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/254a3c68db5e7f3a34280a6205c27ef6/transformed/jetified-ui-text-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/aa0a1ec6bc8e39aa292b7e5ea484327a/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/shripranav/.gradle/caches/transforms-3/a495e0a02449c223b57bf879c68931e1/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/shripranav/.gradle/caches/transforms-3/8cb2eb951e4ba0a200f8629a14d14dcf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/7ef39ae7f73dde9b47ce470264580ae5/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.fragment:fragment:1.5.3] /Users/shripranav/.gradle/caches/transforms-3/c6bc99ffd76b73ad69d8680f1d614020/transformed/fragment-1.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/07c7089497a42e66f118ace33117dde0/transformed/jetified-activity-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/1e88081013ba194e408f43a0767c7a6c/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/2dee6af13d88187a120d988ff5013238/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity-ktx:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/13697b6a4dd5377fc0c52a6f6364e30a/transformed/jetified-activity-ktx-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/b650575b9928a34d9cbbbdd3e267d348/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/b37b2ca4431bcc7f2f81e4acfbd3dbcf/transformed/navigation-common-2.5.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/5d905518dcd75ed673d3d5e7240e9938/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/f82d1c61964c1242f9a9a3286c670ea2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/172f67536a29ffc5a9520c8a6e3d450a/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/d3706fba9379d38a6f312a7392464420/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/11ce4f2c5433eaf8231e7d0b7bf47885/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/efdc34fe780130cc6f83254f2eeebf5b/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/1172e3940d935e8826e76092c36e9d36/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/9ea7a25252c36e362bb017774a0a83da/transformed/jetified-lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/3af0a42bb4a289710dde7b5b627fa0ad/transformed/jetified-ui-tooling-preview-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime-saveable:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/240952019f62c0c68666f711074b6300/transformed/jetified-runtime-saveable-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-graphics:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/eec17dd2a89d6641ff1a03d7d3c3330c/transformed/jetified-ui-graphics-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-unit:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/8ebdd31a0fe63814110c32900e7c2dd2/transformed/jetified-ui-unit-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.ui:ui-geometry:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/535f837813832fba51d87d90f43de973/transformed/jetified-ui-geometry-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.compose.runtime:runtime:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/f905285bf2ac023245613648d55c2b89/transformed/jetified-runtime-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:15:1-37:12
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/shripranav/.gradle/caches/transforms-3/db04e0361b11af47b004ea68c8d0e0f9/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/ea75b42a03a1ca9bf606a5326e74686d/transformed/webkit-1.5.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/3e3abd99d8a614b8ff1cec3000d3c517/transformed/exifinterface-1.3.3/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/2f3a05f7071de66d3aee8160fe4362b9/transformed/localbroadcastmanager-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/82f3df4b3ce385a6557f9f2c7df24dc8/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:17:1-50:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:17:1-37:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/00ab1bb545a4dfe0c5bd3fb8e476d66b/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/0cd972097142bbcd3373cb23b40d4762/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/shripranav/.gradle/caches/transforms-3/0df4009c444b4dd75cc675c992af647a/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.media:media:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/c68086baf3f3fda14dc48ea26552bca8/transformed/media-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/b1bc95202f0f7f2cc379fb6fa8817e2b/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/04bbe1a611e8a06e45d5846e71e58530/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/91ac9421ae8c2c017adb652a913db125/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/c1854c4d94aade3e7be0d5b2521869dc/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e7c305a444317678025e36d4297d3068/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/shripranav/.gradle/caches/transforms-3/66449d1452c6f1d0062110e9cb8a482a/transformed/recyclerview-1.2.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/d0efd5cfd6479831362086cc15286ca3/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/5a24b07f685f8a951c8ff65667faa9da/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/1389cddb47397332d4769cf0a3ec9a6b/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/93ed98c3604f6da990cdaf85a013d62d/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/ae705208ca80005ff6886fcdbb2128d3/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/1757d170715ea419bac095218c83485e/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/dad6eb0381692d1b864d74dcbe9138e0/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/1e7c31023f0c3eb1af1753eba245662c/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:17:1-30:12
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/shripranav/.gradle/caches/transforms-3/744a1faef985405b26629c3db4a86254/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:15:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/f8b0a65e94388cdd9bff99c6d4cef0be/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/9a2192a8940a34af6b2687863cecf766/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/18c1b029b419eb4e9bf272d2dfb1af30/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/617a114bfdebb9d00db840e2c77baaae/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/shripranav/.gradle/caches/transforms-3/d1aa6779d37fccd9d401f694d6e3d0b0/transformed/jetified-viewbinding-7.3.1/AndroidManifest.xml:2:1-9:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/f63e185725321af7dd692b5aef00c1fe/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/3280331ec72460ba4b66293c86574eaf/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/b767e316ea42fb3a07c48a5392aa277f/transformed/jetified-savedstate-ktx-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/8bb8e160fb0f0aaf54184b1ebcd65dd2/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/b2bdd8c5446597deccd739fef634a60b/transformed/lifecycle-livedata-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/426b654d1ccfc76d3aca3d1b44065ef7/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/f3065cc08d7d133efdf91a9304c4073e/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] /Users/shripranav/.gradle/caches/transforms-3/51fc916726be1412df7634f0a0f9f6eb/transformed/jetified-security-crypto-1.1.0-alpha03/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/5e60e90a6c947e1e19ba8802d8e92900/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/b57977ea95483ab648449c93b2e9df32/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/ad693e66a4c424f892b62de52de10934/transformed/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.compose.ui:ui-util:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/0ba88ce019c29cedb095d18f547faf21/transformed/jetified-ui-util-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/b5ac2bd7aea2672b577248bd979f52b0/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:2:1-15:12
+MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] /Users/shripranav/.gradle/caches/transforms-3/b84db4f62242e8a9c0f1edd43469bd8f/transformed/espresso-idling-resource-3.4.0/AndroidManifest.xml:17:1-24:12
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml:1:1-8:12
@@ -69,20 +249,38 @@ uses-permission#android.permission.INTERNET
 ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:5-66
 MERGED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:5-66
 MERGED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:5-66
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-67
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:9:5-67
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:9:5-67
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:10:5-67
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:10:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:8:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:24:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
 	android:name
 		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:22-64
 uses-sdk
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
-MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/shripranav/Projects/workinbpo/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:flutter_plugin_android_lifecycle] /Users/shripranav/Projects/workinbpo/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] /Users/shripranav/Projects/workinbpo/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:sqflite] /Users/shripranav/Projects/workinbpo/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:path_provider_android] /Users/shripranav/Projects/workinbpo/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
@@ -91,44 +289,264 @@ MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/conn
 MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/190dae7ca6cc541541e30629f03f19ed/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/190dae7ca6cc541541e30629f03f19ed/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/bbc8e63d61fc213b167e22c10f00ac34/transformed/webkit-1.5.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/bbc8e63d61fc213b167e22c10f00ac34/transformed/webkit-1.5.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/43dce9ec1d0fff5e5df3d4140cdc94bb/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/43dce9ec1d0fff5e5df3d4140cdc94bb/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/365c1215f07354aca46d8218fbbac281/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/365c1215f07354aca46d8218fbbac281/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/05a948180612559464e7b2aa7b686111/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/05a948180612559464e7b2aa7b686111/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/890e166fedeae474bab3e68484e853a3/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/890e166fedeae474bab3e68484e853a3/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/a6a0e6a019710cc77784e547b1c20cdc/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/a6a0e6a019710cc77784e547b1c20cdc/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.8.0] /Users/shripranav/.gradle/caches/transforms-3/10ccb84aca9d550781826cd0705e3128/transformed/core-1.8.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/8a9f8fb6aa7a50a35faf60a726d7061b/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/8a9f8fb6aa7a50a35faf60a726d7061b/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/a386681f4dc66be913f439e7f7c360ad/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/a386681f4dc66be913f439e7f7c360ad/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/shripranav/.gradle/caches/transforms-3/617a2a0c7e81e0644ee4f48aca655164/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.3.1] /Users/shripranav/.gradle/caches/transforms-3/617a2a0c7e81e0644ee4f48aca655164/transformed/lifecycle-runtime-2.3.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/d43f3e5192c8f965074acf52d3f85256/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/d43f3e5192c8f965074acf52d3f85256/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/54caadf135f208228cb0f072b0337615/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/54caadf135f208228cb0f072b0337615/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/3e2d0a98019bbf8e5d98ad6325508aa0/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/3e2d0a98019bbf8e5d98ad6325508aa0/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/827ac686e1a37dd46dea23a058fa2d6f/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/shripranav/.gradle/caches/transforms-3/827ac686e1a37dd46dea23a058fa2d6f/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/4a291f64185873bc9507999b6717dcae/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/4a291f64185873bc9507999b6717dcae/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/e089b2f8b18125d5c472c6e3d3348270/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/e089b2f8b18125d5c472c6e3d3348270/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/3a6acffc6d27eba9f037fa29ca3066bf/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/3a6acffc6d27eba9f037fa29ca3066bf/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:stripe_android] /Users/shripranav/Projects/workinbpo/build/stripe_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:stripe_android] /Users/shripranav/Projects/workinbpo/build/stripe_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-android:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e35ef0c1cc95a3089393ce37fb837e02/transformed/jetified-stripe-android-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-android:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e35ef0c1cc95a3089393ce37fb837e02/transformed/jetified-stripe-android-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-model:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e2d4b8ec4c53dfd270ef1f9a7da97114/transformed/jetified-payments-model-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:payments-model:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e2d4b8ec4c53dfd270ef1f9a7da97114/transformed/jetified-payments-model-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/091bc785dd8394b09d3f4c4a0d217168/transformed/jetified-stripe-ui-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/091bc785dd8394b09d3f4c4a0d217168/transformed/jetified-stripe-ui-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/c78ddea761d24b9aaef620272518a521/transformed/jetified-stripe-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/c78ddea761d24b9aaef620272518a521/transformed/jetified-stripe-core-20.15.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.27.0] /Users/shripranav/.gradle/caches/transforms-3/27138e4ca1e4fb02a30a95574522f7fc/transformed/jetified-accompanist-navigation-animation-0.27.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-navigation-animation:0.27.0] /Users/shripranav/.gradle/caches/transforms-3/27138e4ca1e4fb02a30a95574522f7fc/transformed/jetified-accompanist-navigation-animation-0.27.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-compose:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/297fd9797e22188c1c9a01c16e6861e1/transformed/jetified-navigation-compose-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-compose:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/297fd9797e22188c1c9a01c16e6861e1/transformed/jetified-navigation-compose-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-compose:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/0aab2cff0f1781c7fc43a62cc213816e/transformed/jetified-activity-compose-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-compose:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/0aab2cff0f1781c7fc43a62cc213816e/transformed/jetified-activity-compose-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-viewbinding:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/276666276f6aff3d2137fd3883afeb20/transformed/jetified-ui-viewbinding-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-viewbinding:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/276666276f6aff3d2137fd3883afeb20/transformed/jetified-ui-viewbinding-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] /Users/shripranav/.gradle/caches/transforms-3/8ba61178ad47d34ddf627c26f2079e8a/transformed/jetified-constraintlayout-compose-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout-compose:1.0.1] /Users/shripranav/.gradle/caches/transforms-3/8ba61178ad47d34ddf627c26f2079e8a/transformed/jetified-constraintlayout-compose-1.0.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/0be4156fc7f9aacee2dc54df3c8dc916/transformed/jetified-material-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/0be4156fc7f9aacee2dc54df3c8dc916/transformed/jetified-material-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.accompanist:accompanist-flowlayout:0.27.0] /Users/shripranav/.gradle/caches/transforms-3/9b3904db9210019c2dcb5572c48b5ef0/transformed/jetified-accompanist-flowlayout-0.27.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.accompanist:accompanist-flowlayout:0.27.0] /Users/shripranav/.gradle/caches/transforms-3/9b3904db9210019c2dcb5572c48b5ef0/transformed/jetified-accompanist-flowlayout-0.27.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.material:material-ripple:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/abda8ab3d19c943a4a935d2b405d9d86/transformed/jetified-material-ripple-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-ripple:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/abda8ab3d19c943a4a935d2b405d9d86/transformed/jetified-material-ripple-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/d63daeef0fc5c9ffd61205fe8a2cb2d3/transformed/jetified-foundation-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/d63daeef0fc5c9ffd61205fe8a2cb2d3/transformed/jetified-foundation-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/046ef1dc8c622bd660a4483d6bc386b6/transformed/jetified-material-icons-core-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.material:material-icons-core:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/046ef1dc8c622bd660a4483d6bc386b6/transformed/jetified-material-icons-core-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-livedata:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/42e846896eb8c34f0523af62c383fac3/transformed/jetified-runtime-livedata-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-livedata:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/42e846896eb8c34f0523af62c383fac3/transformed/jetified-runtime-livedata-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/63e2814921ae3a93f5af5b9c3bddc09d/transformed/jetified-animation-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/63e2814921ae3a93f5af5b9c3bddc09d/transformed/jetified-animation-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation-layout:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/22e330849496e71f67910037503369c2/transformed/jetified-foundation-layout-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.foundation:foundation-layout:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/22e330849496e71f67910037503369c2/transformed/jetified-foundation-layout-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/d3388f4f716aa8625a81c1b490ce3594/transformed/jetified-lifecycle-viewmodel-compose-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/d3388f4f716aa8625a81c1b490ce3594/transformed/jetified-lifecycle-viewmodel-compose-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.animation:animation-core:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/64ebfab9ebe84c31b5aaec91fb338251/transformed/jetified-animation-core-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.animation:animation-core:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/64ebfab9ebe84c31b5aaec91fb338251/transformed/jetified-animation-core-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/ec342adaba44058e4da0ac910ec4ee3b/transformed/jetified-ui-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/ec342adaba44058e4da0ac910ec4ee3b/transformed/jetified-ui-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:5:5-7:41
+MERGED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.3] /Users/shripranav/.gradle/caches/transforms-3/0fb3a8b9df5d538f1d53f64354bb1f27/transformed/jetified-fragment-ktx-1.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment-ktx:1.5.3] /Users/shripranav/.gradle/caches/transforms-3/0fb3a8b9df5d538f1d53f64354bb1f27/transformed/jetified-fragment-ktx-1.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/61e268f592f54243861760a15aa750f2/transformed/material-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.material:material:1.6.0] /Users/shripranav/.gradle/caches/transforms-3/61e268f592f54243861760a15aa750f2/transformed/material-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/shripranav/.gradle/caches/transforms-3/a0a9f0cdb49842c77c272d78c774f109/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/shripranav/.gradle/caches/transforms-3/a0a9f0cdb49842c77c272d78c774f109/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:mavericks:2.7.0] /Users/shripranav/.gradle/caches/transforms-3/c29aa2b82946502961de722308b3604c/transformed/jetified-mavericks-2.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.airbnb.android:mavericks:2.7.0] /Users/shripranav/.gradle/caches/transforms-3/c29aa2b82946502961de722308b3604c/transformed/jetified-mavericks-2.7.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /Users/shripranav/.gradle/caches/transforms-3/bcc55ce51beb019bb15d20ebceefd0ad/transformed/jetified-appcompat-resources-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.5.1] /Users/shripranav/.gradle/caches/transforms-3/bcc55ce51beb019bb15d20ebceefd0ad/transformed/jetified-appcompat-resources-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] /Users/shripranav/.gradle/caches/transforms-3/769482b341c31acf14c25fd4472424bd/transformed/appcompat-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.5.1] /Users/shripranav/.gradle/caches/transforms-3/769482b341c31acf14c25fd4472424bd/transformed/appcompat-1.5.1/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/9a0ddb7d157704edde943ad35266c48c/transformed/jetified-glide-4.12.0/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/9a0ddb7d157704edde943ad35266c48c/transformed/jetified-glide-4.12.0/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/f10839cdea33b9f9734d1f9f00a4c0fd/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/f10839cdea33b9f9734d1f9f00a4c0fd/transformed/legacy-support-v4-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/23f6522ec2bf9505a052a087ca677e3f/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/23f6522ec2bf9505a052a087ca677e3f/transformed/jetified-firebase-iid-interop-17.1.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/db35681a59ebc9b21037a68f8bfbd649/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-installations-interop:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/db35681a59ebc9b21037a68f8bfbd649/transformed/jetified-firebase-installations-interop-17.1.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.gms:play-services-wallet:19.1.0] /Users/shripranav/.gradle/caches/transforms-3/56658f702105f8b6fb67984f9d356db8/transformed/jetified-play-services-wallet-19.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wallet:19.1.0] /Users/shripranav/.gradle/caches/transforms-3/56658f702105f8b6fb67984f9d356db8/transformed/jetified-play-services-wallet-19.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/9c3960b94030be25e9b34ecf45e45377/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-identity:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/9c3960b94030be25e9b34ecf45e45377/transformed/jetified-play-services-identity-18.0.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/d8dc463c0b188207e4cc3b35985175ff/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/d8dc463c0b188207e4cc3b35985175ff/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/c1ef40b948c2b28d0b3a4b2ca1919a67/transformed/jetified-lifecycle-livedata-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/c1ef40b948c2b28d0b3a4b2ca1919a67/transformed/jetified-lifecycle-livedata-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-text:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/254a3c68db5e7f3a34280a6205c27ef6/transformed/jetified-ui-text-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-text:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/254a3c68db5e7f3a34280a6205c27ef6/transformed/jetified-ui-text-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/aa0a1ec6bc8e39aa292b7e5ea484327a/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/aa0a1ec6bc8e39aa292b7e5ea484327a/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/shripranav/.gradle/caches/transforms-3/a495e0a02449c223b57bf879c68931e1/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.2] /Users/shripranav/.gradle/caches/transforms-3/a495e0a02449c223b57bf879c68931e1/transformed/jetified-play-services-stats-17.0.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/shripranav/.gradle/caches/transforms-3/8cb2eb951e4ba0a200f8629a14d14dcf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:19.0.0] /Users/shripranav/.gradle/caches/transforms-3/8cb2eb951e4ba0a200f8629a14d14dcf/transformed/jetified-firebase-measurement-connector-19.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/7ef39ae7f73dde9b47ce470264580ae5/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/7ef39ae7f73dde9b47ce470264580ae5/transformed/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.3] /Users/shripranav/.gradle/caches/transforms-3/c6bc99ffd76b73ad69d8680f1d614020/transformed/fragment-1.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.5.3] /Users/shripranav/.gradle/caches/transforms-3/c6bc99ffd76b73ad69d8680f1d614020/transformed/fragment-1.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/07c7089497a42e66f118ace33117dde0/transformed/jetified-activity-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/07c7089497a42e66f118ace33117dde0/transformed/jetified-activity-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/1e88081013ba194e408f43a0767c7a6c/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime-ktx:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/1e88081013ba194e408f43a0767c7a6c/transformed/navigation-runtime-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/2dee6af13d88187a120d988ff5013238/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/2dee6af13d88187a120d988ff5013238/transformed/navigation-runtime-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity-ktx:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/13697b6a4dd5377fc0c52a6f6364e30a/transformed/jetified-activity-ktx-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.6.1] /Users/shripranav/.gradle/caches/transforms-3/13697b6a4dd5377fc0c52a6f6364e30a/transformed/jetified-activity-ktx-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/b650575b9928a34d9cbbbdd3e267d348/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common-ktx:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/b650575b9928a34d9cbbbdd3e267d348/transformed/navigation-common-ktx-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/b37b2ca4431bcc7f2f81e4acfbd3dbcf/transformed/navigation-common-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.5.3] /Users/shripranav/.gradle/caches/transforms-3/b37b2ca4431bcc7f2f81e4acfbd3dbcf/transformed/navigation-common-2.5.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/5d905518dcd75ed673d3d5e7240e9938/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/5d905518dcd75ed673d3d5e7240e9938/transformed/jetified-lifecycle-viewmodel-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/f82d1c61964c1242f9a9a3286c670ea2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/f82d1c61964c1242f9a9a3286c670ea2/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/172f67536a29ffc5a9520c8a6e3d450a/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/172f67536a29ffc5a9520c8a6e3d450a/transformed/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/d3706fba9379d38a6f312a7392464420/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/d3706fba9379d38a6f312a7392464420/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/11ce4f2c5433eaf8231e7d0b7bf47885/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/11ce4f2c5433eaf8231e7d0b7bf47885/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/efdc34fe780130cc6f83254f2eeebf5b/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/efdc34fe780130cc6f83254f2eeebf5b/transformed/lifecycle-viewmodel-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/1172e3940d935e8826e76092c36e9d36/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/1172e3940d935e8826e76092c36e9d36/transformed/jetified-lifecycle-viewmodel-savedstate-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/9ea7a25252c36e362bb017774a0a83da/transformed/jetified-lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/9ea7a25252c36e362bb017774a0a83da/transformed/jetified-lifecycle-runtime-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/3af0a42bb4a289710dde7b5b627fa0ad/transformed/jetified-ui-tooling-preview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-tooling-preview:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/3af0a42bb4a289710dde7b5b627fa0ad/transformed/jetified-ui-tooling-preview-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/240952019f62c0c68666f711074b6300/transformed/jetified-runtime-saveable-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime-saveable:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/240952019f62c0c68666f711074b6300/transformed/jetified-runtime-saveable-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/eec17dd2a89d6641ff1a03d7d3c3330c/transformed/jetified-ui-graphics-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-graphics:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/eec17dd2a89d6641ff1a03d7d3c3330c/transformed/jetified-ui-graphics-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-unit:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/8ebdd31a0fe63814110c32900e7c2dd2/transformed/jetified-ui-unit-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-unit:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/8ebdd31a0fe63814110c32900e7c2dd2/transformed/jetified-ui-unit-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-geometry:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/535f837813832fba51d87d90f43de973/transformed/jetified-ui-geometry-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-geometry:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/535f837813832fba51d87d90f43de973/transformed/jetified-ui-geometry-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/f905285bf2ac023245613648d55c2b89/transformed/jetified-runtime-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.runtime:runtime:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/f905285bf2ac023245613648d55c2b89/transformed/jetified-runtime-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/shripranav/.gradle/caches/transforms-3/db04e0361b11af47b004ea68c8d0e0f9/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-encoders-json:18.0.0] /Users/shripranav/.gradle/caches/transforms-3/db04e0361b11af47b004ea68c8d0e0f9/transformed/jetified-firebase-encoders-json-18.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/ea75b42a03a1ca9bf606a5326e74686d/transformed/webkit-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.5.0] /Users/shripranav/.gradle/caches/transforms-3/ea75b42a03a1ca9bf606a5326e74686d/transformed/webkit-1.5.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/3e3abd99d8a614b8ff1cec3000d3c517/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.exifinterface:exifinterface:1.3.3] /Users/shripranav/.gradle/caches/transforms-3/3e3abd99d8a614b8ff1cec3000d3c517/transformed/exifinterface-1.3.3/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/2f3a05f7071de66d3aee8160fe4362b9/transformed/localbroadcastmanager-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/2f3a05f7071de66d3aee8160fe4362b9/transformed/localbroadcastmanager-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/82f3df4b3ce385a6557f9f2c7df24dc8/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/82f3df4b3ce385a6557f9f2c7df24dc8/transformed/jetified-emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:21:5-22:38
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:21:5-22:38
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/00ab1bb545a4dfe0c5bd3fb8e476d66b/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/00ab1bb545a4dfe0c5bd3fb8e476d66b/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/0cd972097142bbcd3373cb23b40d4762/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/0cd972097142bbcd3373cb23b40d4762/transformed/jetified-firebase-components-17.0.1/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/shripranav/.gradle/caches/transforms-3/0df4009c444b4dd75cc675c992af647a/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/shripranav/.gradle/caches/transforms-3/0df4009c444b4dd75cc675c992af647a/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/c68086baf3f3fda14dc48ea26552bca8/transformed/media-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.media:media:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/c68086baf3f3fda14dc48ea26552bca8/transformed/media-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/b1bc95202f0f7f2cc379fb6fa8817e2b/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/b1bc95202f0f7f2cc379fb6fa8817e2b/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/04bbe1a611e8a06e45d5846e71e58530/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/04bbe1a611e8a06e45d5846e71e58530/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/91ac9421ae8c2c017adb652a913db125/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/91ac9421ae8c2c017adb652a913db125/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/c1854c4d94aade3e7be0d5b2521869dc/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/c1854c4d94aade3e7be0d5b2521869dc/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e7c305a444317678025e36d4297d3068/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e7c305a444317678025e36d4297d3068/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/shripranav/.gradle/caches/transforms-3/66449d1452c6f1d0062110e9cb8a482a/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] /Users/shripranav/.gradle/caches/transforms-3/66449d1452c6f1d0062110e9cb8a482a/transformed/recyclerview-1.2.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/d0efd5cfd6479831362086cc15286ca3/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/d0efd5cfd6479831362086cc15286ca3/transformed/jetified-customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/5a24b07f685f8a951c8ff65667faa9da/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/5a24b07f685f8a951c8ff65667faa9da/transformed/jetified-core-ktx-1.9.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/1389cddb47397332d4769cf0a3ec9a6b/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.autofill:autofill:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/1389cddb47397332d4769cf0a3ec9a6b/transformed/jetified-autofill-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/93ed98c3604f6da990cdaf85a013d62d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/93ed98c3604f6da990cdaf85a013d62d/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/ae705208ca80005ff6886fcdbb2128d3/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/ae705208ca80005ff6886fcdbb2128d3/transformed/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/1757d170715ea419bac095218c83485e/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/1757d170715ea419bac095218c83485e/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/dad6eb0381692d1b864d74dcbe9138e0/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/dad6eb0381692d1b864d74dcbe9138e0/transformed/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/1e7c31023f0c3eb1af1753eba245662c/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/1e7c31023f0c3eb1af1753eba245662c/transformed/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/shripranav/.gradle/caches/transforms-3/744a1faef985405b26629c3db4a86254/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.google.android.datatransport:transport-api:3.0.0] /Users/shripranav/.gradle/caches/transforms-3/744a1faef985405b26629c3db4a86254/transformed/jetified-transport-api-3.0.0/AndroidManifest.xml:18:5-20:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/f8b0a65e94388cdd9bff99c6d4cef0be/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.12.0] /Users/shripranav/.gradle/caches/transforms-3/f8b0a65e94388cdd9bff99c6d4cef0be/transformed/jetified-gifdecoder-4.12.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/9a2192a8940a34af6b2687863cecf766/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/9a2192a8940a34af6b2687863cecf766/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/18c1b029b419eb4e9bf272d2dfb1af30/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/18c1b029b419eb4e9bf272d2dfb1af30/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/617a114bfdebb9d00db840e2c77baaae/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/617a114bfdebb9d00db840e2c77baaae/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/shripranav/.gradle/caches/transforms-3/d1aa6779d37fccd9d401f694d6e3d0b0/transformed/jetified-viewbinding-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.databinding:viewbinding:7.3.1] /Users/shripranav/.gradle/caches/transforms-3/d1aa6779d37fccd9d401f694d6e3d0b0/transformed/jetified-viewbinding-7.3.1/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/f63e185725321af7dd692b5aef00c1fe/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/f63e185725321af7dd692b5aef00c1fe/transformed/lifecycle-runtime-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/3280331ec72460ba4b66293c86574eaf/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/3280331ec72460ba4b66293c86574eaf/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/b767e316ea42fb3a07c48a5392aa277f/transformed/jetified-savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/b767e316ea42fb3a07c48a5392aa277f/transformed/jetified-savedstate-ktx-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/8bb8e160fb0f0aaf54184b1ebcd65dd2/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/8bb8e160fb0f0aaf54184b1ebcd65dd2/transformed/jetified-savedstate-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/b2bdd8c5446597deccd739fef634a60b/transformed/lifecycle-livedata-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/b2bdd8c5446597deccd739fef634a60b/transformed/lifecycle-livedata-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/426b654d1ccfc76d3aca3d1b44065ef7/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/426b654d1ccfc76d3aca3d1b44065ef7/transformed/jetified-lifecycle-livedata-core-ktx-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/f3065cc08d7d133efdf91a9304c4073e/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.5.1] /Users/shripranav/.gradle/caches/transforms-3/f3065cc08d7d133efdf91a9304c4073e/transformed/lifecycle-livedata-core-2.5.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] /Users/shripranav/.gradle/caches/transforms-3/51fc916726be1412df7634f0a0f9f6eb/transformed/jetified-security-crypto-1.1.0-alpha03/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.security:security-crypto:1.1.0-alpha03] /Users/shripranav/.gradle/caches/transforms-3/51fc916726be1412df7634f0a0f9f6eb/transformed/jetified-security-crypto-1.1.0-alpha03/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/5e60e90a6c947e1e19ba8802d8e92900/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/5e60e90a6c947e1e19ba8802d8e92900/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/b57977ea95483ab648449c93b2e9df32/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/shripranav/.gradle/caches/transforms-3/b57977ea95483ab648449c93b2e9df32/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/ad693e66a4c424f892b62de52de10934/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/shripranav/.gradle/caches/transforms-3/ad693e66a4c424f892b62de52de10934/transformed/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.compose.ui:ui-util:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/0ba88ce019c29cedb095d18f547faf21/transformed/jetified-ui-util-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.compose.ui:ui-util:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/0ba88ce019c29cedb095d18f547faf21/transformed/jetified-ui-util-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/b5ac2bd7aea2672b577248bd979f52b0/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/shripranav/.gradle/caches/transforms-3/b5ac2bd7aea2672b577248bd979f52b0/transformed/jetified-annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] /Users/shripranav/.gradle/caches/transforms-3/b84db4f62242e8a9c0f1edd43469bd8f/transformed/espresso-idling-resource-3.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.test.espresso:espresso-idling-resource:3.4.0] /Users/shripranav/.gradle/caches/transforms-3/b84db4f62242e8a9c0f1edd43469bd8f/transformed/espresso-idling-resource-3.4.0/AndroidManifest.xml:20:5-22:41
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
 	android:targetSdkVersion
@@ -137,6 +555,122 @@ INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/Android
 	android:minSdkVersion
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-68
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:26:5-68
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:26:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:9:5-68
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-65
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-79
+MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:9:5-79
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:9:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:7:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:22:5-79
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-76
+uses-permission#android.permission.POST_NOTIFICATIONS
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
+MERGED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:13:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:25:5-77
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:25:5-77
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:13:22-74
+service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingBackgroundService
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-19:72
+	android:exported
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+	android:permission
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:19:13-69
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-107
+service#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingService
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:20:9-26:19
+	android:exported
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:22:13-37
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-97
+intent-filter#action:name:com.google.firebase.MESSAGING_EVENT
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-25:29
+action#com.google.firebase.MESSAGING_EVENT
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:17-78
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:24:25-75
+receiver#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingReceiver
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:28:9-35:20
+	android:exported
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:30:13-36
+	android:permission
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:31:13-73
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:29:13-98
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:32:13-34:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:17-81
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:33:25-78
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:9-41:19
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-14:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:52:9-58:19
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:52:9-58:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:14:9-20:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:24:9-30:19
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:31:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:37:18-89
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.messaging.FlutterFirebaseAppRegistrar
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:38:13-40:85
+	android:value
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:40:17-82
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:39:17-128
+provider#io.flutter.plugins.firebase.messaging.FlutterFirebaseMessagingInitProvider
+ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:43:9-47:38
+	android:authorities
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:45:13-88
+	android:exported
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:46:13-37
+	android:initOrder
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:47:13-35
+	android:name
+		ADDED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:44:13-102
+meta-data#com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar
+ADDED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:12:17-124
 provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
 ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-18:20
 	android:grantUriPermissions
@@ -153,6 +687,58 @@ ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/im
 		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:17:17-72
 	android:name
 		ADDED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:16:17-67
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-78
+uses-permission#android.permission.VIBRATE
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-63
+uses-permission#android.permission.USE_FULL_SCREEN_INTENT
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:5-81
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:11:22-78
+uses-permission#android.permission.SCHEDULE_EXACT_ALARM
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:12:22-76
+receiver#com.dexterous.flutterlocalnotifications.ActionBroadcastReceiver
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:16:9-18:40
+	android:exported
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:18:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:17:13-91
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:19:9-21:40
+	android:exported
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:21:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:20:13-97
+receiver#com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:22:9-31:20
+	android:exported
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:23:13-101
+intent-filter#action:name:android.intent.action.BOOT_COMPLETED+action:name:android.intent.action.MY_PACKAGE_REPLACED+action:name:android.intent.action.QUICKBOOT_POWERON+action:name:com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:25:13-30:29
+action#android.intent.action.BOOT_COMPLETED
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:17-79
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:26:25-76
+action#android.intent.action.MY_PACKAGE_REPLACED
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:17-84
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:27:25-81
+action#android.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:28:25-79
+action#com.htc.intent.action.QUICKBOOT_POWERON
+ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [:flutter_local_notifications] /Users/shripranav/Projects/workinbpo/build/flutter_local_notifications/intermediates/merged_manifest/debug/AndroidManifest.xml:29:25-79
 activity#io.flutter.plugins.urllauncher.WebViewActivity
 ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:9-13:74
 	android:exported
@@ -161,19 +747,447 @@ ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/ur
 		ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:13:13-71
 	android:name
 		ADDED from [:url_launcher_android] /Users/shripranav/Projects/workinbpo/build/url_launcher_android/intermediates/merged_manifest/debug/AndroidManifest.xml:11:13-74
-uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-79
+activity#com.stripe.android.paymentsheet.PaymentSheetActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:10:9-13:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:13:13-66
 	android:name
-		ADDED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:9:22-76
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:11:13-80
+activity#com.stripe.android.paymentsheet.PaymentOptionsActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:14:9-17:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:16:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:17:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:15:13-82
+activity#com.stripe.android.paymentsheet.addresselement.AddressElementActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:18:9-21:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:20:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:21:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:19:13-97
+activity#com.stripe.android.paymentsheet.paymentdatacollection.polling.PollingActivity
+ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:22:9-25:69
+	android:exported
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:24:13-37
+	android:theme
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:23:13-105
+activity#com.stripe.android.link.LinkActivity
+ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:10:9-15:58
+	android:label
+		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:13:13-41
+	android:windowSoftInputMode
+		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:15:13-55
+	android:exported
+		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:14:13-49
+	android:name
+		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:11:13-64
+queries
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:12:5-20:15
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:10:5-14:15
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:10:5-14:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+intent#action:name:android.intent.action.VIEW+data:scheme:http
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:15:9-19:18
+action#android.intent.action.VIEW
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:16:13-65
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:16:21-62
+data
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:18:13-43
+	android:scheme
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:18:19-40
+activity#com.stripe.android.financialconnections.FinancialConnectionsSheetRedirectActivity
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:23:9-42:20
+	android:exported
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:25:13-36
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:24:13-109
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:link-accounts+data:host:link-accounts+data:path:/${applicationId}/cancel+data:path:/${applicationId}/success+data:scheme:stripe-auth+data:scheme:stripe-auth
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:26:13-41:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:link-accounts+data:host:link-accounts+data:path:/com.bhive.knownjobzrecruiter/cancel+data:path:/com.bhive.knownjobzrecruiter/success+data:scheme:stripe-auth+data:scheme:stripe-auth
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:26:13-41:29
+category#android.intent.category.DEFAULT
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:29:17-76
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:29:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:30:17-78
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:30:27-75
+activity#com.stripe.android.financialconnections.FinancialConnectionsSheetActivity
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:43:9-46:57
+	android:exported
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:45:13-37
+	android:theme
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:46:13-54
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:44:13-101
+provider#com.stripe.android.financialconnections.appinitializer.FinancialConnectionsInitializer
+ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:48:9-52:43
+	android:authorities
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:50:13-77
+	android:multiprocess
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:52:13-40
+	android:exported
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:51:13-37
+	android:name
+		ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:49:13-114
+activity#com.stripe.android.ui.core.cardscan.CardScanActivity
+ADDED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:10:9-13:69
+	android:exported
+		ADDED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:13:13-66
+	android:name
+		ADDED from [com.stripe:payments-ui-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/1015e70c2a3d4d81979b06e67cc657dc/transformed/jetified-payments-ui-core-20.15.4/AndroidManifest.xml:11:13-80
+package#com.android.chrome
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:13:9-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:13:18-51
+activity#com.stripe.android.view.AddPaymentMethodActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:17:9-20:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:19:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:20:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:18:13-76
+activity#com.stripe.android.view.PaymentMethodsActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:21:9-24:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:23:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:24:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:22:13-74
+activity#com.stripe.android.view.PaymentFlowActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:25:9-28:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:27:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:28:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:26:13-71
+activity#com.stripe.android.view.PaymentAuthWebViewActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:29:9-33:58
+	android:windowSoftInputMode
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:33:13-55
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:31:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:32:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:30:13-78
+activity#com.stripe.android.view.PaymentRelayActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:34:9-37:61
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:36:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:37:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:35:13-72
+activity#com.stripe.android.payments.StripeBrowserLauncherActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:43:9-47:61
+	android:launchMode
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:46:13-44
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:45:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:47:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:44:13-85
+activity#com.stripe.android.payments.StripeBrowserProxyReturnActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:48:9-65:20
+	android:launchMode
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:52:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:49:13-88
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:payment_return_url+data:path:/${applicationId}+data:scheme:stripesdk
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:53:13-64:29
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:payment_return_url+data:path:/com.bhive.knownjobzrecruiter+data:scheme:stripesdk
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:53:13-64:29
+activity#com.stripe.android.payments.core.authentication.threeds2.Stripe3ds2TransactionActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:66:9-69:57
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:68:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:69:13-54
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:67:13-114
+activity#com.stripe.android.googlepaylauncher.StripeGooglePayActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:70:9-73:66
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:72:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:73:13-63
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:71:13-88
+activity#com.stripe.android.googlepaylauncher.GooglePayLauncherActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:74:9-77:66
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:76:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:77:13-63
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:75:13-90
+activity#com.stripe.android.googlepaylauncher.GooglePayPaymentMethodLauncherActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:78:9-81:66
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:80:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:81:13-63
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:79:13-103
+activity#com.stripe.android.payments.paymentlauncher.PaymentLauncherConfirmationActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:82:9-85:62
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:84:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:85:13-59
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:83:13-107
+activity#com.stripe.android.payments.bankaccount.ui.CollectBankAccountActivity
+ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:86:9-89:61
+	android:exported
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:88:13-37
+	android:theme
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:89:13-58
+	android:name
+		ADDED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:87:13-97
+activity#com.stripe.android.stripe3ds2.views.ChallengeActivity
+ADDED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:10:9-13:54
+	android:exported
+		ADDED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:12:13-37
+	android:theme
+		ADDED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:13:13-51
+	android:name
+		ADDED from [com.stripe:stripe-3ds2-android:6.1.5] /Users/shripranav/.gradle/caches/transforms-3/e6ba0eb951e4101c795800aee74b13f1/transformed/jetified-stripe-3ds2-android-6.1.5/AndroidManifest.xml:11:13-81
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:5-82
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:28:5-82
+MERGED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:28:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:11:5-82
+MERGED from [com.google.android.gms:play-services-cloud-messaging:17.0.1] /Users/shripranav/.gradle/caches/transforms-3/94987091f71a520f9f251fc23ec6d407/transformed/jetified-play-services-cloud-messaging-17.0.1/AndroidManifest.xml:11:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:21.1.0] /Users/shripranav/.gradle/caches/transforms-3/52e247d09bef144a031022872ddb0ab1/transformed/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:31:9-38:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:33:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:34:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:32:13-78
+service#com.google.firebase.messaging.FirebaseMessagingService
+ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:44:9-51:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:47:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:46:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:45:13-82
+meta-data#com.google.firebase.components:com.google.firebase.messaging.FirebaseMessagingRegistrar
+ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:55:13-57:85
+	android:value
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:57:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-messaging:23.1.1] /Users/shripranav/.gradle/caches/transforms-3/6c60ceba99cbe055099f8a16bec1b969/transformed/jetified-firebase-messaging-23.1.1/AndroidManifest.xml:56:17-119
+meta-data#com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar
+ADDED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:17:13-19:85
+	android:value
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:19:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-installations:17.1.0] /Users/shripranav/.gradle/caches/transforms-3/1e382cc686e061c793066e5a3586fa8e/transformed/jetified-firebase-installations-17.1.0/AndroidManifest.xml:18:17-127
+meta-data#com.google.firebase.components:com.google.firebase.datatransport.TransportRegistrar
+ADDED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:27:13-29:85
+	android:value
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:29:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-datatransport:18.1.7] /Users/shripranav/.gradle/caches/transforms-3/153f4fed51a62c114a3571a2ee65e157/transformed/jetified-firebase-datatransport-18.1.7/AndroidManifest.xml:28:17-115
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:25:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:27:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:29:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:28:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.2.0] /Users/shripranav/.gradle/caches/transforms-3/786a37433916fe6d79292c0d75fa7e3b/transformed/jetified-firebase-common-20.2.0/AndroidManifest.xml:26:13-77
+uses-feature#0x00020000
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:26:5-28:35
+	android:glEsVersion
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:27:9-41
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:28:9-32
+package#com.google.android.apps.maps
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:9-64
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:33:18-61
+uses-library#org.apache.http.legacy
+ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:39:9-41:40
+	android:required
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:41:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:40:13-50
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.0.1] /Users/shripranav/.gradle/caches/transforms-3/fa6e88cb1658288b531212837e56f245/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.1.0] /Users/shripranav/.gradle/caches/transforms-3/aeaecefaa279253eea6d5bd14179aefc/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:22:13-58
 uses-library#androidx.window.extensions
-ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
 uses-library#androidx.window.sidecar
-ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
 	android:required
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/df96c1372ab4a4a8915e75a8ed1ca867/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+		ADDED from [androidx.window:window:1.0.0-beta04] /Users/shripranav/.gradle/caches/transforms-3/9e815f99bc34c3eac49733835493f0ca/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+service#com.google.android.datatransport.runtime.backends.TransportBackendDiscovery
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:28:9-34:19
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+MERGED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:36:9-38:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:30:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:29:13-103
+meta-data#backend:com.google.android.datatransport.cct.CctBackendFactory
+ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:31:13-33:39
+	android:value
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:33:17-36
+	android:name
+		ADDED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:32:17-94
+service#com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:26:9-30:19
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:28:13-37
+	android:permission
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:29:13-69
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:27:13-117
+receiver#com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver
+ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:32:9-34:40
+	android:exported
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:34:13-37
+	android:name
+		ADDED from [com.google.android.datatransport:transport-runtime:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/37217acb53c3ff6a8ed1bcc3c4080a08/transformed/jetified-transport-runtime-3.1.8/AndroidManifest.xml:33:13-132
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:25:9-33:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:25:9-33:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:26:9-34:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/shripranav/.gradle/caches/transforms-3/08158774be0b69324da4126acd5001a4/transformed/jetified-startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/307824733bc0cbcd261876324420cd15/transformed/jetified-emoji2-1.2.0/AndroidManifest.xml:30:17-75
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:30:13-32:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:32:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:31:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:35:9-47:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:38:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:40:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:37:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:36:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:41:13-43:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:42:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:42:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:44:13-46:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:45:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.2.0] /Users/shripranav/.gradle/caches/transforms-3/a8652410f84d782444823e817c37c4f9/transformed/jetified-profileinstaller-1.2.0/AndroidManifest.xml:45:25-82
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.4.1] /Users/shripranav/.gradle/caches/transforms-3/dd135ffbf0b698c948f7790dd90b813e/transformed/jetified-lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+permission#com.bhive.knownjobzrecruiter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+uses-permission#com.bhive.knownjobzrecruiter.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.9.0] /Users/shripranav/.gradle/caches/transforms-3/d69e1346c4e05f7497ba6b30c3e4ccd2/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+meta-data#aia-compat-api-min-version
+ADDED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:10:9-12:33
+	android:value
+		ADDED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:12:13-30
+	android:name
+		ADDED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav/.gradle/caches/transforms-3/e586d86a5063f414b4eb95eeba247516/transformed/jetified-instantapps-1.1.0/AndroidManifest.xml:11:13-54

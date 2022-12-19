@@ -7,6 +7,7 @@ import 'package:nav2/model/city_model.dart';
 import 'package:nav2/model/district_model.dart';
 import 'package:nav2/model/edit_profile_model.dart';
 import 'package:nav2/model/master_model.dart';
+import 'package:nav2/model/profile_model.dart';
 import 'package:nav2/provider/internet_provider.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:http/http.dart' as http;
@@ -15,6 +16,8 @@ import 'package:nav2/utils/internet_viewer.dart';
 import 'package:nav2/utils/loading_widget.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../provider/profile_provider.dart';
 
 class EditCompanyProfile extends StatefulWidget {
   String? name ;
@@ -400,13 +403,33 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
     EditProfileModel data = EditProfileModel.fromJson(jsonDecode(response.body));
 
     if(data.status!){
+      profileApi();
+    }else{
+      errorSnackBar('Something went wrong', context);
+    }
+  }
+
+  Future<void> profileApi() async {
+    final prefs = await SharedPreferences.getInstance();
+    var token = prefs.getString(USER_TOKEN);
+
+    var url = Uri.parse(PROFILE_URL);
+    http.Response response = await http.get(url ,
+        headers: {
+          'Authorization': 'Bearer $token'
+        });
+    print('The Response of profile ${response.statusCode}');
+
+    if(response.statusCode == 200){
       setState(() {
         isPressed = false ;
       });
       Navigator.pop(context);
       successSnackBar('Successfully updated Profile', context);
-    }else{
-      errorSnackBar('Something went wrong', context);
+      ProfileModel data = ProfileModel.fromJson(jsonDecode(response.body));
+      // ignore: use_build_context_synchronously
+      Provider.of<ProfileProvider>(context , listen: false).updateValues(data!);
+
     }
   }
 
@@ -454,11 +477,7 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
     print('The response of upload image ${response.body}');
 
     if(res.statusCode == 200){
-      setState(() {
-        isPressed = false ;
-      });
-      Navigator.pop(context);
-      successSnackBar('Successfully updated Profile', context);
+      profileApi();
     }else{
       errorSnackBar('Something went wrong', context);
     }
@@ -852,6 +871,8 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
                     Image.file(user_image! , height: 150, width: width,),
                   ),
                 ),
+
+                const SizedBox(height: 20,) ,
 
                 InkWell(
                   onTap: () async {

@@ -120,7 +120,7 @@ class Company {
   int? isSubscribed;
   String? personalFirstName;
   String? personalLastName;
-  int? personalContactNumber;
+  String? personalContactNumber;
   String? companyEmail;
   dynamic emailVerifiedAt;
   int? availFreepackage;

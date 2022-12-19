@@ -286,9 +286,9 @@ class User {
   String? email;
   String? fatherName;
   String? dateOfBirth;
-  int? genderId;
-  int? maritalStatusId;
-  int? nationalityId;
+  dynamic genderId;
+  dynamic maritalStatusId;
+  dynamic nationalityId;
   String? nationalIdCardNumber;
   String? countryId;
   String? stateId;

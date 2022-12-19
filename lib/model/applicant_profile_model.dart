@@ -154,7 +154,7 @@ class Company {
   int? isSubscribed;
   dynamic personalFirstName;
   dynamic personalLastName;
-  int? personalContactNumber;
+  String? personalContactNumber;
   String? companyEmail;
   DateTime? emailVerifiedAt;
   int? availFreepackage;
@@ -832,9 +832,9 @@ class User {
   String? email;
   String? fatherName;
   DateTime? dateOfBirth;
-  int? genderId;
-  int? maritalStatusId;
-  int? nationalityId;
+  dynamic genderId;
+  dynamic maritalStatusId;
+  dynamic nationalityId;
   String? nationalIdCardNumber;
   String? countryId;
   dynamic stateId;

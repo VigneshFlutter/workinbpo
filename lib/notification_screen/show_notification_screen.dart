@@ -86,7 +86,8 @@ class _ShowNotificationScreenState extends State<ShowNotificationScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
 
-                          Expanded(
+                          data?.notifications?[index].user?.name == null ? Container():
+                      Expanded(
                             flex: 3 ,
                             child: Text(data!.notifications![index].user!.name! ,
                             maxLines: 2,
@@ -97,6 +98,7 @@ class _ShowNotificationScreenState extends State<ShowNotificationScreen> {
                             ),),
                           ),
 
+                          data?.notifications?[index].createdAt == null ? Container():
                           Text(Jiffy(data!.notifications![index].createdAt!).fromNow() ,
                           style: const TextStyle(
                             fontSize: 12 ,
@@ -108,8 +110,8 @@ class _ShowNotificationScreenState extends State<ShowNotificationScreen> {
 
                       const SizedBox(height: 2,) ,
 
+                      data?.notifications?[index].message ==  null ? Container():
                       Text(data!.notifications![index].message!) ,
-
                       const SizedBox(height: 15,) ,
 
                       Container(

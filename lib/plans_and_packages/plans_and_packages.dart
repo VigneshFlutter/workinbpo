@@ -1,14 +1,16 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_stripe/flutter_stripe.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 import 'package:nav2/model/plans_and_packages_model.dart';
-import 'package:nav2/plans_and_packages/buy_package_screen.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:nav2/utils/loading_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../controller/payment_controller.dart';
 
 class PlansAndPackages extends StatefulWidget {
   const PlansAndPackages({Key? key}) : super(key: key);
@@ -23,6 +25,8 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
   double? width ;
   PlansAndPackagesModel? data ;
   bool isLoading = true ;
+  Map<String , dynamic>? paymentIntent ;
+  String secretKey = 'sk_live_...BiKA';
 
   @override
   void initState() {
@@ -51,11 +55,81 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
 
   }
 
+  Future<void> makePayment() async {
+    print('Inside');
+    try{
+      paymentIntent = await createPaymentIntent('100', 'INR');
+      await Stripe.instance.initPaymentSheet(
+          paymentSheetParameters: SetupPaymentSheetParameters(
+            paymentIntentClientSecret: paymentIntent!['client_secret'] ,
+            merchantDisplayName: 'KnownJobz' ,
+              style: ThemeMode.light
+          ));
+
+      displayPaymentSheet();
+    }catch(e){
+      print('The Stripe Payment ${e.toString()}');
+    }
+  }
+
+  void displayPaymentSheet() async {
+    print('Inside');
+    try{
+      await Stripe.instance.presentPaymentSheet();
+      setState(() {
+        paymentIntent = null ;
+      });
+
+      // ignore : use_build_context_synchronously
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          backgroundColor: Colors.green,
+            content: Text('Paid Successfully'))
+      );
+    }on StripeException catch(e){
+      print('The Display Payment Sheet ${e.toString()}');
+      showDialog(
+          context: context,
+          builder: (_) => const AlertDialog(
+            content: Text('Cancelled'),
+          ));
+    }
+  }
+
+  createPaymentIntent(String amount , String currency) async {
+    print('Inside');
+    try{
+      Map<String , dynamic> body = {
+        "amount": calculateAmount(amount) ,
+        'currency': currency ,
+        'payment_method_types[]': 'card'
+      };
+
+      var response = await http.post(
+        Uri.parse('https://api.stripe.com/v1/payment_intents') ,
+        body: body ,
+        headers: {
+          'Authorization' : 'Bearer $secretKey' ,
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }
+      );
+      return jsonDecode(response.body.toString());
+    }catch(e){
+      print('The Payment Intent ${e.toString()}');
+    }
+  }
+
+  calculateAmount(String amount){
+    print('Inside');
+    final price = int.parse(amount) * 100;
+    return price.toString() ;
+  }
+
   @override
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height ;
     width = MediaQuery.of(context).size.width ;
-
+    final PaymentController controller = Get.put(PaymentController());
     return Scaffold(
       body: Container(
         height: height,
@@ -76,7 +150,7 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
 
             const SizedBox(height: 30,) ,
 
-            const Text('Current Plan' ,
+            data?.company?.package == null ? Container(): const Text('Current Plan' ,
             style: TextStyle(
               fontSize: 22 ,
               fontWeight: FontWeight.w600
@@ -84,6 +158,7 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
 
             const SizedBox(height: 20,) ,
 
+            data?.company?.package == null ? Container():
             Align(
               alignment: Alignment.topLeft,
               child: Container(
@@ -109,7 +184,8 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                 ),
                 child: Column(
                   children: [
-                    Container(
+                    data?.company?.package?.packageTitle == null ? Container()
+                    : Container(
                       height: 35,
                       width: width,
                       decoration: const BoxDecoration(
@@ -129,10 +205,11 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                       ),
                     ) ,
 
-                    const SizedBox(height: 15,) , 
+                    const SizedBox(height: 15,) ,
 
 
 
+                    data?.company?.package?.packagePrice == null ? Container():
                     ListTile(
                       leading: Image.asset(RUPEE_ICON , height: 25, width: 25,),
                       title: Text("Package Pricing at : ${data!.company!.package!.packagePrice!.toString()}" ,
@@ -142,7 +219,8 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                         ),),
                     ) ,
 
-                    
+
+                    data?.company?.packageStartDate == null ? Container():
                     ListTile(
                       leading: Image.asset(FROM_DATE_ICON , height: 35, width: 35,),
                       title: Text('Package starts at : ${DateFormat('yyyy-MM-dd').format(data!.company!.packageStartDate!)}' ,
@@ -152,6 +230,7 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                       ),),
                     ) ,
 
+                    data?.company?.packageEndDate == null ? Container():
                     ListTile(
                       leading: Image.asset(TO_DATE_ICON , height: 35, width: 35,),
                       title: Text('Package ends at : ${DateFormat('yyyy-MM-dd').format(data!.company!.packageEndDate!)}',
@@ -161,6 +240,7 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                         ),),
                     ) ,
 
+                    data?.company?.availedJobsQuota == null ? Container() :
                     Align(
                       alignment: Alignment.topLeft,
                       child: Container(
@@ -195,14 +275,14 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
 
             const SizedBox(height: 20,) ,
 
-            data!.company!.package == null ? Container():
+            data?.packages == null ? Container():
             const Text('Update your Packages' ,
             style: TextStyle(
                 fontSize: 22 ,
                 fontWeight: FontWeight.w600
             ),) ,
 
-            SizedBox(height: 10,) ,
+            const SizedBox(height: 10,) ,
 
             SizedBox(
               height: 400 * data!.packages!.length.toDouble(),
@@ -328,14 +408,15 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                         ) ,
 
                         InkWell(
-                          onTap: (){
-                            Navigator.push(
-                                context, MaterialPageRoute(
-                                builder: (context) => BuyPackageScreen(
-                                    packageName: data!.packages![index].packageTitle!,
-                                    price: data!.packages![index].packagePrice!.toString(),
-                                    noOfDays: data!.packages![index].packageNumDays!.toString(),
-                                    noOfPosts: data!.packages![index].packageNumListings!.toString())));
+                          onTap: () async {
+                            controller.makePayment(amount: data!.packages![index].packagePrice!.toString(), currency: 'INR');
+                            // Navigator.push(
+                            //     context, MaterialPageRoute(
+                            //     builder: (context) => BuyPackageScreen(
+                            //         packageName: data!.packages![index].packageTitle!,
+                            //         price: data!.packages![index].packagePrice!.toString(),
+                            //         noOfDays: data!.packages![index].packageNumDays!.toString(),
+                            //         noOfPosts: data!.packages![index].packageNumListings!.toString())));
                           },
                           child: Container(
                             height: 45,

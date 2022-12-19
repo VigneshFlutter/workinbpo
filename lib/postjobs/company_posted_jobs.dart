@@ -309,19 +309,26 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                         ListTile(
                           title: const Text('View a Job'),
                           leading: const  Icon(Icons.remove_red_eye , color: Colors.black,),
-                          onTap: ()=> Navigator.push(context, MaterialPageRoute(
-                              builder: (context) => JobDetailPage(job_slug: slug))),
+                          onTap: (){
+                            Navigator.push(context, MaterialPageRoute(
+                                builder: (context) => JobDetailPage(job_slug: slug)));
+                            // Navigator.pop(context);
+                          },
                         ),
                         ListTile(
                           title: const Text("Edit"),
                           leading:  SvgPicture.asset(EDIT_ICON),
-                          onTap: ()=> Navigator.push(
-                              context, MaterialPageRoute(
+                          onTap: (){
+                            Navigator.push(
+                                context, MaterialPageRoute(
                                 builder: (context) => AddJobPostScreen(
                                   jobIndex: index,
                                   isEditProfile: true ,
                                   jobData: data!,
-                                ))),
+                                )));
+
+                            // Navigator.pop(context);
+                          },
                         ) ,
                         ListTile(
                           title: const Text('Delete'),
@@ -338,17 +345,25 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                         ListTile(
                           title: const Text('List of Candidate'),
                           leading: SvgPicture.asset(CANDIDATE_ICON),
-                          onTap: ()=> Navigator.push(
-                              context, MaterialPageRoute(
-                              builder: (context) => ListCandidateScreen(user_id: user_id ?? ''))),
+                          onTap: (){
+                            Navigator.push(
+                                context, MaterialPageRoute(
+                                builder: (context) => ListCandidateScreen(user_id: user_id ?? '')));
+
+                            // Navigator.pop(context);
+                          },
                         ) , 
                         
                         ListTile(
                           title: Text('List of shortlist'),
                           leading: Image.asset(SHORT_LIST_ICON , height: 20, width: 20,),
-                          onTap: ()=> Navigator.push(
-                              context, MaterialPageRoute(
-                              builder: (context)=> ShortListJobScreen(id: user_id ?? ''))),
+                          onTap: (){
+                            Navigator.push(
+                                context, MaterialPageRoute(
+                                builder: (context)=> ShortListJobScreen(id: user_id ?? '')));
+
+                            // Navigator.pop(context);
+                          },
                         )
                       ],
                     ))

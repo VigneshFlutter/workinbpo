@@ -88,7 +88,7 @@ class _managemessagesState extends State<managemessages> {
                         return Container(
                           width: width,
                           padding:  const EdgeInsets.all(16),
-                          margin: const EdgeInsets.symmetric(horizontal: 12),
+                          margin: const EdgeInsets.symmetric(horizontal: 12 , vertical: 10),
                           decoration:  BoxDecoration(
                             color: Colors.white ,
                             borderRadius: BorderRadius.circular(20),

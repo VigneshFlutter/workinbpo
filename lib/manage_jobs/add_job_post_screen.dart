@@ -1,6 +1,8 @@
 import 'dart:convert';
+import 'package:dio/dio.dart';
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nav2/bottom_navigation.dart';
 import 'package:nav2/model/city_model.dart';
@@ -80,6 +82,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
   String degreeLevelIdVal =  '' ; 
   String jobExperienceIdVal = '' ;
   List<String> jobSkills = [];
+  List<int> jobSkillsId = [];
 
   //Models
   MasterModel data = MasterModel();
@@ -131,6 +134,20 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
             text: widget.jobData!.jobs!.data![widget.jobIndex!].description
           );
         });
+      }
+      print('The Expiration data ${widget.jobData!.jobs!.data![widget.jobIndex!].expiryDate}');
+      if(widget.jobData!.jobs!.data![widget.jobIndex!].expiryDate != null){
+        setState(() {
+          expiryDateTextEd = TextEditingController(
+            text: DateFormat('dd-MM-yy').format(widget.jobData!.jobs!.data![widget.jobIndex!].expiryDate!) 
+          );
+        });
+      }
+
+      if(widget.jobData!.jobs!.data![widget.jobIndex!].jobSkills!.isNotEmpty){
+        widget.jobData!.jobs!.data![widget.jobIndex!].jobSkills!.map((e){
+          jobSkills.add(e.jobSkill!.jobSkill!);
+        }).toList();
       }
 
       if(widget.jobData!.jobs!.data![widget.jobIndex!].benefits != null){
@@ -249,50 +266,98 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
   }
 
   Future<void> createJobPostApi(String baseurl) async {
-    final prefs = await SharedPreferences.getInstance() ; 
+    print('The Add Job ${nameTextEd.text}');
+    print('The Add Job ${descriptionTextEd.text}');
+    print('The Add Job ${benifitsTextEd.text }');
+    print('The Add Job ${salaryFromTextEd.text }');
+    print('The Add Job ${countryIndex.toString() }');
+    print('The Add Job ${jobSkillsId }');
+    final prefs = await SharedPreferences.getInstance() ;
     var token = prefs.getString(USER_TOKEN); 
 
     var url = Uri.parse(baseurl);
 
-    http.Response response = await http.post(url , 
-    body: {
-      "title": nameTextEd.text , 
-      "description": descriptionTextEd.text , 
-      "benefits": benifitsTextEd.text , 
+    http.Response response = await http.post(url ,
+    body: jsonEncode({
+      "title": nameTextEd.text ,
+      "description": descriptionTextEd.text ,
+      "benefits": benifitsTextEd.text ,
       "country_id": countryIndex.toString() ,
       "state_id": stateIndex.toString() ,
       "city_id": cityIndex.toString() ,
-      "is_freelance": freelanceValue.index.toString(), 
+      "is_freelance": freelanceValue.index.toString(),
       "career_level_id": careerLevelIdVal.toString(),
       "salary_from": salaryFromTextEd.text,
-      "salary_to": salaryToTextEd.text , 
-      "hide_salary": hideSalaryValue.index.toString() , 
+      "salary_to": salaryToTextEd.text ,
+      "hide_salary": hideSalaryValue.index.toString() ,
       "salary_currency": salaryCurrencyVal ,
-      "salary_period_id": salaryPeriodIdVal , 
-      "functional_area_id": functionalAreaIdVal , 
-      "job_type_id": jobTypeIdVal , 
-      "job_shift_id": jobShiftIdVal , 
-      "num_of_positions": numberofPositionsTextEd.text , 
-      "gender_id": genderIdVal , 
-      "degree_level_id": degreeLevelIdVal , 
-      "job_experience_id": jobExperienceIdVal  , 
-      "is_active": "1" , 
+      "salary_period_id": salaryPeriodIdVal ,
+      "functional_area_id": functionalAreaIdVal ,
+      "job_type_id": jobTypeIdVal ,
+      "job_shift_id": jobShiftIdVal ,
+      "num_of_positions": numberofPositionsTextEd.text ,
+      "gender_id": genderIdVal ,
+      "degree_level_id": degreeLevelIdVal ,
+      "job_experience_id": jobExperienceIdVal  ,
+      'skills': jobSkillsId ,
+      "is_active": "1" ,
       "is_featured": "1"
-    } , 
+    }) ,
     headers: {
-      "Authorization": 'Bearer $token'
+      "Authorization": 'Bearer $token'  ,
+      'Content-Type': "application/json"
     });
 
-    print('The Response of add job ${response.body}'); 
+    print('The Response of add job ${response.body}');
     if(response.statusCode == 200){
 
-      // use: build_context_synchronously
+      //ignore: use_build_context_synchronously
       Navigator.push(
         context, MaterialPageRoute(
-          builder: (context) => bottom_navigation())) ;
+          builder: (context) => const bottom_navigation())) ;
     }else{
+      //ignore: use_build_context_synchronously
       errorSnackBar('Something went wrong ', context) ;
     }
+
+    // var dio = Dio();
+    // var formData = FormData.fromMap(
+    //   {
+    //     "title": nameTextEd.text ,
+    //     "description": descriptionTextEd.text ,
+    //     "benefits": benifitsTextEd.text ,
+    //     "country_id": countryIndex.toString() ,
+    //     "state_id": stateIndex.toString() ,
+    //     "city_id": cityIndex.toString() ,
+    //     "is_freelance": freelanceValue.index.toString(),
+    //     "career_level_id": careerLevelIdVal.toString(),
+    //     "salary_from": salaryFromTextEd.text,
+    //     "salary_to": salaryToTextEd.text ,
+    //     "hide_salary": hideSalaryValue.index.toString() ,
+    //     "salary_currency": salaryCurrencyVal ,
+    //     "salary_period_id": salaryPeriodIdVal ,
+    //     "functional_area_id": functionalAreaIdVal ,
+    //     "job_type_id": jobTypeIdVal ,
+    //     "job_shift_id": jobShiftIdVal ,
+    //     "num_of_positions": numberofPositionsTextEd.text ,
+    //     "gender_id": genderIdVal ,
+    //     "degree_level_id": degreeLevelIdVal ,
+    //     "job_experience_id": jobExperienceIdVal  ,
+    //     'skills': jobSkills ,
+    //     "is_active": "1" ,
+    //     "is_featured": "1"
+    //   } ,
+    // );
+    // Response responseBody = await dio.post(baseurl ,
+    //   data: formData ,
+    //   options: Options(
+    //     headers: {
+    //       'Authorization': 'Bearer $token'
+    //     }
+    //   ),
+    // );
+    //
+    // print('The Response of dio body ${responseBody.data}');
 
   }
 
@@ -402,12 +467,16 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                                     if(jobExperienceVal == 'Select a job experience'){
                                       errorSnackBar('Please choose a job experience', context);
                                     }else{
-                                      setState(() {
-                                        isPressed = true ;
-                                      });
-                                      createJobPostApi(
-                                          ADD_POST_JOB_API
-                                      );
+                                     if(expiryDateTextEd.text.isNotEmpty){
+                                       setState(() {
+                                         isPressed = true ;
+                                       });
+                                       createJobPostApi(
+                                           ADD_POST_JOB_API
+                                       );
+                                     }else{
+                                       errorSnackBar('Please type a expiration date', context);
+                                     }
                                     }
                                   }
                                 }
@@ -823,6 +892,73 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                               children: [
                                 const SizedBox(height: 10,) ,
                                 Text(data.salaryperiods![index].salaryPeriod! ,
+                                  style: const  TextStyle(
+                                      fontSize: 16 ,
+                                      fontWeight: FontWeight.w600
+                                  ),) ,
+                                const SizedBox(height: 10,) ,
+                                Container(height: 1, width: width, color: Colors.grey,)
+                              ],
+                            ),
+                          );
+                        }))
+              ],
+            ),
+          ),
+        );
+      },);
+  }
+
+  void jobSkillsBottomSheet() {
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: height!/2 + 200,
+          color: Colors.white,
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const SizedBox(height: 20,) ,
+                Container(
+                  height: 20,
+                  width: 45,
+                  decoration: BoxDecoration(
+                      color: Colors.black54 ,
+                      borderRadius: BorderRadius.circular(14)
+                  ),
+                ) ,
+                const SizedBox(
+                  height: 15,
+                ) ,
+                const Align(
+                    alignment: Alignment.topLeft,
+                    child:  Text('Choose Job Skill' ,
+                      style: TextStyle(
+                          fontSize: 22 ,
+                          fontWeight: FontWeight.w600
+                      ),)),
+                const SizedBox(height: 20,),
+                Expanded(
+                    child: ListView.builder(
+                        itemCount: data.jobSkills!.length,
+                        itemBuilder: (context , index){
+                          return InkWell(
+                            onTap: (){
+                              setState(() {
+                                jobSkills.add(data.jobSkills![index].jobSkill!) ;
+                                jobSkillsId.add(data.jobSkills![index].jobSkillId!);
+                              });
+
+                              Navigator.pop(context);
+                            },
+                            child: Column(
+                              children: [
+                                const SizedBox(height: 10,) ,
+                                Text(data.jobSkills![index].jobSkill! ,
                                   style: const  TextStyle(
                                       fontSize: 16 ,
                                       fontWeight: FontWeight.w600
@@ -1331,9 +1467,34 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
 
                 const SizedBox(height: 20,) ,
 
-                label('Job skills') ,
-                const SizedBox(height: 10,) ,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    label('Job skills'),
 
+                    InkWell(
+                      onTap: (){
+                        jobSkillsBottomSheet();
+                      },
+                      child: Container(
+                        height: 35,
+                        width: 65,
+                        decoration: BoxDecoration(
+                          color: Colors.black ,
+                          borderRadius: BorderRadius.circular(6) ,
+                        ),
+                        child: const Center(
+                          child: Text('Add' ,
+                          style: TextStyle(
+                            fontSize: 15 ,
+                            color: Colors.white
+                          ),),
+                        ),
+                      ),
+                    )
+                  ],
+                ) ,
+                // const SizedBox(height: 10,) ,
 
 
                 const SizedBox(height: 10,) ,
@@ -1349,12 +1510,12 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                           },
                             avatar: const Icon(
                               Icons.delete,
-                              color: Colors.blueGrey,
+                              color: Colors.white,
                             ),
                           backgroundColor: Colors.blueGrey,
                             label: Text(e ,
                             style: const TextStyle(
-                              color: Colors.blueGrey ,
+                              color: Colors.white ,
                               fontSize: 15
                             ),
                         ));
@@ -1862,11 +2023,16 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                 const SizedBox(height: 10,) ,
 
                 TextFormField(
-                  decoration: InputDecoration(
+                  controller: expiryDateTextEd,
+                  decoration: InputDecoration( 
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(8)
+                    ),
                     hintText: 'Expiration date: '
                   ),
                 ),
 
+                const SizedBox(height: 30,) ,
 
                 InkWell(
                   onTap: ()=> checkingValues(),

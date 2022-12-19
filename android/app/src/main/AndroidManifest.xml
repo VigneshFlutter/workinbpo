@@ -2,7 +2,7 @@
     package="com.bhive.knownjobzrecruiter">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="Knownjobz recruiter"
+        android:label="Knownjobz Recruiter"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

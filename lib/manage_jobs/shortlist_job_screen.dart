@@ -6,6 +6,7 @@ import 'package:nav2/model/shortlist_model.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:nav2/utils/loading_widget.dart';
+import 'package:nav2/utils/no_results_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'applicant_profile_screen.dart';
@@ -86,6 +87,11 @@ class _ShortListJobScreenState extends State<ShortListJobScreen> {
 
             SizedBox(height: 15,) ,
 
+            data!.jobApplications!.isEmpty ? Expanded(
+              flex: 3,
+                child: Align(
+                  alignment: Alignment.center,
+                    child: NoResultsPage())):
             Expanded(
               flex: 3,
               child: ListView.builder(

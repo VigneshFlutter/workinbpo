@@ -62,6 +62,7 @@ class _dashboardpageState extends State<dashboardpage> {
   }
 
   void deleteToken() async {
+    print('The Token deleted'); 
     final prefs = await SharedPreferences.getInstance();
     prefs.remove(USER_TOKEN);
   }
@@ -119,103 +120,87 @@ class _dashboardpageState extends State<dashboardpage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    InkWell(
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => managejob(),
-                        ),
-                      ),
-                      child: Card(
-                        elevation: 1,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Center(
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(20)),
-                              width: 170,
-                              height: 150,
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 15),
-                                    child: Image.asset(
-                                      'assets/openjob.png',
-                                      width: 40,
-                                      height: 40,
-                                    ),
+                    Card(
+                      elevation: 1,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                        child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            width: 170,
+                            height: 150,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Image.asset(
+                                    'assets/openjob.png',
+                                    width: 40,
+                                    height: 40,
                                   ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      'Open jobs',
-                                      style: TextStyle(fontSize: 20),
-                                    ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 15),
+                                  child: Text(
+                                    'Open jobs',
+                                    style: TextStyle(fontSize: 20),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      '${data!.openjobscount!}',
-                                      style: const TextStyle(
-                                          fontSize: 20,
-                                          color:
-                                              Color.fromARGB(255, 50, 153, 238)),
-                                    ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(top: 15),
+                                  child: Text(
+                                    '${data!.openjobscount!}',
+                                    style: const TextStyle(
+                                        fontSize: 20,
+                                        color:
+                                            Color.fromARGB(255, 50, 153, 238)),
                                   ),
-                                ],
-                              )),
-                        ),
+                                ),
+                              ],
+                            )),
                       ),
                     ),
-                    InkWell(
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => managefollowers(),
-                        ),
-                      ),
-                      child: Card(
-                        elevation: 1,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Center(
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(20)),
-                              width: 170,
-                              height: 150,
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 15),
-                                    child: Image.asset(
-                                      'assets/follower.png',
-                                      height: 40,
-                                      width: 40,
-                                      color: Colors.green,
-                                    ),
+                    Card(
+                      elevation: 1,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                        child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            width: 170,
+                            height: 150,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Image.asset(
+                                    'assets/follower.png',
+                                    height: 40,
+                                    width: 40,
+                                    color: Colors.green,
                                   ),
-                                  const Padding(
-                                    padding: const EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      'Followers',
-                                      style: TextStyle(fontSize: 20),
-                                    ),
+                                ),
+                                const Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Text(
+                                    'Followers',
+                                    style: TextStyle(fontSize: 20),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      data!.followercount!.toString(),
-                                      style: const TextStyle(
-                                          fontSize: 20, color: Colors.green),
-                                    ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Text(
+                                    data!.followercount!.toString(),
+                                    style: const TextStyle(
+                                        fontSize: 20, color: Colors.green),
                                   ),
-                                ],
-                              )),
-                        ),
+                                ),
+                              ],
+                            )),
                       ),
                     ),
                   ],
@@ -226,105 +211,48 @@ class _dashboardpageState extends State<dashboardpage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    InkWell(
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => managemessages(),
-                        ),
-                      ),
-                      child: Card(
-                        elevation: 1,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Center(
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(20)),
-                              width: 170,
-                              height: 150,
-                              child: Column(
-                                children: [
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: Icon(
-                                      Icons.mail,
-                                      size: 40,
-                                      color: Color.fromARGB(255, 255, 231, 11),
-                                    ),
+
+                    Card(
+                      elevation: 1,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                      child: Center(
+                        child: Container(
+                            decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius: BorderRadius.circular(20)),
+                            width: width! - 20,
+                            height: 150,
+                            child: Column(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Image.asset(
+                                    SHORT_LIST_ICON,
+                                    height: 40,
+                                    width: 40,
+                                    color: APPCOLOR,
                                   ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      'Messages',
-                                      style: TextStyle(fontSize: 20),
-                                    ),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top: 20),
+                                  child: Text(
+                                    'Shortlisted Profiles',
+                                    style: TextStyle(fontSize: 18),
                                   ),
-                                  Padding(
-                                    padding: EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      data!.msgcount!.toString(),
-                                      style: const TextStyle(
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 15),
+                                  child: Text(
+                                    data!.shortlistcount!.toString(),
+                                    style: const TextStyle(
                                         fontSize: 20,
-                                        color: Color.fromARGB(255, 224, 202, 7),
-                                      ),
-                                    ),
+                                        color:
+                                            Color.fromARGB(255, 220, 69, 101)),
                                   ),
-                                ],
-                              )),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => managejob(),
-                        ),
-                      ),
-                      child: Card(
-                        elevation: 1,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20)),
-                        child: Center(
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(20)),
-                              width: 170,
-                              height: 150,
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 15),
-                                    child: Image.asset(
-                                      SHORT_LIST_ICON,
-                                      height: 40,
-                                      width: 40,
-                                      color: APPCOLOR,
-                                    ),
-                                  ),
-                                  const Padding(
-                                    padding: EdgeInsets.only(top: 20),
-                                    child: Text(
-                                      'Shortlisted Profiles',
-                                      style: TextStyle(fontSize: 18),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 15),
-                                    child: Text(
-                                      data!.shortlistcount!.toString(),
-                                      style: const TextStyle(
-                                          fontSize: 20,
-                                          color:
-                                              Color.fromARGB(255, 220, 69, 101)),
-                                    ),
-                                  ),
-                                ],
-                              )),
-                        ),
+                                ),
+                              ],
+                            )),
                       ),
                     ),
                   ],

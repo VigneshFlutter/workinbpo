@@ -27,6 +27,7 @@ const String ADD_SHORTLIST_API = '${APP_BASE_URL}company-addtoshortlist/';
 const String REMOVE_SHORTLIST_API = '${APP_BASE_URL}company-removefromshortlist/';
 const String NOTIFICATION_API = '${APP_BASE_URL}company-notifications';
 const String DELETE_API = '${APP_BASE_URL}company-deletejob/';
+const String FORGET_PASSWORD_API = '${APP_BASE_URL}company/password/email';
 
 
 
@@ -41,7 +42,8 @@ const ORANGE_COLOR = Color(0xFFE78E41);
 const String APP_LOADING = 'assets/lottie/apploading.json';
 const String COLOR_LOADING = 'assets/lottie/colorLoading.json';
 const String NOTIFICATION_BELL = 'assets/lottie/notication-bell.json';
-const String NO_RESULTS = 'assets/lottie/no-results.json'; 
+const String NO_RESULTS = 'assets/lottie/no-results.json';
+const String VERIFICATION_LOTTIE = 'assets/lottie/verification-code.json';
 
 //Icons
 const String RUPEE_ICON = 'assets/rupee.png';

@@ -45,13 +45,13 @@ class _RegisterState extends State<Register> {
       'candidate_or_employer': 'employer' ,
       'firstname': firstNameTextEd.text ,
       'lastname': lastNameTextEd.text ,
-      'contact': contactTextEd.text ,
+      'contact': '+91 ${contactTextEd.text}' ,
       'email': emailTextEd.text ,
       'password': passwordTextEd.text ,
       'password_confirmation': passwordConfirmationTxtEd.text ,
       'name': nameTextEd.text ,
       'location': companyLocationTextEd.text ,
-      'phone': contactNumTextEd.text ,
+      'phone': '+91 ${contactNumTextEd.text}' ,
       'companyemail': emailIDTextEd.text ,
       'no_of_offices': numberofOfficiesTextEd.text ,
       'established_in': establishedINTextEd.text ,
@@ -64,9 +64,11 @@ class _RegisterState extends State<Register> {
 
     if(data.status!){
       savingToken(data.token!);
+
+      //ignore: use_build_context_synchronously
       Navigator.push(
         context, MaterialPageRoute(
-          builder: (context) => bottom_navigation()));
+          builder: (context) => const bottom_navigation()));
     }else{
       errorSnackBar('Not registered yet', context);
     }
