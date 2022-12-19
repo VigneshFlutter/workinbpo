@@ -5,6 +5,7 @@ import 'package:lottie/lottie.dart';
 import 'package:nav2/bottom_navigation.dart';
 import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/model/register_model.dart';
+import 'package:nav2/otp_page/otp_page.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:http/http.dart' as http;
@@ -38,14 +39,15 @@ class _RegisterState extends State<Register> {
   TextEditingController descriptionTextEd = TextEditingController();
 
   Future<void> registerAPi() async {
-    String REG_URL = BASE_URL + 'register';
+    
+    String REG_URL = '${BASE_URL}register';
     var url = Uri.parse(REG_URL);
     http.Response response = await http.post(url ,
     body: {
       'candidate_or_employer': 'employer' ,
       'firstname': firstNameTextEd.text ,
       'lastname': lastNameTextEd.text ,
-      'contact': '+91 ${contactTextEd.text}' ,
+      'contact': '+91${contactTextEd.text}' ,
       'email': emailTextEd.text ,
       'password': passwordTextEd.text ,
       'password_confirmation': passwordConfirmationTxtEd.text ,
@@ -61,15 +63,27 @@ class _RegisterState extends State<Register> {
     });
     print('The Response of register api ${response.body}');
     RegisterModel data = RegisterModel.fromJson(jsonDecode(response.body));
-
+     
     if(data.status!){
-      savingToken(data.token!);
+       setState(() {
+        isPressed = false ;
+      });
+      // savingToken(data.token!);
 
-      //ignore: use_build_context_synchronously
-      Navigator.push(
+     
+      // ignore: use_build_context_synchronously
+     Navigator.push(
         context, MaterialPageRoute(
-          builder: (context) => const bottom_navigation()));
+          builder: (context) =>  OtpScreen(
+            mobileNumber: '+91${contactTextEd.text}',
+            email: emailTextEd.text,
+          )));
+     
     }else{
+      setState(() {
+        isPressed = false ;
+      });
+      // ignore: use_build_context_synchronously
       errorSnackBar('Not registered yet', context);
     }
   }

@@ -1,7 +1,10 @@
-
-
+import 'dart:convert';
+import 'package:http/http.dart' as http ;
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:nav2/loginpage/Admin_login.dart';
+import 'package:nav2/model/otp_model.dart';
+import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:provider/provider.dart';
 
@@ -12,21 +15,13 @@ import '../utils/internet_viewer.dart';
 
 class OtpScreen extends StatefulWidget {
 
-  String firstName ;
-  String lastName ;
-  String middleName ;
+ 
   String mobileNumber;
-
-  String password ;
   String email;
   OtpScreen({
     required this.mobileNumber,
-    required this.email ,
-    required this.lastName ,
-    required this.firstName ,
-    required this.middleName ,
-
-    required this.password});
+    required this.email 
+    });
 
   @override
   State<OtpScreen> createState() => _OtpScreenState();
@@ -47,7 +42,33 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   void initState() {
     super.initState();
-    // sendOtpFirebase();
+   
+  }
+
+  Future<void> verifyOtp() async{
+
+    print('The Register data for otp ${widget.email} , ${widget.mobileNumber}'); 
+
+    var url = Uri.parse('https://knownjobz.com/api/verifyotp-twillio');
+    http.Response response = await http.post(url , 
+    body: jsonEncode({
+      'email': widget.email , 
+      'phone': widget.mobileNumber , 
+      'otp': otpController.text
+    }));
+
+    print('The Response of Otp ${response.body}'); 
+    OtpModel data = OtpModel.fromJson(jsonDecode(response.body)); 
+
+    if(data.status!){
+      
+      // ignore: use_build_context_synchronously
+      successSnackBar('Success!', context); 
+
+      // ignore: use_build_context_synchronously
+      Navigator.push(context, MaterialPageRoute(builder: (context) => const adminlogin()));
+    }
+
   }
   
 
@@ -179,7 +200,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 alignment: Alignment.topRight,
                 child: InkWell(
                   onTap: () {
-
+                    verifyOtp();
                   },
                   child: Container(
                     height: 55,

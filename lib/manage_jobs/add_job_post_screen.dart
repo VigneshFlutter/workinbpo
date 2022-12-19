@@ -84,6 +84,42 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
   List<String> jobSkills = [];
   List<int> jobSkillsId = [];
 
+  List<String> jobEmployeesCount = [
+    '0' , 
+    '1' ,
+    '2' , 
+    '3' , 
+    '4', 
+    '5' , 
+    '6' , 
+    '7' , 
+    '8' , 
+    '9' , 
+    '10' , 
+    '11' ,
+    '12' , 
+    '13' , 
+    '14' , 
+    '15' , 
+    '16' , 
+    '17' , 
+    '18' , 
+    '19' , 
+    '20' , 
+    '21' , 
+    '22' , 
+    '23' , 
+    '24' , 
+    '25' , 
+    '26' , 
+    '27' , 
+    '28' , 
+    '29' , 
+    '30' ,  
+    
+  ];
+  String noOfEmployessCount = 'Select the Number of Positions'; 
+
   //Models
   MasterModel data = MasterModel();
   DistrictModel stateData = DistrictModel();
@@ -105,7 +141,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
     if(widget.isEditProfile){
 
       // Name Value updating
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].title != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].title != null){
         setState(() {
           nameTextEd = TextEditingController(
             text: widget.jobData!.jobs!.data![widget.jobIndex!].title
@@ -113,14 +149,14 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].isFreelance != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].isFreelance != null){
         setState(() {
           freelanceValue = widget.jobData!.jobs!.data![widget.jobIndex!].isFreelance == 0
               ? FreelanceRadio.no : FreelanceRadio.yes;
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].hideSalary != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].hideSalary != null){
         setState(() {
           hideSalaryValue = widget.jobData!.jobs!.data![widget.jobIndex!].hideSalary == 0 ?
               HideSalaryRadio.no : HideSalaryRadio.yes ;
@@ -128,7 +164,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
       }
 
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].description != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].description != null){
         setState(() {
           descriptionTextEd = TextEditingController(
             text: widget.jobData!.jobs!.data![widget.jobIndex!].description
@@ -144,13 +180,15 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].jobSkills!.isNotEmpty){
+     if(widget.jobData?.jobs?.data?[widget.jobIndex!].jobSkills != null){
+       if(widget.jobData!.jobs!.data![widget.jobIndex!].jobSkills!.isNotEmpty){
         widget.jobData!.jobs!.data![widget.jobIndex!].jobSkills!.map((e){
           jobSkills.add(e.jobSkill!.jobSkill!);
         }).toList();
       }
+     }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].benefits != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].benefits != null){
         setState(() {
           benifitsTextEd = TextEditingController(
             text: widget.jobData!.jobs!.data![widget.jobIndex!].benefits
@@ -158,7 +196,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].countryId != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].countryId != null){
         setState(() {
           countryVal = widget.jobData!.jobs!.data![widget.jobIndex!].countryId!.country!;
           countryIndex = widget.jobData!.jobs!.data![widget.jobIndex!].countryId!.id! ;
@@ -171,14 +209,14 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].careerLevelId!.careerLevel != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].careerLevelId?.careerLevel != null){
         setState(() {
           carrerLevel = widget.jobData!.jobs!.data![widget.jobIndex!].careerLevelId!.careerLevel! ;
           careerLevelIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].careerLevelId!.careerLevelId!.toString() ;
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].salaryFrom != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].salaryFrom != null){
         setState(() {
           salaryFromTextEd = TextEditingController(
             text: widget.jobData!.jobs!.data![widget.jobIndex!].salaryFrom!.toString()
@@ -186,7 +224,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].salaryTo != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].salaryTo != null){
         setState(() {
           salaryToTextEd = TextEditingController(
             text: widget.jobData!.jobs!.data![widget.jobIndex!].salaryTo.toString()
@@ -194,7 +232,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      if(widget.jobData!.jobs!.data![widget.jobIndex!].salaryCurrency != null){
+      if(widget.jobData?.jobs?.data?[widget.jobIndex!].salaryCurrency != null){
         setState(() {
           salaryCurrencyVal = widget.jobData!.jobs!.data![widget.jobIndex!].salaryCurrency!;
         });
@@ -203,21 +241,21 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
       print('The Salary Period ${widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriod}');
       print('The Salary Period ${widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriodId}');
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriod != null){
+       if(widget.jobData?.jobs?.data?[widget.jobIndex!].salaryPeriodId?.salaryPeriod != null){
          setState(() {
            salaryPeriodVal = widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriod! ;
            salaryPeriodIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriodId!.toString() ;
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].functionalAreaId!.functionalArea != null){
+       if(widget.jobData?.jobs?.data?[widget.jobIndex!].functionalAreaId?.functionalArea != null){
          setState(() {
            functionalAreaVal = widget.jobData!.jobs!.data![widget.jobIndex!].functionalAreaId!.functionalArea! ;
            functionalAreaIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].functionalAreaId!.functionalAreaId!.toString() ;
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].jobTypeId!.jobType != null){
+       if(widget.jobData!.jobs!.data?[widget.jobIndex!].jobTypeId?.jobType != null){
          print('The Salary Period ${widget.jobData!.jobs!.data![widget.jobIndex!].jobTypeId!.jobType}');
          print('The Salary Period ${widget.jobData!.jobs!.data![widget.jobIndex!].jobTypeId!.jobTypeId}');
          setState(() {
@@ -226,14 +264,14 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].jobShiftId != null){
+       if(widget.jobData?.jobs!.data?[widget.jobIndex!].jobShiftId != null){
          setState(() {
            jobShiftVal = widget.jobData!.jobs!.data![widget.jobIndex!].jobShiftId!.jobShift! ;
            jobShiftIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].jobShiftId!.jobShiftId!.toString() ;
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].numOfPositions != null){
+       if(widget.jobData?.jobs!.data?[widget.jobIndex!].numOfPositions != null){
          setState(() {
            numberofPositionsTextEd = TextEditingController(
              text: widget.jobData!.jobs!.data![widget.jobIndex!].numOfPositions!.toString()
@@ -241,21 +279,21 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].genderId != null){
+       if(widget.jobData?.jobs!.data?[widget.jobIndex!].genderId != null){
          setState(() {
            genderVal = widget.jobData!.jobs!.data![widget.jobIndex!].genderId!.gender! ;
            genderIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].genderId!.genderId!.toString() ;
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].degreeLevelId != null){
+       if(widget.jobData?.jobs?.data?[widget.jobIndex!].degreeLevelId != null){
          setState(() {
            degreeLevelVal = widget.jobData!.jobs!.data![widget.jobIndex!].degreeLevelId!.degreeLevel! ;
            degreeLevelIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].degreeLevelId!.degreeLevelId!.toString() ;
          });
        }
 
-       if(widget.jobData!.jobs!.data![widget.jobIndex!].jobExperienceId != null){
+       if(widget.jobData?.jobs!.data?[widget.jobIndex!].jobExperienceId != null){
          setState(() {
            jobExperienceVal = widget.jobData!.jobs!.data![widget.jobIndex!].jobExperienceId!.jobExperience! ;
            jobExperienceIdVal = widget.jobData!.jobs!.data![widget.jobIndex!].jobExperienceId!.jobExperienceId!.toString() ;
@@ -301,7 +339,8 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
       "job_experience_id": jobExperienceIdVal  ,
       'skills': jobSkillsId ,
       "is_active": "1" ,
-      "is_featured": "1"
+      "is_featured": "1" , 
+      "expiry_date": expiryDateTextEd.text 
     }) ,
     headers: {
       "Authorization": 'Bearer $token'  ,
@@ -319,46 +358,6 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
       //ignore: use_build_context_synchronously
       errorSnackBar('Something went wrong ', context) ;
     }
-
-    // var dio = Dio();
-    // var formData = FormData.fromMap(
-    //   {
-    //     "title": nameTextEd.text ,
-    //     "description": descriptionTextEd.text ,
-    //     "benefits": benifitsTextEd.text ,
-    //     "country_id": countryIndex.toString() ,
-    //     "state_id": stateIndex.toString() ,
-    //     "city_id": cityIndex.toString() ,
-    //     "is_freelance": freelanceValue.index.toString(),
-    //     "career_level_id": careerLevelIdVal.toString(),
-    //     "salary_from": salaryFromTextEd.text,
-    //     "salary_to": salaryToTextEd.text ,
-    //     "hide_salary": hideSalaryValue.index.toString() ,
-    //     "salary_currency": salaryCurrencyVal ,
-    //     "salary_period_id": salaryPeriodIdVal ,
-    //     "functional_area_id": functionalAreaIdVal ,
-    //     "job_type_id": jobTypeIdVal ,
-    //     "job_shift_id": jobShiftIdVal ,
-    //     "num_of_positions": numberofPositionsTextEd.text ,
-    //     "gender_id": genderIdVal ,
-    //     "degree_level_id": degreeLevelIdVal ,
-    //     "job_experience_id": jobExperienceIdVal  ,
-    //     'skills': jobSkills ,
-    //     "is_active": "1" ,
-    //     "is_featured": "1"
-    //   } ,
-    // );
-    // Response responseBody = await dio.post(baseurl ,
-    //   data: formData ,
-    //   options: Options(
-    //     headers: {
-    //       'Authorization': 'Bearer $token'
-    //     }
-    //   ),
-    // );
-    //
-    // print('The Response of dio body ${responseBody.data}');
-
   }
 
   Future<void> getMasterValues() async {
@@ -455,7 +454,7 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                             if(jobShiftVal == 'Select a job shift'){
                               errorSnackBar('Please choose a job shift', context);
                             }else{
-                              if(numberofPositionsTextEd.text.isEmpty){
+                              if(noOfEmployessCount == 'Select the Number of Positions'){
                                 errorSnackBar('Please type of number of positions', context);
                               }else{
                                 if(genderVal == 'Select a gender'){
@@ -1159,6 +1158,73 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                               children: [
                                 const SizedBox(height: 10,) ,
                                 Text(data.jobShifts![index].jobShift! ,
+                                  style: const  TextStyle(
+                                      fontSize: 16 ,
+                                      fontWeight: FontWeight.w600
+                                  ),) ,
+                                const SizedBox(height: 10,) ,
+                                Container(height: 1, width: width, color: Colors.grey,)
+                              ],
+                            ),
+                          );
+                        }))
+              ],
+            ),
+          ),
+        );
+      },);
+  }
+
+  void numberOfPositionsBottomSheet(){
+    showModalBottomSheet<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          height: height!/2 + 200,
+          color: Colors.white,
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const SizedBox(height: 20,) ,
+                Container(
+                  height: 20,
+                  width: 45,
+                  decoration: BoxDecoration(
+                      color: Colors.black54 ,
+                      borderRadius: BorderRadius.circular(14)
+                  ),
+                ) ,
+                const SizedBox(
+                  height: 15,
+                ) ,
+                const Align(
+                    alignment: Alignment.topLeft,
+                    child:  Text('Choose Number of Positions' ,
+                      style: TextStyle(
+                          fontSize: 22 ,
+                          fontWeight: FontWeight.w600
+                      ),)),
+                const SizedBox(height: 20,),
+                Expanded(
+                    child: ListView.builder(
+                        itemCount: jobEmployeesCount.length,
+                        itemBuilder: (context , index){
+                          return InkWell(
+                            onTap: (){
+                              setState(() {
+                                noOfEmployessCount = jobEmployeesCount[index] ;
+                                
+                              });
+                              
+                              Navigator.pop(context);
+                            },
+                            child: Column(
+                              children: [
+                                const SizedBox(height: 10,) ,
+                                Text(jobEmployeesCount[index] ,
                                   style: const  TextStyle(
                                       fontSize: 16 ,
                                       fontWeight: FontWeight.w600
@@ -1920,15 +1986,29 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
 
                 const SizedBox(height: 10,) , 
 
-                TextFormField(
-                  controller: numberofPositionsTextEd,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(8)
-                    ),
-                    hintText: "Enter your number of positions"
+               InkWell(
+                onTap: (){
+                  numberOfPositionsBottomSheet();
+                },
+                child: Container(
+                  height: 55,
+                  width: width,
+                  decoration: BoxDecoration(
+                    color: Colors.white , 
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: Colors.grey , 
+                    )
+                  ),
+                  child: Center(
+                    child: Text(noOfEmployessCount , 
+                    style: const TextStyle(
+                      fontSize: 15 , 
+                      fontWeight: FontWeight.w500
+                    ),),
                   ),
                 ),
+               ) , 
 
 
                 const SizedBox(height: 20,) ,
