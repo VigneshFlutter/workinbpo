@@ -50,7 +50,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
       setState(() {
         data = ApplicantProfileModel.fromJson(jsonDecode(response.body));
         isLoading = false ;
-        isShortlist = data!.user!.isSubscribed == 0 ? true : false ;
+        isShortlist = data!.shortlisted == 0 ? true : false ;
       });
     }
   }
@@ -62,6 +62,8 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
     int? jobID  ,
     int? companyID
 }) async{
+
+   
     final prefs = await SharedPreferences.getInstance();
     var token = prefs.getString(USER_TOKEN);
 
@@ -202,7 +204,8 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
 
                 InkWell(
                   onTap: (){
-                    if(isShortlist){
+                    if(!isShortlist){
+                      print('The Remove shortlist');
                       addShortListApi(
                           baseurl: REMOVE_SHORTLIST_API,
                           applicationID: data!.jobApplication!.id ,
@@ -211,6 +214,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
                           companyID: data!.company!.id
                       );
                     }else{
+                      print('The added shortlist');
                       addShortListApi(
                         baseurl: ADD_SHORTLIST_API ,
                         applicationID: data!.jobApplication!.id ,
@@ -493,6 +497,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             data!.profileSkills!.isEmpty? Container(): mainTitle('Skills') ,
 
             Wrap(
+              spacing: 8.0,
               children: data!.profileSkills!.map((e) {
                 return Chip(
                   padding: const EdgeInsets.symmetric(
@@ -512,6 +517,7 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             
             mainTitle('Languages') ,
             Wrap(
+              spacing: 8.0,
               children: data!.profileLangs!.map((e) {
                 return Chip(
                   padding: const EdgeInsets.symmetric(

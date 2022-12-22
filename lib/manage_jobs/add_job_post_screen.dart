@@ -136,6 +136,8 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
     checkingValuesOfEdit();
     super.initState();
   }
+
+
   
   void checkingValuesOfEdit() {
     if(widget.isEditProfile){

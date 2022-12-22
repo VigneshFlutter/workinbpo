@@ -61,23 +61,34 @@ class _OtpScreenState extends State<OtpScreen> {
     print('The Register data for otp ${widget.regData.description} , ${otpController.text}');
 
     var dio = Dio();
+    var url = 'https://knownjobz.com/api/verifyotp' ;
     try{
-      Response response = await dio.post(
-          'https://knownjobz.com/api/verifyotp-twillio',
-          data: {
-            "email": widget.regData.userEmail ,
-            "phone": widget.regData.companyPhone,
-            "otp": otpController.text
-          } ,
-          options: Options(
-              headers: {
-                HttpHeaders.contentTypeHeader: "application/json",
-              }
-          )
-      );
+      // Response response = await dio.post(
+      //     'https://knownjobz.com/api/verifyotp',
+      //     data: {
+      //       "email": widget.regData.userEmail ,
+      //       "phone": widget.regData.companyPhone,
+      //       "otp": otpController.text
+      //     } ,
+      //     options: Options(
+      //         headers: {
+      //           HttpHeaders.contentTypeHeader: "application/json",
+      //         }
+      //     )
+      // );
 
-      print('The Response of Otp ${response.data}');
-      OtpModel data = OtpModel.fromJson(jsonDecode(response.data));
+      http.Response response = await http.post(Uri.parse(url) ,
+      body: jsonEncode({
+        "email": widget.regData.userEmail ,
+        "phone": widget.regData.userMobile,
+        "otp": otpController.text
+      }) ,
+      headers: {
+        'Content-Type': 'application/json'
+      });
+
+      print('The Response of Otp ${response.body}');
+      OtpModel data = OtpModel.fromJson(jsonDecode(response.body));
       setState(() {
         isLoading = false ;
       });
@@ -94,15 +105,6 @@ class _OtpScreenState extends State<OtpScreen> {
     }catch(err ,stackTrace){
       debugPrint('The Verify Otp $err , $stackTrace');
     }
-
-    // var url = Uri.parse('https://knownjobz.com/api/verifyotp-twillio');
-    // http.Response response = await http.post(url ,
-    // body: {
-    //   "email": widget.regData.userEmail ,
-    //   "phone": widget.regData.companyPhone,
-    //   "otp": otpController.text
-    // });
-
   }
 
   Future<void> registerAPi() async {
@@ -117,13 +119,13 @@ class _OtpScreenState extends State<OtpScreen> {
       'candidate_or_employer': 'employer' ,
       'firstname': widget.regData.firstName ,
       'lastname': widget.regData.lastName ,
-      'contact': '+91${widget.regData.userMobile}' ,
+      'contact': widget.regData.userMobile ,
       'email': widget.regData.userEmail ,
       'password': widget.regData.password ,
       'password_confirmation': widget.regData.password ,
       'name': widget.regData.companyName,
       'location': widget.regData.companyLocation ,
-      'phone': '+91 ${widget.regData.companyPhone}' ,
+      'phone': widget.regData.companyPhone ,
       'companyemail': widget.regData.companyEmail ,
       'no_of_offices': widget.regData.numberofOffices ,
       'established_in': widget.regData.establishedIn ,
