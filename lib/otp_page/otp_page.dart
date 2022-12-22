@@ -1,26 +1,31 @@
 import 'dart:convert';
+import 'dart:io';
+import 'package:dio/dio.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:http/http.dart' as http ;
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/model/otp_model.dart';
+import 'package:nav2/model/register_send_model.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:provider/provider.dart';
-
-
+import '../model/register_model.dart';
 import '../provider/internet_provider.dart';
 import '../utils/constants.dart';
 import '../utils/internet_viewer.dart';
 
 class OtpScreen extends StatefulWidget {
-
- 
   String mobileNumber;
   String email;
+  RegisterSendModel regData ; 
+  String token ;
   OtpScreen({
     required this.mobileNumber,
-    required this.email 
+    required this.email  , 
+    required this.regData , 
+    required this.token
     });
 
   @override
@@ -42,33 +47,92 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   void initState() {
     super.initState();
-   
   }
 
   Future<void> verifyOtp() async{
+    //  FCM TOKEN
+    String? fcmToken = await FirebaseMessaging.instance.getToken();
 
-    print('The Register data for otp ${widget.email} , ${widget.mobileNumber}'); 
+    print('The otp fcm token $fcmToken');
+    print('The Register data for otp ${widget.regData.userEmail} , ${widget.regData.userMobile} , ${otpController.text}');
+    print('The Register data for otp ${widget.regData.firstName} , ${widget.regData.lastName} , ${widget.regData.password}');
+    print('The Register data for otp ${widget.regData.companyName} , ${widget.regData.companyLocation} , ${widget.regData.companyPhone}');
+    print('The Register data for otp ${widget.regData.companyEmail} , ${widget.regData.numberofOffices} , ${widget.regData.establishedIn}');
+    print('The Register data for otp ${widget.regData.description} , ${otpController.text}');
 
-    var url = Uri.parse('https://knownjobz.com/api/verifyotp-twillio');
-    http.Response response = await http.post(url , 
-    body: jsonEncode({
-      'email': widget.email , 
-      'phone': widget.mobileNumber , 
-      'otp': otpController.text
-    }));
+    var dio = Dio();
+    try{
+      Response response = await dio.post(
+          'https://knownjobz.com/api/verifyotp-twillio',
+          data: {
+            "email": widget.regData.userEmail ,
+            "phone": widget.regData.companyPhone,
+            "otp": otpController.text
+          } ,
+          options: Options(
+              headers: {
+                HttpHeaders.contentTypeHeader: "application/json",
+              }
+          )
+      );
 
-    print('The Response of Otp ${response.body}'); 
-    OtpModel data = OtpModel.fromJson(jsonDecode(response.body)); 
+      print('The Response of Otp ${response.data}');
+      OtpModel data = OtpModel.fromJson(jsonDecode(response.data));
+      setState(() {
+        isLoading = false ;
+      });
+      if(data.status!){
+        // ignore: use_build_context_synchronously
+        successSnackBar('Success!', context);
+        // ignore: use_build_context_synchronously
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const adminlogin()));
+      }else{
+        // ignore: use_build_context_synchronously
+        errorSnackBar('Failed to verify the otp', context);
+      }
 
-    if(data.status!){
-      
-      // ignore: use_build_context_synchronously
-      successSnackBar('Success!', context); 
-
-      // ignore: use_build_context_synchronously
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const adminlogin()));
+    }catch(err ,stackTrace){
+      debugPrint('The Verify Otp $err , $stackTrace');
     }
 
+    // var url = Uri.parse('https://knownjobz.com/api/verifyotp-twillio');
+    // http.Response response = await http.post(url ,
+    // body: {
+    //   "email": widget.regData.userEmail ,
+    //   "phone": widget.regData.companyPhone,
+    //   "otp": otpController.text
+    // });
+
+  }
+
+  Future<void> registerAPi() async {
+    //  FCM TOKEN
+    String? fcmToken = await FirebaseMessaging.instance.getToken();
+
+    print('The Login fcm token $fcmToken');
+    String REG_URL = '${BASE_URL}register';
+    var url = Uri.parse(REG_URL);
+    http.Response response = await http.post(url ,
+    body: {
+      'candidate_or_employer': 'employer' ,
+      'firstname': widget.regData.firstName ,
+      'lastname': widget.regData.lastName ,
+      'contact': '+91${widget.regData.userMobile}' ,
+      'email': widget.regData.userEmail ,
+      'password': widget.regData.password ,
+      'password_confirmation': widget.regData.password ,
+      'name': widget.regData.companyName,
+      'location': widget.regData.companyLocation ,
+      'phone': '+91 ${widget.regData.companyPhone}' ,
+      'companyemail': widget.regData.companyEmail ,
+      'no_of_offices': widget.regData.numberofOffices ,
+      'established_in': widget.regData.establishedIn ,
+      'description': widget.regData.description ,
+      'is_subscribed': '1' ,
+      'terms_of_use': '1' ,
+      'fcm_token': fcmToken
+    });
+    print('The Response of register api ${response.body}');
   }
   
 
@@ -187,7 +251,7 @@ class _OtpScreenState extends State<OtpScreen> {
               Align(
                 alignment: Alignment.topRight,
                 child: TextButton(
-                  onPressed: () => print('Pressed'),
+                  onPressed: () => registerAPi(),
                   child: const Text('Resend' ,
                     style: TextStyle(
                         fontSize: 15 ,
@@ -200,6 +264,9 @@ class _OtpScreenState extends State<OtpScreen> {
                 alignment: Alignment.topRight,
                 child: InkWell(
                   onTap: () {
+                    setState(() {
+                      isLoading =  true ;
+                    });
                     verifyOtp();
                   },
                   child: Container(

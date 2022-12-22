@@ -333,10 +333,10 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             mainTitle('Education') ,
 
             SizedBox(
-              height: 60* data!.profileEdu!.length.toDouble(),
+              height: 95* data!.profileEdu!.length.toDouble(),
               width: width,
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 itemCount: data!.profileEdu!.length,
                   itemBuilder: (context , index){
 
@@ -348,7 +348,8 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
                           const SizedBox(width: 10,) ,
                           Text(data!.profileEdu![index].degreeTitle! ,
                           style: const TextStyle(
-                            fontSize: 15 ,
+                            fontSize: 17 ,
+                            fontWeight: FontWeight.bold
                           ),)
 
                         ],
@@ -365,6 +366,31 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
 
                         ],
                       ) ,
+
+                      SizedBox(height: 10,) ,
+                      Row(
+                        children: [
+                          const Text('Completion date: ' ,
+                            style:  TextStyle(
+                              fontSize: 15 ,
+                            ),),
+                          const SizedBox(width: 10,) ,
+                          Text(data!.profileEdu![index].dateCompletion! ,
+                            style: const TextStyle(
+                              fontSize: 15 ,
+                            ),)
+
+                        ],
+                      ) ,
+                      const SizedBox(height: 10,) ,
+
+                      Container(
+                        height: 1,
+                        width: width,
+                        color: Colors.grey,
+                      ) ,
+
+                      const SizedBox(height: 10,)
                     ],
                   );
               }),
@@ -375,11 +401,11 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             mainTitle('Experience') ,
 
             SizedBox(
-              height: 80 * data!.profileExp!.length.toDouble(),
+              height: 155 * data!.profileExp!.length.toDouble(),
               width: width,
               child: ListView.builder(
                   itemCount: data!.profileExp!.length,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (context , index){
                     return Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -414,6 +440,48 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
 
                           ],
                         ) ,
+
+                        SizedBox(height: 10,) ,
+                        Row(
+                          children: [
+                            const Text('start date: ' ,
+                              style:  TextStyle(
+                                fontSize: 15 ,
+                              ),),
+                            const SizedBox(width: 10,) ,
+                            Text(DateFormat('dd-MM-yyyy').format(data!.profileExp![index].dateStart!) ,
+                              style: const TextStyle(
+                                fontSize: 15 ,
+                              ),)
+
+                          ],
+                        ) ,
+
+                        SizedBox(height: 10,) ,
+                        Row(
+                          children: [
+                            const Text('start date: ' ,
+                              style:  TextStyle(
+                                fontSize: 15 ,
+                              ),),
+                            const SizedBox(width: 10,) ,
+                            Text(DateFormat('dd-MM-yyyy').format(data!.profileExp![index].dateStart!) ,
+                              style: const TextStyle(
+                                fontSize: 15 ,
+                              ),)
+
+                          ],
+                        ) ,
+
+                        const SizedBox(height: 10,) ,
+
+                        Container(
+                          height: 1,
+                          width: width,
+                          color: Colors.grey,
+                        ) ,
+
+                        const SizedBox(height: 10,) ,
                       ],
                     );
                   }),
@@ -422,11 +490,14 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
 
             const SizedBox(height: 15,) ,
             
-            mainTitle('Skills') ,
+            data!.profileSkills!.isEmpty? Container(): mainTitle('Skills') ,
 
             Wrap(
               children: data!.profileSkills!.map((e) {
                 return Chip(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8.0
+                  ),
                     backgroundColor: Colors.white,
                     side: const BorderSide(color: Colors.blueGrey),
                     label: Text(e.jobSkill!.jobSkill! ,
@@ -443,6 +514,9 @@ class _ApplicantProfileScreenState extends State<ApplicantProfileScreen> {
             Wrap(
               children: data!.profileLangs!.map((e) {
                 return Chip(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 8.0
+                  ),
                     backgroundColor: Colors.white,
                     side: const BorderSide(color: Colors.blueGrey),
                     label: Text(e.language!.lang! ,

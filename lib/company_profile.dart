@@ -182,11 +182,15 @@ class _companyprofileState extends State<companyprofile> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     const Icon(Icons.call),
-                                    Text(
-                                       value.data.company!.phone!,
-                                      style: const TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
+                                    Expanded(
+                                      flex: 3,
+                                      child: Text(
+                                         value.data.company!.phone!,
+                                        maxLines: 2,
+                                        style: const TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -200,11 +204,15 @@ class _companyprofileState extends State<companyprofile> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                     const Icon(Icons.mail),
-                                    Text(
-                                       value.data.company!.email!,
-                                      style: const  TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
+                                    Expanded(
+                                      flex: 3,
+                                      child: Text(
+                                         value.data.company!.email!,
+                                        maxLines: 3,
+                                        style: const  TextStyle(
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w400),
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -218,11 +226,16 @@ class _companyprofileState extends State<companyprofile> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: [
                                    Image.asset('assets/internet.png' , height : 25 , width : 25) ,
-                                    Text(
-                                       value.data.company!.website!,
-                                      style: const TextStyle(
-                                          fontSize: 18,
-                                          fontWeight: FontWeight.w400),
+                                    Expanded(
+                                      flex: 3,
+                                      child: Text(
+                                         value.data.company!.website!,
+                                        maxLines: 2,
+                                        style: const TextStyle(
+                                            fontSize: 18,
+
+                                            fontWeight: FontWeight.w400),
+                                      ),
                                     ),
                                   ],
                                 ),

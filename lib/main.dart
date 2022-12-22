@@ -1,11 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_stripe/flutter_stripe.dart';
-import 'package:nav2/bottom_navigation.dart';
-import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/provider/internet_provider.dart';
 import 'package:nav2/provider/profile_provider.dart';
 import 'package:nav2/splash_screen/splash_screen.dart';
@@ -121,12 +118,12 @@ class _MyAppState extends State<MyApp> {
             ));
       }
     });
+    notification();
     super.initState();
   }
 
   void notification() async {
     String? fcmToken = await FirebaseMessaging.instance.getToken();
-
     print('The Login fcm token $fcmToken');
   }
 

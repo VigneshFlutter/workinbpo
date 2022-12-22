@@ -424,12 +424,13 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
       setState(() {
         isPressed = false ;
       });
+      // ignore: use_build_context_synchronously
       Navigator.pop(context);
+      // ignore: use_build_context_synchronously
       successSnackBar('Successfully updated Profile', context);
       ProfileModel data = ProfileModel.fromJson(jsonDecode(response.body));
       // ignore: use_build_context_synchronously
-      Provider.of<ProfileProvider>(context , listen: false).updateValues(data!);
-
+      Provider.of<ProfileProvider>(context , listen: false).updateValues(data);
     }
   }
 
@@ -479,6 +480,7 @@ class _EditCompanyProfileState extends State<EditCompanyProfile> {
     if(res.statusCode == 200){
       profileApi();
     }else{
+      // ignore: use_build_context_synchronously
       errorSnackBar('Something went wrong', context);
     }
   }

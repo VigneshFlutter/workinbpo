@@ -238,8 +238,6 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
         });
       }
 
-      print('The Salary Period ${widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriod}');
-      print('The Salary Period ${widget.jobData!.jobs!.data![widget.jobIndex!].salaryPeriodId!.salaryPeriodId}');
 
        if(widget.jobData?.jobs?.data?[widget.jobIndex!].salaryPeriodId?.salaryPeriod != null){
          setState(() {

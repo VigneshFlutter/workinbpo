@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:jiffy/jiffy.dart';
 import 'package:nav2/model/notification_model.dart';
+import 'package:nav2/notification_screen/no_notification_screen.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/loading_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -74,7 +75,9 @@ class _ShowNotificationScreenState extends State<ShowNotificationScreen> {
 
             // const SizedBox(height: 20,) ,
             
-            Expanded(
+            data!.notifications!.isEmpty ? const Expanded(
+              flex: 3,
+                child:  NoNotificationScreen()): Expanded(
               flex: 3,
               child: ListView.builder(
                 itemCount: data!.notifications!.length,

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nav2/Registerpage.dart';
@@ -28,9 +29,15 @@ class _adminloginState extends State<adminlogin> {
   TextEditingController passwordTextEd = TextEditingController();
 
   Future<void> loginApi() async {
+
+    //  FCM TOKEN 
+     String? fcmToken = await FirebaseMessaging.instance.getToken();
+
+    print('The Login fcm token $fcmToken');
+
     var url = Uri.parse('${BASE_URL}login');
     http.Response response = await http.post(url,
-        body: {'email': emailTextEd.text, 'password': passwordTextEd.text});
+        body: {'email': emailTextEd.text, 'password': passwordTextEd.text , 'fcm_token': fcmToken});
     print('The Response of login ${response.body}');
     LoginModel data = LoginModel.fromJson(jsonDecode(response.body));
 
@@ -38,8 +45,9 @@ class _adminloginState extends State<adminlogin> {
       setState(() {
         isPressed = false;
       });
+      // ignore: use_build_context_synchronously
       Navigator.push(context,
-          MaterialPageRoute(builder: (context) => bottom_navigation()));
+          MaterialPageRoute(builder: (context) => const bottom_navigation()));
       savingToken(data.accessToken!);
     } else {
       setState(() {

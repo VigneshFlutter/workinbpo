@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:nav2/utils/constants.dart';
 
 class NoNotificationScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _NoNotificationScreenState extends State<NoNotificationScreen> {
         color: Colors.white,
         child: Column(
           children: [
-            Image.asset(NOTIFICATION_BELL , height: 150, width: 200,)  ,
+            Lottie.asset(NO_RESULTS , height: 150, width: 200,)  ,
 
             const SizedBox(height: 20,) ,
 

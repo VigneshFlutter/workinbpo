@@ -1,10 +1,12 @@
 import 'dart:convert';
 
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nav2/bottom_navigation.dart';
 import 'package:nav2/loginpage/Admin_login.dart';
 import 'package:nav2/model/register_model.dart';
+import 'package:nav2/model/register_send_model.dart';
 import 'package:nav2/otp_page/otp_page.dart';
 import 'package:nav2/utils/constants.dart';
 import 'package:nav2/utils/custom_snackbar.dart';
@@ -39,6 +41,11 @@ class _RegisterState extends State<Register> {
   TextEditingController descriptionTextEd = TextEditingController();
 
   Future<void> registerAPi() async {
+
+    //  FCM TOKEN
+    String? fcmToken = await FirebaseMessaging.instance.getToken();
+
+    print('The Login fcm token $fcmToken');
     
     String REG_URL = '${BASE_URL}register';
     var url = Uri.parse(REG_URL);
@@ -47,7 +54,7 @@ class _RegisterState extends State<Register> {
       'candidate_or_employer': 'employer' ,
       'firstname': firstNameTextEd.text ,
       'lastname': lastNameTextEd.text ,
-      'contact': '+91${contactTextEd.text}' ,
+      'contact': '+91 ${contactTextEd.text}' ,
       'email': emailTextEd.text ,
       'password': passwordTextEd.text ,
       'password_confirmation': passwordConfirmationTxtEd.text ,
@@ -59,7 +66,8 @@ class _RegisterState extends State<Register> {
       'established_in': establishedINTextEd.text ,
       'description': descriptionTextEd.text ,
       'is_subscribed': '1' ,
-      'terms_of_use': '1'
+      'terms_of_use': '1' ,
+      'fcm_token': fcmToken
     });
     print('The Response of register api ${response.body}');
     RegisterModel data = RegisterModel.fromJson(jsonDecode(response.body));
@@ -70,13 +78,26 @@ class _RegisterState extends State<Register> {
       });
       // savingToken(data.token!);
 
-     
       // ignore: use_build_context_synchronously
      Navigator.push(
         context, MaterialPageRoute(
           builder: (context) =>  OtpScreen(
+            regData: RegisterSendModel(
+              firstName: firstNameTextEd.text, 
+              lastName: lastNameTextEd.text,
+              userMobile: '+91${contactTextEd.text}', 
+              userEmail: emailTextEd.text, 
+              password: passwordTextEd.text, 
+              companyName: nameTextEd.text, 
+              companyEmail: emailIDTextEd.text,
+              companyLocation: companyLocationTextEd.text, 
+              companyPhone: "+91${contactNumTextEd.text}",
+              numberofOffices: numberofOfficiesTextEd.text, 
+              establishedIn: establishedINTextEd.text, 
+              description: descriptionTextEd.text),
             mobileNumber: '+91${contactTextEd.text}',
             email: emailTextEd.text,
+            token: data.token!,
           )));
      
     }else{
