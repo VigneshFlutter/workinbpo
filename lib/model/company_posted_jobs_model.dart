@@ -12,20 +12,72 @@ class CompanyPostedJobsModel {
   CompanyPostedJobsModel({
     this.status,
     this.jobs,
+    this.currentPackage,
+    this.packageLeft,
   });
 
   bool? status;
   Jobs? jobs;
+  List<CurrentPackage>? currentPackage;
+  List<CurrentPackage>? packageLeft;
 
   factory CompanyPostedJobsModel.fromJson(Map<String, dynamic> json) => CompanyPostedJobsModel(
     status: json["status"] == null ? null : json["status"],
     jobs: json["jobs"] == null ? null : Jobs.fromJson(json["jobs"]),
+    currentPackage: json["current_package"] == null ? null : List<CurrentPackage>.from(json["current_package"].map((x) => CurrentPackage.fromJson(x))),
+    packageLeft: json["package_left"] == null ? null : List<CurrentPackage>.from(json["package_left"].map((x) => CurrentPackage.fromJson(x))),
   );
 
   Map<String, dynamic> toJson() => {
     "status": status == null ? null : status,
     "jobs": jobs == null ? null : jobs!.toJson(),
+    "current_package": currentPackage == null ? null : List<dynamic>.from(currentPackage!.map((x) => x.toJson())),
+    "package_left": packageLeft == null ? null : List<dynamic>.from(packageLeft!.map((x) => x.toJson())),
   };
+}
+
+class CurrentPackage {
+    CurrentPackage({
+        this.id,
+        this.packageTitle,
+        this.packagePrice,
+        this.packageNumDays,
+        this.packageNumListings,
+        this.packageFor,
+        this.createdAt,
+        this.updatedAt,
+    });
+
+    int? id;
+    String? packageTitle;
+    int? packagePrice;
+    int? packageNumDays;
+    int? packageNumListings;
+    String? packageFor;
+    DateTime? createdAt;
+    DateTime? updatedAt;
+
+    factory CurrentPackage.fromJson(Map<String, dynamic> json) => CurrentPackage(
+        id: json["id"] == null ? null : json["id"],
+        packageTitle: json["package_title"] == null ? null : json["package_title"],
+        packagePrice: json["package_price"] == null ? null : json["package_price"],
+        packageNumDays: json["package_num_days"] == null ? null : json["package_num_days"],
+        packageNumListings: json["package_num_listings"] == null ? null : json["package_num_listings"],
+        packageFor: json["package_for"] == null ? null : json["package_for"],
+        createdAt: json["created_at"] == null ? null : DateTime.parse(json["created_at"]),
+        updatedAt: json["updated_at"] == null ? null : DateTime.parse(json["updated_at"]),
+    );
+
+    Map<String, dynamic> toJson() => {
+        "id": id == null ? null : id,
+        "package_title": packageTitle == null ? null : packageTitle,
+        "package_price": packagePrice == null ? null : packagePrice,
+        "package_num_days": packageNumDays == null ? null : packageNumDays,
+        "package_num_listings": packageNumListings == null ? null : packageNumListings,
+        "package_for": packageFor == null ? null : packageFor,
+        "created_at": createdAt == null ? null : createdAt!.toIso8601String(),
+        "updated_at": updatedAt == null ? null : updatedAt!.toIso8601String(),
+    };
 }
 
 class Jobs {

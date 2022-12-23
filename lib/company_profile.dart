@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'package:external_app_launcher/external_app_launcher.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:nav2/edit_company_profile/edit_company_profile.dart';
@@ -101,7 +102,7 @@ class _companyprofileState extends State<companyprofile> {
                         ),
                         child: Container(
                           width: width,
-                          height: 840 ,
+                          height: 860 ,
                           margin: const EdgeInsets.symmetric(
                             horizontal: 8.0
                           ) ,
@@ -330,26 +331,53 @@ class _companyprofileState extends State<companyprofile> {
                                           fontWeight: FontWeight.w500),
                                     ),
                                   )),
-                                 const Align(
-                                  alignment: Alignment.topLeft,
-                                  child: Padding(
-                                    padding:  EdgeInsets.only(
-                                        left: 15, bottom: 5),
-                                    child: Text(
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      const Text(
                                       'Is Email Verified',
                                       style: TextStyle(fontSize: 18),
                                     ),
-                                  )),
+
+                                    Image.asset(VERIFIED_BADGE_ICON , height: 25, width: 25,)
+                                    ],
+                                  ),
+                                //  const Align(
+                                //   alignment: Alignment.topLeft,
+                                //   child: Padding(
+                                //     padding:  EdgeInsets.only(
+                                //         left: 15, bottom: 5),
+                                //     child: Text(
+                                //       'Is Email Verified',
+                                //       style: TextStyle(fontSize: 18),
+                                //     ),
+                                //   )),
                               Align(
                                   alignment: Alignment.topLeft,
                                   child: Padding(
                                     padding: const EdgeInsets.only(
                                         left: 15, bottom: 20),
-                                    child: data!.company!.verified == 0 ? const Text(
-                                      'No',
-                                      style: TextStyle(
-                                          fontSize: 20,
-                                          fontWeight: FontWeight.w700),
+                                    child: data!.company!.verified == 0 ? InkWell(
+                                      onTap: () async {
+                                        await LaunchApp.openApp(
+                                          androidPackageName: 'com.google.android.gm'
+                                        );
+                                      },
+                                      child:  Container(
+                                        height: 45,
+                                        width: 125,
+                                        decoration: BoxDecoration(
+                                          color: APPCOLOR , 
+                                          borderRadius: BorderRadius.circular(8)
+                                        ),
+                                        child: const Center(
+                                          child: Text('Verify email' , 
+                                          style: TextStyle(
+                                            fontSize: 15 , 
+                                            color: Colors.white
+                                          ),),
+                                        ),
+                                      ),
                                     ): const Text(
                                       'Yes',
                                       style: TextStyle(

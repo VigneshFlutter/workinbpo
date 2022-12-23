@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:4:4-34:19
+INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:9:4-41:19
 MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-48:19
 MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:15:5-48:19
 MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-15:19
@@ -84,11 +84,11 @@ MERGED from [com.google.android.instantapps:instantapps:1.1.0] /Users/shripranav
 	android:name
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
-INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
-INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
-INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
-MERGED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
+ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
+INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
+INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
+INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
+MERGED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
 MERGED from [:firebase_messaging] /Users/shripranav/Projects/workinbpo/build/firebase_messaging/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-50:12
 MERGED from [:firebase_core] /Users/shripranav/Projects/workinbpo/build/firebase_core/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-17:12
 MERGED from [:image_picker_android] /Users/shripranav/Projects/workinbpo/build/image_picker_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-21:12
@@ -100,6 +100,7 @@ MERGED from [:path_provider_android] /Users/shripranav/Projects/workinbpo/build/
 MERGED from [:connectivity_plus] /Users/shripranav/Projects/workinbpo/build/connectivity_plus/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:external_app_launcher] /Users/shripranav/Projects/workinbpo/build/external_app_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:stripe_android] /Users/shripranav/Projects/workinbpo/build/stripe_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [com.stripe:stripe-android:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e35ef0c1cc95a3089393ce37fb837e02/transformed/jetified-stripe-android-20.15.4/AndroidManifest.xml:2:1-9:12
 MERGED from [com.stripe:paymentsheet:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/a84bd3f760f23cabaa9544680fa0aab6/transformed/jetified-paymentsheet-20.15.4/AndroidManifest.xml:2:1-28:12
@@ -237,11 +238,11 @@ INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/Android
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
+		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-35:12
+		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:1-42:12
 		INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:1:11-69
@@ -265,6 +266,18 @@ MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /User
 MERGED from [com.google.android.datatransport:transport-backend-cct:3.1.8] /Users/shripranav/.gradle/caches/transforms-3/5de683aa20b64147f9f358d6d80805dd/transformed/jetified-transport-backend-cct-3.1.8/AndroidManifest.xml:25:5-67
 	android:name
 		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:3:22-64
+queries
+ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:5:5-7:12
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:12:5-20:15
+MERGED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:12:5-20:15
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:10:5-14:15
+MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:10:5-14:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
+package#net.pulsesecure.pulsesecure
+ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:6:4-58
+	android:name
+		ADDED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml:6:13-55
 uses-sdk
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/shripranav/Projects/workinbpo/android/app/src/main/AndroidManifest.xml
@@ -291,6 +304,8 @@ MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/buil
 MERGED from [:webview_flutter_android] /Users/shripranav/Projects/workinbpo/build/webview_flutter_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:shared_preferences_android] /Users/shripranav/Projects/workinbpo/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:external_app_launcher] /Users/shripranav/Projects/workinbpo/build/external_app_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:external_app_launcher] /Users/shripranav/Projects/workinbpo/build/external_app_launcher/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:stripe_android] /Users/shripranav/Projects/workinbpo/build/stripe_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:stripe_android] /Users/shripranav/Projects/workinbpo/build/stripe_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [com.stripe:stripe-android:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/e35ef0c1cc95a3089393ce37fb837e02/transformed/jetified-stripe-android-20.15.4/AndroidManifest.xml:5:5-7:41
@@ -791,12 +806,6 @@ ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms
 		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:14:13-49
 	android:name
 		ADDED from [com.stripe:link:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/5e6b4183716dfbbd9d5d7af36b31d0f7/transformed/jetified-link-20.15.4/AndroidManifest.xml:11:13-64
-queries
-ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:12:5-20:15
-MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:10:5-14:15
-MERGED from [com.stripe:payments-core:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/f73f920eaa3282d0cea0ae0b2bc3cb17/transformed/jetified-payments-core-20.15.4/AndroidManifest.xml:10:5-14:15
-MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
-MERGED from [com.google.android.gms:play-services-maps:18.0.2] /Users/shripranav/.gradle/caches/transforms-3/40f6960a1e8c3fd45f9eab696d451f6c/transformed/jetified-play-services-maps-18.0.2/AndroidManifest.xml:30:5-34:15
 intent#action:name:android.intent.action.VIEW+data:scheme:http
 ADDED from [com.stripe:financial-connections:20.15.4] /Users/shripranav/.gradle/caches/transforms-3/523b608ca50290178671134a92753bdf/transformed/jetified-financial-connections-20.15.4/AndroidManifest.xml:15:9-19:18
 action#android.intent.action.VIEW

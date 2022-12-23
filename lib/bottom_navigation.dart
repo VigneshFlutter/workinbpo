@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/dashboard_page.dart';
 
@@ -28,35 +29,41 @@ class _bottom_navigationState extends State<bottom_navigation> {
   
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-     
-      body: Container(child: pages[pageIndex]),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Colors.grey,
-        currentIndex: pageIndex,
-        onTap: (val){
-          setState(() {
-            pageIndex = val ;
-          });
-        },
-        items: const [
-          BottomNavigationBarItem(
-            label: 'Home',
-              icon: Icon(Icons.home,)) ,
+    return WillPopScope(
+      onWillPop: () async{
+        await SystemNavigator.pop();
+        return true;
+      },
+      child: Scaffold(
+       
+        body: Container(child: pages[pageIndex]),
+        bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
+          currentIndex: pageIndex,
+          onTap: (val){
+            setState(() {
+              pageIndex = val ;
+            });
+          },
+          items: const [
+            BottomNavigationBarItem(
+              label: 'Home',
+                icon: Icon(Icons.home,)) ,
 
-          BottomNavigationBarItem(
-              label: 'Jobs',
-              icon: Icon(Icons.work,)) ,
+            BottomNavigationBarItem(
+                label: 'Jobs',
+                icon: Icon(Icons.work,)) ,
 
-          BottomNavigationBarItem(
-              label: 'Followers',
-              icon: Icon(Icons.favorite,)) ,
+            BottomNavigationBarItem(
+                label: 'Followers',
+                icon: Icon(Icons.favorite,)) ,
 
-          BottomNavigationBarItem(
-              label: 'Profile',
-              icon: Icon(Icons.person,)) ,
-        ],
+            BottomNavigationBarItem(
+                label: 'Profile',
+                icon: Icon(Icons.person,)) ,
+          ],
+        ),
       ),
     );
   }

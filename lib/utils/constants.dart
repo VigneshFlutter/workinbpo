@@ -72,5 +72,5 @@ const String GENDER_ICON = 'assets/equality.png';
 const String SALARY_ICON = 'assets/salary.png' ;
 const String MARTIAL_STATUS_ICON = 'assets/wedding-ring.png';
 const String JOB_GREY_ICON = 'assets/suitcase-grey.png';
-
+const String VERIFIED_BADGE_ICON = 'assets/verified-badge.png'; 
 

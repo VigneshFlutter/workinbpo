@@ -80,7 +80,7 @@ class _OtpScreenState extends State<OtpScreen> {
       http.Response response = await http.post(Uri.parse(url) ,
       body: jsonEncode({
         "email": widget.regData.userEmail ,
-        "phone": widget.regData.userMobile,
+        "phone": widget.regData.companyPhone,
         "otp": otpController.text
       }) ,
       headers: {
