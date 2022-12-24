@@ -21,6 +21,7 @@ enum FreelanceRadio { yes, no }
 
 enum HideSalaryRadio { yes, no }
 
+// ignore: must_be_immutable
 class AddJobPostScreen extends StatefulWidget {
   bool isEditProfile;
   CompanyPostedJobsModel? jobData;
@@ -340,7 +341,8 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
     print('The Add Job ${benifitsTextEd.text}');
     print('The Add Job ${salaryFromTextEd.text}');
     print('The Add Job ${countryIndex.toString()}');
-    print('The Add Job ${jobSkillsId}');
+    // ignore: avoid_print
+    print('The Add Job $jobSkillsId');
     final prefs = await SharedPreferences.getInstance();
     var token = prefs.getString(USER_TOKEN);
 

@@ -36,9 +36,9 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
   var colorizeColors = [
     Colors.black,
     Colors.white,
-    const Color(0xFFF1F7B5) ,
-    const Color(0xFFFD8A8A) ,
-    const Color(0xFF205295) , 
+    const Color(0xFFF1F7B5),
+    const Color(0xFFFD8A8A),
+    const Color(0xFF205295),
     const Color(0xFFADA2FF)
   ];
 
@@ -121,12 +121,112 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                           Align(
                             alignment: Alignment.topRight,
                             child: InkWell(
-                              onTap: () => Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => AddJobPostScreen(
-                                            isEditProfile: false,
-                                          ))),
+                              onTap: () {
+                                if (data!.currentPackage![0]
+                                        .packageNumListings! <=
+                                    data!.jobs!.data!.length) {
+                                  Scaffold.of(context).showBottomSheet<void>(
+                                    (BuildContext context) {
+                                      return Container(
+                                        height: height! / 2,
+                                        width: width,
+                                        decoration: const BoxDecoration(
+                                          color: Colors.white, 
+                                          borderRadius: BorderRadius.only(
+                                            topLeft: Radius.circular(12) , 
+                                            topRight: Radius.circular(12)
+                                          ), 
+                                          boxShadow: [
+                                            BoxShadow(color: Colors.grey , blurRadius: 2.0) , BoxShadow(color: Colors.grey , blurRadius: 2.0) , 
+                                            BoxShadow(color: Colors.grey , blurRadius: 2.0) , BoxShadow(color: Colors.grey , blurRadius: 2.0)
+                                          ]
+                                        ),
+                                        child: Center(
+                                          child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: <Widget>[
+                                              Align(
+                                                alignment: Alignment.topRight,
+                                                child: IconButton(
+                                                  onPressed: (() {
+                                                    Navigator.pop(context); 
+                                                  }),
+                                                  icon: const Icon(Icons.cancel),
+                                                ),
+                                              ),
+                                              Lottie.asset(PREMIUM_PACKAGE,
+                                                  height: 125, width: 125),
+                                              const SizedBox(
+                                                height: 15,
+                                              ),
+                                              const Text(
+                                                'Upgrade your Packages',
+                                                style: TextStyle(
+                                                    fontSize: 18,
+                                                    fontWeight:
+                                                        FontWeight.w800),
+                                              ),
+                                              const SizedBox(
+                                                height: 20,
+                                              ),
+                                              InkWell(
+                                                onTap: () => Navigator.push(
+                                                    context,
+                                                    MaterialPageRoute(
+                                                        builder: (context) =>
+                                                            const PlansAndPackages())),
+                                                child: Container(
+                                                  height: 45,
+                                                  width: 140,
+                                                  decoration: BoxDecoration(
+                                                      color: const Color(
+                                                          0xFFF5C24A),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              13)),
+                                                  child: Row(
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .center,
+                                                    children: [
+                                                      Image.asset(
+                                                        'assets/upgradePackage.png',
+                                                        height: 18,
+                                                        width: 18,
+                                                      ),
+                                                      const SizedBox(
+                                                        width: 5,
+                                                      ),
+                                                      const Text(
+                                                        'Upgrade plan',
+                                                        style: TextStyle(
+                                                            fontSize: 16,
+                                                            fontWeight:
+                                                                FontWeight
+                                                                    .w500),
+                                                      )
+                                                    ],
+                                                  ),
+                                                ),
+                                              )
+                                            ],
+                                          ),
+                                        ),
+                                      );
+                                    },
+                                  );
+                                } else {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              AddJobPostScreen(
+                                                isEditProfile: false,
+                                              )));
+                                }
+                              },
                               child: Container(
                                 height: 45,
                                 width: 130,
@@ -174,9 +274,12 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                       width: 10,
                                     ),
                                     InkWell(
-                                      onTap: (){
-                                        Navigator.push(context, MaterialPageRoute(
-                                          builder: (context) => const PlansAndPackages()));
+                                      onTap: () {
+                                        Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) =>
+                                                    const PlansAndPackages()));
                                       },
                                       child: Container(
                                         height: 45,
@@ -209,9 +312,9 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                     )
                                   ],
                                 ),
-
-                                 const SizedBox(height: 3,) ,
-
+                                const SizedBox(
+                                  height: 3,
+                                ),
                                 SizedBox(
                                   width: width,
                                   child: AnimatedTextKit(
@@ -222,8 +325,7 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                         textStyle: colorizeTextStyle,
                                         colors: colorizeColors,
                                       ),
-
-                                       ColorizeAnimatedText(
+                                      ColorizeAnimatedText(
                                         '${data!.currentPackage![0].packageNumListings} / ${data!.jobs!.data!.length} packages available',
                                         textStyle: colorizeTextStyle,
                                         colors: colorizeColors,
@@ -231,7 +333,6 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                     ],
                                   ),
                                 )
-                               
                               ],
                             ),
                           ),

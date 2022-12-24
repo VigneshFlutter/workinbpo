@@ -44,6 +44,8 @@ const String COLOR_LOADING = 'assets/lottie/colorLoading.json';
 const String NOTIFICATION_BELL = 'assets/lottie/notication-bell.json';
 const String NO_RESULTS = 'assets/lottie/no-results.json';
 const String VERIFICATION_LOTTIE = 'assets/lottie/verification-code.json';
+const String VERIFY_MAIL = 'assets/lottie/verifyEmail.json'; 
+const String PREMIUM_PACKAGE = 'assets/lottie/premiumPackage.json'; 
 
 //Icons
 const String RUPEE_ICON = 'assets/rupee.png';
@@ -73,4 +75,8 @@ const String SALARY_ICON = 'assets/salary.png' ;
 const String MARTIAL_STATUS_ICON = 'assets/wedding-ring.png';
 const String JOB_GREY_ICON = 'assets/suitcase-grey.png';
 const String VERIFIED_BADGE_ICON = 'assets/verified-badge.png'; 
+const String ABOUT_US = 'assets/info.png'; 
+const String PRIVACY_POLICY = 'assets/privacy.png'; 
+const String TERMS_AND_CONDITIONS = 'assets/termsAndConditions.png'; 
+const String CANCELLATION_POLICY = 'assets/cancellation.png'; 
 

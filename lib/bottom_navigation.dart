@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:nav2/company_profile.dart';
 import 'package:nav2/dashboard_page.dart';
-
-import 'package:nav2/manage_followers.dart';
-import 'package:nav2/manage_job.dart';
 import 'package:nav2/managemessages/manage_messages.dart';
 import 'package:nav2/postjobs/company_posted_jobs.dart';
   
 
-  
-class bottom_navigation extends StatefulWidget {
+  class bottom_navigation extends StatefulWidget {
   const bottom_navigation({Key? key}) : super(key: key);
   
   @override

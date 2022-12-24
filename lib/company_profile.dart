@@ -339,24 +339,16 @@ class _companyprofileState extends State<companyprofile> {
                                       style: TextStyle(fontSize: 18),
                                     ),
 
-                                    Image.asset(VERIFIED_BADGE_ICON , height: 25, width: 25,)
+                                     data!.company!.verified == 0 ? Container(): 
+                                     Image.asset(VERIFIED_BADGE_ICON , height: 25, width: 25,)
                                     ],
                                   ),
-                                //  const Align(
-                                //   alignment: Alignment.topLeft,
-                                //   child: Padding(
-                                //     padding:  EdgeInsets.only(
-                                //         left: 15, bottom: 5),
-                                //     child: Text(
-                                //       'Is Email Verified',
-                                //       style: TextStyle(fontSize: 18),
-                                //     ),
-                                //   )),
+                                const SizedBox(height: 10,) ,
                               Align(
                                   alignment: Alignment.topLeft,
                                   child: Padding(
                                     padding: const EdgeInsets.only(
-                                        left: 15, bottom: 20),
+                                         bottom: 20),
                                     child: data!.company!.verified == 0 ? InkWell(
                                       onTap: () async {
                                         await LaunchApp.openApp(
