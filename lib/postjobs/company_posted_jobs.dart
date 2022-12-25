@@ -122,9 +122,18 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                             alignment: Alignment.topRight,
                             child: InkWell(
                               onTap: () {
-                                if (data!.currentPackage![0]
+                                if(data!.currentPackage!.isEmpty){
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              AddJobPostScreen(
+                                                isEditProfile: false,
+                                              )));
+                                }else{
+                                   if (data!.currentPackage![0]
                                         .packageNumListings! <=
-                                    data!.jobs!.data!.length) {
+                                    data!.completedJobCount) {
                                   Scaffold.of(context).showBottomSheet<void>(
                                     (BuildContext context) {
                                       return Container(
@@ -226,6 +235,8 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                                 isEditProfile: false,
                                               )));
                                 }
+                                }
+                               
                               },
                               child: Container(
                                 height: 45,
@@ -246,7 +257,7 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                           const SizedBox(
                             height: 10,
                           ),
-                          Container(
+                          data!.currentPackage!.isEmpty ? Container(): Container(
                             height: 115,
                             width: width,
                             padding: EdgeInsets.all(15),
@@ -326,7 +337,7 @@ class _CompanyPostedJobsState extends State<CompanyPostedJobs> {
                                         colors: colorizeColors,
                                       ),
                                       ColorizeAnimatedText(
-                                        '${data!.currentPackage![0].packageNumListings} / ${data!.jobs!.data!.length} packages available',
+                                        '${data!.completedJobCount} / ${data!.currentPackage![0].packageNumListings} packages available',
                                         textStyle: colorizeTextStyle,
                                         colors: colorizeColors,
                                       ),

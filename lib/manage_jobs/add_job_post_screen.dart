@@ -196,10 +196,29 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
 
       if (widget.jobData?.jobs?.data?[widget.jobIndex!].countryId != null) {
         setState(() {
+          
           countryVal =
               widget.jobData!.jobs!.data![widget.jobIndex!].countryId!.country!;
           countryIndex =
               widget.jobData!.jobs!.data![widget.jobIndex!].countryId!.id!;
+
+              if(countryVal == "India"){
+                isIndia = true ;
+
+                if(widget.jobData?.jobs?.data?[widget.jobIndex!].stateId != null){
+                  setState(() {
+                    stateIndex = widget.jobData!.jobs!.data![widget.jobIndex!].stateId!.stateId.toString() ;
+                    stateVal = widget.jobData!.jobs!.data![widget.jobIndex!].stateId!.state! ;
+                  });
+                }
+
+                if(widget.jobData?.jobs?.data?[widget.jobIndex!].cityId != null){
+                  setState(() {
+                    cityIndex = widget.jobData!.jobs!.data![widget.jobIndex!].cityId!.cityId!.toString() ;
+                    cityVal = widget.jobData!.jobs!.data![widget.jobIndex!].cityId!.city! ;
+                  });
+                }
+              }
         });
       }
 
@@ -461,6 +480,75 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                 } else {
                   if (cityVal == 'Select a city') {
                     errorSnackBar("Please choose your city", context);
+                  } else {
+                    if (carrerLevel == 'Select a carrer  level') {
+                      errorSnackBar('Please choose carrer level', context);
+                    } else {
+                      if (salaryFromTextEd.text.isEmpty) {
+                        errorSnackBar('Please type salary from', context);
+                      } else {
+                        if (salaryToTextEd.text.isEmpty) {
+                          errorSnackBar('Please type salary to', context);
+                        } else {
+                          if (salaryCurrencyVal == 'Select a salary Currency') {
+                            errorSnackBar(
+                                'Please choose salary currency', context);
+                          } else {
+                            if (salaryPeriodVal == 'Select a salary period') {
+                              errorSnackBar(
+                                  'Please choose salary period', context);
+                            } else {
+                              if (functionalAreaVal ==
+                                  'Select a Functional Area') {
+                                errorSnackBar(
+                                    'Please choose functional area', context);
+                              } else {
+                                if (jobTypeVal == 'Select a job type') {
+                                  errorSnackBar(
+                                      'Please choose a job type', context);
+                                } else {
+                                  if (jobShiftVal == 'Select a job shift') {
+                                    errorSnackBar(
+                                        'Please choose a job shift', context);
+                                  } else {
+                                    if (noOfEmployessCount ==
+                                        'Select the Number of Positions') {
+                                      errorSnackBar(
+                                          'Please type of number of positions',
+                                          context);
+                                    } else {
+                                      if (degreeLevelVal == 'Select a degree') {
+                                        errorSnackBar(
+                                            'Please choose a degree', context);
+                                      } else {
+                                        if (jobExperienceVal ==
+                                            'Select a job experience') {
+                                          errorSnackBar(
+                                              'Please choose a job experience',
+                                              context);
+                                        } else {
+                                          if (expiryDateTextEd
+                                              .text.isNotEmpty) {
+                                            setState(() {
+                                              isPressed = true;
+                                            });
+                                            createJobPostApi(ADD_POST_JOB_API);
+                                          } else {
+                                            errorSnackBar(
+                                                'Please type a expiration date',
+                                                context);
+                                          }
+                                        }
+                                      }
+                                    }
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
                   }
                 }
               } else {
@@ -498,27 +586,27 @@ class _AddJobPostScreenState extends State<AddJobPostScreen> {
                                       context);
                                 } else {
                                   if (degreeLevelVal == 'Select a degree') {
+                                    errorSnackBar(
+                                        'Please choose a degree', context);
+                                  } else {
+                                    if (jobExperienceVal ==
+                                        'Select a job experience') {
                                       errorSnackBar(
-                                          'Please choose a degree', context);
+                                          'Please choose a job experience',
+                                          context);
                                     } else {
-                                      if (jobExperienceVal ==
-                                          'Select a job experience') {
-                                        errorSnackBar(
-                                            'Please choose a job experience',
-                                            context);
+                                      if (expiryDateTextEd.text.isNotEmpty) {
+                                        setState(() {
+                                          isPressed = true;
+                                        });
+                                        createJobPostApi(ADD_POST_JOB_API);
                                       } else {
-                                        if (expiryDateTextEd.text.isNotEmpty) {
-                                          setState(() {
-                                            isPressed = true;
-                                          });
-                                          createJobPostApi(ADD_POST_JOB_API);
-                                        } else {
-                                          errorSnackBar(
-                                              'Please type a expiration date',
-                                              context);
-                                        }
+                                        errorSnackBar(
+                                            'Please type a expiration date',
+                                            context);
                                       }
                                     }
+                                  }
                                 }
                               }
                             }
