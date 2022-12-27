@@ -321,7 +321,7 @@ class _PlansAndPackagesState extends State<PlansAndPackages> {
                         itemCount: data!.packages!.length,
                         itemBuilder: (context, index) {
                           return data!.packages![index].packagePrice == 0 &&
-                                  data!.company!.availFreepackage! == 0
+                                  data!.company!.availFreepackage! == 1
                               ? Container()
                               : Align(
                                   alignment: Alignment.topLeft,
