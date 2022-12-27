@@ -10,8 +10,9 @@
         <option name="modules">
           <set>
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/connectivity_plus-3.0.2/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/external_app_launcher-3.1.0/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_core-2.4.0/android" />
-            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-14.1.4/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/firebase_messaging-14.2.0/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_local_notifications-12.0.4/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.7/android" />
             <option value="$USER_HOME$/.pub-cache/hosted/pub.dartlang.org/image_picker_android-0.8.5+4/android" />

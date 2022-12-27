@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:country_picker/country_picker.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -41,69 +42,69 @@ class _RegisterState extends State<Register> {
   TextEditingController establishedINTextEd = TextEditingController();
   TextEditingController descriptionTextEd = TextEditingController();
 
-  Future<void> registerAPi() async {
+  String countryCode = "+91";
 
+  Future<void> registerAPi() async {
     //  FCM TOKEN
     String? fcmToken = await FirebaseMessaging.instance.getToken();
 
     print('The Login fcm token $fcmToken');
-    
+
     String REG_URL = '${BASE_URL}register';
     var url = Uri.parse(REG_URL);
-    http.Response response = await http.post(url ,
-    body: {
-      'candidate_or_employer': 'employer' ,
-      'firstname': firstNameTextEd.text ,
-      'lastname': lastNameTextEd.text ,
-      'contact': '+91 ${contactNumTextEd.text}' ,
-      'email': emailTextEd.text ,
-      'password': passwordTextEd.text ,
-      'password_confirmation': passwordConfirmationTxtEd.text ,
-      'name': nameTextEd.text ,
-      'location': companyLocationTextEd.text ,
-      'phone': '+91 ${contactTextEd.text}' ,
-      'companyemail': emailIDTextEd.text ,
-      'no_of_offices': numberofOfficiesTextEd.text ,
-      'established_in': establishedINTextEd.text ,
-      'description': descriptionTextEd.text ,
-      'is_subscribed': '1' ,
-      'terms_of_use': '1' ,
+    http.Response response = await http.post(url, body: {
+      'candidate_or_employer': 'employer',
+      'firstname': firstNameTextEd.text,
+      'lastname': lastNameTextEd.text,
+      'contact': '+91 ${contactNumTextEd.text}',
+      'email': emailTextEd.text,
+      'password': passwordTextEd.text,
+      'password_confirmation': passwordConfirmationTxtEd.text,
+      'name': nameTextEd.text,
+      'location': companyLocationTextEd.text,
+      'phone': '+91 ${contactTextEd.text}',
+      'companyemail': emailIDTextEd.text,
+      'no_of_offices': numberofOfficiesTextEd.text,
+      'established_in': establishedINTextEd.text,
+      'description': descriptionTextEd.text,
+      'is_subscribed': '1',
+      'terms_of_use': '1',
       'fcm_token': fcmToken
     });
     print('The Response of register api ${response.body}');
     RegisterModel data = RegisterModel.fromJson(jsonDecode(response.body));
-     
-    if(data.status!){
-       setState(() {
-        isPressed = false ;
+
+    if (data.status!) {
+      setState(() {
+        isPressed = false;
       });
       // savingToken(data.token!);
 
       // ignore: use_build_context_synchronously
-     Navigator.push(
-        context, MaterialPageRoute(
-          builder: (context) =>  OtpScreen(
-            regData: RegisterSendModel(
-              firstName: firstNameTextEd.text, 
-              lastName: lastNameTextEd.text,
-              userMobile: '+91${contactTextEd.text}', 
-              userEmail: emailTextEd.text, 
-              password: passwordTextEd.text, 
-              companyName: nameTextEd.text, 
-              companyEmail: emailIDTextEd.text,
-              companyLocation: companyLocationTextEd.text, 
-              companyPhone: "+91${contactNumTextEd.text}",
-              numberofOffices: numberofOfficiesTextEd.text, 
-              establishedIn: establishedINTextEd.text, 
-              description: descriptionTextEd.text),
-            mobileNumber: '+91${contactTextEd.text}',
-            email: emailTextEd.text,
-            token: data.token!,
-          )));
-     
-    }else{
+      Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => OtpScreen(
+                    regData: RegisterSendModel(
+                        firstName: firstNameTextEd.text,
+                        lastName: lastNameTextEd.text,
+                        userMobile: '$countryCode ${contactTextEd.text}',
+                        userEmail: emailTextEd.text,
+                        password: passwordTextEd.text,
+                        companyName: nameTextEd.text,
+                        companyEmail: emailIDTextEd.text,
+                        companyLocation: companyLocationTextEd.text,
+                        companyPhone: "$countryCode ${contactNumTextEd.text}",
+                        numberofOffices: numberofOfficiesTextEd.text,
+                        establishedIn: establishedINTextEd.text,
+                        description: descriptionTextEd.text),
+                    mobileNumber: '+91${contactTextEd.text}',
+                    email: emailTextEd.text,
+                    token: data.token!,
+                  )));
+    } else {
       setState(() {
-        isPressed = false ;
+        isPressed = false;
       });
       // ignore: use_build_context_synchronously
       errorSnackBar('Check your email or phone already exists', context);
@@ -113,7 +114,7 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return WillPopScope(
-      onWillPop: () async{
+      onWillPop: () async {
         await SystemNavigator.pop();
         return true;
       },
@@ -179,11 +180,29 @@ class _RegisterState extends State<Register> {
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
-                child: TextField(
+                child: TextFormField(
                     keyboardType: TextInputType.number,
                     maxLength: 10,
                     controller: contactTextEd,
                     decoration: InputDecoration(
+                      prefix: TextButton(
+                        onPressed: () {
+                          showCountryPicker(
+                            context: context,
+                            showPhoneCode: true, // optional. Shows phone code before the country name.
+                            onSelect: (Country country) {
+                              setState(() {
+                                countryCode = '+${country.phoneCode}' ;
+                              });
+                            },
+                          );
+                        },
+                        child: Text(
+                          countryCode,
+                          style: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
                       enabledBorder: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
                       labelText: 'Contact Number',
@@ -249,84 +268,102 @@ class _RegisterState extends State<Register> {
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                  controller: nameTextEd,
+                    controller: nameTextEd,
                     decoration: InputDecoration(
-                  enabledBorder:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                  labelText: 'Name',
-                )),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      labelText: 'Name',
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                  controller: companyLocationTextEd,
+                    controller: companyLocationTextEd,
                     decoration: InputDecoration(
-                  enabledBorder:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                  labelText: "Company's Location",
-                )),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      labelText: "Company's Location",
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                  keyboardType: TextInputType.number,
-                  controller: contactNumTextEd,
+                    keyboardType: TextInputType.number,
+                    controller: contactNumTextEd,
                     decoration: InputDecoration(
-                  enabledBorder:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                  labelText: 'Contact Number',
-                )),
+                      prefix: TextButton(
+                        onPressed: () {
+                          showCountryPicker(
+                            context: context,
+                            showPhoneCode: true, // optional. Shows phone code before the country name.
+                            onSelect: (Country country) {
+                              setState(() {
+                                countryCode = '+${country.phoneCode}' ;
+                              });
+                            },
+                          );
+                        },
+                        child: Text(
+                          countryCode,
+                          style: const TextStyle(
+                              fontSize: 16, fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      labelText: 'Contact Number',
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  controller: emailIDTextEd,
+                    keyboardType: TextInputType.emailAddress,
+                    controller: emailIDTextEd,
                     decoration: InputDecoration(
-                  enabledBorder:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                  labelText: 'Email ID',
-                )),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      labelText: 'Email ID',
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                  keyboardType: TextInputType.number ,
-                  controller: numberofOfficiesTextEd,
+                    keyboardType: TextInputType.number,
+                    controller: numberofOfficiesTextEd,
                     decoration: InputDecoration(
-                  enabledBorder:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                  labelText: 'Number Of Offices',
-                )),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      labelText: 'Number Of Offices',
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                  keyboardType: TextInputType.number,
-                  controller: establishedINTextEd,
+                    keyboardType: TextInputType.number,
+                    controller: establishedINTextEd,
                     decoration: InputDecoration(
-                  enabledBorder:
-                      OutlineInputBorder(borderRadius: BorderRadius.circular(10)),
-                  labelText: 'Established In',
-                )),
+                      enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10)),
+                      labelText: 'Established In',
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 child: TextField(
-                   controller: descriptionTextEd,
+                    controller: descriptionTextEd,
                     maxLines: 3,
                     decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  labelText: 'Description',
-                )),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      labelText: 'Description',
+                    )),
               ),
               Padding(
                 padding: const EdgeInsets.only(
@@ -357,24 +394,26 @@ class _RegisterState extends State<Register> {
                       color: APPCOLOR,
                       // green as background color
                     ),
-                    child:  Center(
-                        child: isPressed ? Lottie.asset(APP_LOADING , height: 35 , width: 55) :
-                        const Text("Signup",
-                            style: TextStyle(
-                              color: Color.fromARGB(255, 255, 255, 255),
-                              fontSize: 16,
-                            )))),
+                    child: Center(
+                        child: isPressed
+                            ? Lottie.asset(APP_LOADING, height: 35, width: 55)
+                            : const Text("Signup",
+                                style: TextStyle(
+                                  color: Color.fromARGB(255, 255, 255, 255),
+                                  fontSize: 16,
+                                )))),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20, top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children:  [
+                  children: [
                     const Text('Already have an account? '),
                     InkWell(
                       onTap: () => Navigator.push(
-                          context, MaterialPageRoute(
-                          builder: (context) => const adminlogin())),
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const adminlogin())),
                       child: const Center(
                         child: Text(
                           'Log-in ',
@@ -443,7 +482,7 @@ class _RegisterState extends State<Register> {
                               if (_checkbox) {
                                 registerAPi();
                                 setState(() {
-                                  isPressed = true ;
+                                  isPressed = true;
                                 });
                               } else {
                                 errorSnackBar(

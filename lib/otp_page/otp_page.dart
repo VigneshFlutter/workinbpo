@@ -49,11 +49,28 @@ class _OtpScreenState extends State<OtpScreen> {
     super.initState();
   }
 
-  Future<void> verifyOtp() async{
-    //  FCM TOKEN
-    String? fcmToken = await FirebaseMessaging.instance.getToken();
 
-    print('The otp fcm token $fcmToken');
+   Future<void> resendOtp() async {
+    var url = 'https://knownjobz.com/api/sentotp'; 
+    http.Response response = await http.post(Uri.parse(url) , 
+    body: {
+      'email': widget.regData.userEmail , 
+      'phone': widget.regData.userMobile
+    });
+
+    print('The Response of Resend otp ${response.body}'); 
+    OtpModel data = OtpModel.fromJson(jsonDecode(response.body));
+    if(data.status!){
+      // ignore: use_build_context_synchronously
+      successSnackBar('Successfully sent', context);
+    }else{
+      // ignore: use_build_context_synchronously
+      errorSnackBar('Failed to send otp', context);
+    }
+  }
+
+  Future<void> verifyOtp() async{
+   
     print('The Register data for otp ${widget.regData.userEmail} , ${widget.regData.userMobile} , ${otpController.text}');
     print('The Register data for otp ${widget.regData.firstName} , ${widget.regData.lastName} , ${widget.regData.password}');
     print('The Register data for otp ${widget.regData.companyName} , ${widget.regData.companyLocation} , ${widget.regData.companyPhone}');
@@ -63,24 +80,10 @@ class _OtpScreenState extends State<OtpScreen> {
     var dio = Dio();
     var url = 'https://knownjobz.com/api/verifyotp' ;
     try{
-      // Response response = await dio.post(
-      //     'https://knownjobz.com/api/verifyotp',
-      //     data: {
-      //       "email": widget.regData.userEmail ,
-      //       "phone": widget.regData.companyPhone,
-      //       "otp": otpController.text
-      //     } ,
-      //     options: Options(
-      //         headers: {
-      //           HttpHeaders.contentTypeHeader: "application/json",
-      //         }
-      //     )
-      // );
-
       http.Response response = await http.post(Uri.parse(url) ,
       body: jsonEncode({
         "email": widget.regData.userEmail ,
-        "phone": widget.regData.companyPhone,
+        "phone": widget.regData.userMobile,
         "otp": otpController.text
       }) ,
       headers: {
@@ -253,7 +256,7 @@ class _OtpScreenState extends State<OtpScreen> {
               Align(
                 alignment: Alignment.topRight,
                 child: TextButton(
-                  onPressed: () => registerAPi(),
+                  onPressed: () => resendOtp(),
                   child: const Text('Resend' ,
                     style: TextStyle(
                         fontSize: 15 ,

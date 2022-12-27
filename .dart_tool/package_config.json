@@ -116,6 +116,12 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "country_picker",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/country_picker-2.0.19",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cross_file",
       "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/cross_file-0.3.3+2",
       "packageUri": "lib/",
@@ -333,7 +339,7 @@
     },
     {
       "name": "image_picker_ios",
-      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/image_picker_ios-0.8.6+3",
+      "rootUri": "file:///Users/shripranav/.pub-cache/hosted/pub.dartlang.org/image_picker_ios-0.8.6+4",
       "packageUri": "lib/",
       "languageVersion": "2.14"
     },
@@ -794,7 +800,7 @@
       "languageVersion": "2.17"
     }
   ],
-  "generated": "2022-12-24T05:47:11.684461Z",
+  "generated": "2022-12-26T08:49:14.691953Z",
   "generator": "pub",
   "generatorVersion": "2.18.4"
 }
